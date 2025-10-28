@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAEI - Investment Proposal</title>
+    <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - Africa's First Conservation-AgTech Platform">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Fullscreen Toggle -->
+    <button class="fullscreen-btn" id="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+        <i class="fas fa-expand"></i>
+    </button>
+
+    <div class="slide-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active title-slide">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-seedling"></i>
+                </div>
+            </div>
+            <h1>
+                <span class="highlight">UBUNTU</span> AGRICULTURAL<br>
+                EMPOWERMENT INITIATIVE
+            </h1>
+            <p class="subtitle">Africa's First Conservation-AgTech Platform</p>
+            <div class="metrics-bar">
+                <div class="metric-item">
+                    <span class="value">R508.6M</span>
+                    <span class="label">Investment</span>
+                </div>
+                <div class="metric-item">
+                    <span class="value">→</span>
+                </div>
+                <div class="metric-item">
+                    <span class="value">R1.65B</span>
+                    <span class="label">Year 5 Revenue</span>
+                </div>
+                <div class="metric-item">
+                    <span class="value">→</span>
+                </div>
+                <div class="metric-item">
+                    <span class="value">28.9%</span>
+                    <span class="label">IRR</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Investment Highlights -->
+        <div class="slide">
+            <h2>Investment Highlights</h2>
+            <div class="stats-grid">
+                <div class="stat-card" onclick="showModal('investment')">
+                    <div class="icon"><i class="fas fa-coins"></i></div>
+                    <div class="number">R508.6M</div>
+                    <div class="label">Total Investment</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="stat-card" onclick="showModal('revenue')">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="number">R1.65B</div>
+                    <div class="label">Year 5 Revenue</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="stat-card" onclick="showModal('irr')">
+                    <div class="icon"><i class="fas fa-percent"></i></div>
+                    <div class="number">28.9%</div>
+                    <div class="label">Internal Rate of Return</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="stat-card" onclick="showModal('npv')">
+                    <div class="icon"><i class="fas fa-piggy-bank"></i></div>
+                    <div class="number">R3.29B</div>
+                    <div class="label">Net Present Value</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="stat-card" onclick="showModal('farmers')">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <div class="number">25,000</div>
+                    <div class="label">Farmers Served</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="stat-card" onclick="showModal('exit')">
+                    <div class="icon"><i class="fas fa-trophy"></i></div>
+                    <div class="number">R9.8B</div>
+                    <div class="label">Exit Valuation</div>
+                    <div class="click-indicator"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Revenue Growth -->
+        <div class="slide">
+            <h2>5-Year Revenue Trajectory</h2>
+            <div class="chart-container">
+                <div class="chart-bars">
+                    <div class="bar-group" onclick="showModal('year1')">
+                        <div class="bar" style="height: 50px; animation: growBar 1s ease forwards;">
+                            <div class="bar-value">R21M</div>
+                        </div>
+                        <div class="bar-label">Year 1</div>
+                    </div>
+                    <div class="bar-group" onclick="showModal('year2')">
+                        <div class="bar" style="height: 120px; animation: growBar 1.2s ease 0.2s forwards; opacity: 0;">
+                            <div class="bar-value">R196.8M</div>
+                        </div>
+                        <div class="bar-label">Year 2</div>
+                    </div>
+                    <div class="bar-group" onclick="showModal('year3')">
+                        <div class="bar" style="height: 200px; animation: growBar 1.4s ease 0.4s forwards; opacity: 0;">
+                            <div class="bar-value">R526.4M</div>
+                        </div>
+                        <div class="bar-label">Year 3</div>
+                    </div>
+                    <div class="bar-group" onclick="showModal('year4')">
+                        <div class="bar" style="height: 280px; animation: growBar 1.6s ease 0.6s forwards; opacity: 0;">
+                            <div class="bar-value">R873.8M</div>
+                        </div>
+                        <div class="bar-label">Year 4</div>
+                    </div>
+                    <div class="bar-group" onclick="showModal('year5')">
+                        <div class="bar" style="height: 360px; animation: growBar 1.8s ease 0.8s forwards; opacity: 0;">
+                            <div class="bar-value">R1.65B</div>
+                        </div>
+                        <div class="bar-label">Year 5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Six Revenue Streams -->
+        <div class="slide">
+            <h2>Six Integrated Revenue Streams</h2>
+            <div class="platform-grid">
+                <div class="platform-card" onclick="showModal('marketplace')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-store"></i></div>
+                        <h4>Marketplace</h4>
+                    </div>
+                    <div class="revenue">51.4% (R850M Y5)</div>
+                    <div class="description">Commission-based trading with automatic loan repayment and premium pricing</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="platform-card" onclick="showModal('precision')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-satellite-dish"></i></div>
+                        <h4>Precision Agriculture</h4>
+                    </div>
+                    <div class="revenue">16.3% (R270M Y5)</div>
+                    <div class="description">IoT sensors, drone monitoring, and AI-powered analytics</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="platform-card" onclick="showModal('bioinputs')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-leaf"></i></div>
+                        <h4>Bio-Inputs</h4>
+                    </div>
+                    <div class="revenue">14.4% (R238M Y5)</div>
+                    <div class="description">Conservation Compost™ with 22% organic premium</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="platform-card" onclick="showModal('training')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4>Training</h4>
+                    </div>
+                    <div class="revenue">5.3% (R88M Y5)</div>
+                    <div class="description">11-language conservation agriculture certification</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="platform-card" onclick="showModal('b2b')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-handshake"></i></div>
+                        <h4>B2B Services</h4>
+                    </div>
+                    <div class="revenue">5.3% (R88M Y5)</div>
+                    <div class="description">Data, carbon credits, corporate partnerships</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="platform-card" onclick="showModal('finance')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h4>AgriFinance</h4>
+                    </div>
+                    <div class="revenue">7.3% (R121M Y5)</div>
+                    <div class="description">Loan-as-gateway achieving 100% tech adoption</div>
+                    <div class="click-indicator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">4</span>
+    </div>
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn" onclick="previousSlide()">
+            <i class="fas fa-arrow-left"></i> Prev
+        </button>
+        <button class="nav-btn" id="next-btn" onclick="nextSlide()">
+            Next <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
