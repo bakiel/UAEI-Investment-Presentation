@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UAEI - Investment Proposal</title>
+    <title>UAEI - Complete Investment Proposal</title>
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - Africa's First Conservation-AgTech Platform">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Fullscreen Toggle -->
-    <button class="fullscreen-btn" id="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+    <button class="fullscreen-btn" id="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen (F)">
         <i class="fas fa-expand"></i>
     </button>
 
@@ -19,30 +19,24 @@
         <!-- Slide 1: Title -->
         <div class="slide active title-slide">
             <div class="logo-container">
-                <div class="logo">
-                    <i class="fas fa-seedling"></i>
-                </div>
+                <img src="assets/UAEI Logo for dark BG.png" alt="UAEI Logo" class="logo-img">
             </div>
             <h1>
                 <span class="highlight">UBUNTU</span> AGRICULTURAL<br>
                 EMPOWERMENT INITIATIVE
             </h1>
-            <p class="subtitle">Africa's First Conservation-AgTech Platform</p>
+            <p class="subtitle">Solving Africa's AgTech Adoption Crisis</p>
             <div class="metrics-bar">
                 <div class="metric-item">
                     <span class="value">R508.6M</span>
-                    <span class="label">Investment</span>
+                    <span class="label">Investment Ask</span>
                 </div>
-                <div class="metric-item">
-                    <span class="value">→</span>
-                </div>
+                <div class="metric-arrow">→</div>
                 <div class="metric-item">
                     <span class="value">R1.65B</span>
                     <span class="label">Year 5 Revenue</span>
                 </div>
-                <div class="metric-item">
-                    <span class="value">→</span>
-                </div>
+                <div class="metric-arrow">→</div>
                 <div class="metric-item">
                     <span class="value">28.9%</span>
                     <span class="label">IRR</span>
@@ -50,50 +44,208 @@
             </div>
         </div>
 
-        <!-- Slide 2: Investment Highlights -->
+        <!-- Slide 2: The Crisis -->
         <div class="slide">
-            <h2>Investment Highlights</h2>
-            <div class="stats-grid">
-                <div class="stat-card" onclick="showModal('investment')">
-                    <div class="icon"><i class="fas fa-coins"></i></div>
-                    <div class="number">R508.6M</div>
-                    <div class="label">Total Investment</div>
-                    <div class="click-indicator"></div>
+            <h2>The Crisis: AgTech Adoption Failure</h2>
+            <div class="crisis-container">
+                <div class="crisis-stat">
+                    <div class="crisis-number">2-5%</div>
+                    <div class="crisis-label">Traditional AgTech Adoption Rate</div>
                 </div>
-                <div class="stat-card" onclick="showModal('revenue')">
-                    <div class="icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="number">R1.65B</div>
-                    <div class="label">Year 5 Revenue</div>
-                    <div class="click-indicator"></div>
+
+                <div class="two-column-layout">
+                    <div class="column">
+                        <div class="info-box danger">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Why It Fails</h3>
+                            <ul class="large-list">
+                                <li>AgTech: "Buy our R6,150 subscription"</li>
+                                <li>Farmer: "I have no money"</li>
+                                <li>Result: <strong>2-5% adoption</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="info-box warning">
+                            <h3><i class="fas fa-search"></i> Root Cause</h3>
+                            <ul class="large-list">
+                                <li>Farmers need <strong>capital</strong></li>
+                                <li>Not technology subscriptions</li>
+                                <li>Good products still fail</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-card" onclick="showModal('irr')">
-                    <div class="icon"><i class="fas fa-percent"></i></div>
-                    <div class="number">28.9%</div>
-                    <div class="label">Internal Rate of Return</div>
-                    <div class="click-indicator"></div>
-                </div>
-                <div class="stat-card" onclick="showModal('npv')">
-                    <div class="icon"><i class="fas fa-piggy-bank"></i></div>
-                    <div class="number">R3.29B</div>
-                    <div class="label">Net Present Value</div>
-                    <div class="click-indicator"></div>
-                </div>
-                <div class="stat-card" onclick="showModal('farmers')">
-                    <div class="icon"><i class="fas fa-users"></i></div>
-                    <div class="number">25,000</div>
-                    <div class="label">Farmers Served</div>
-                    <div class="click-indicator"></div>
-                </div>
-                <div class="stat-card" onclick="showModal('exit')">
-                    <div class="icon"><i class="fas fa-trophy"></i></div>
-                    <div class="number">R9.8B</div>
-                    <div class="label">Exit Valuation</div>
-                    <div class="click-indicator"></div>
+
+                <div class="solution-callout">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>UAEI solves this with Loan-as-Gateway AgTech</span>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 3: Revenue Growth -->
+        <!-- Slide 3: The Breakthrough -->
+        <div class="slide">
+            <h2>UAEI's Breakthrough Innovation</h2>
+            <div class="breakthrough-container">
+                <div class="innovation-box">
+                    <h3>Loan-as-Gateway AgTech</h3>
+                    <p class="innovation-subtitle">Embed technology INSIDE loan products</p>
+                </div>
+
+                <div class="process-flow">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>UAEI:</strong> "R250,000 loan approved. Technology included."
+                        </div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Farmer:</strong> "Yes! I need this capital."
+                        </div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="process-step success">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Result:</strong> 100% adoption target
+                        </div>
+                    </div>
+                </div>
+
+                <div class="genius-box">
+                    <h4><i class="fas fa-star"></i> The Genius</h4>
+                    <p>Farmer gets loan → UAEI builds 300-farmer ecosystem → 60× cost savings + collective power</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Loan Package Components -->
+        <div class="slide">
+            <h2>R250,000 Loan Package: What's Included</h2>
+            <div class="package-simple">
+                <div class="component-large">
+                    <div class="component-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <div class="component-amount">R100,000</div>
+                    <div class="component-label">Cash Capital</div>
+                    <div class="component-desc">Working capital for operations</div>
+                </div>
+                <div class="component-large">
+                    <div class="component-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <div class="component-amount">R30,000</div>
+                    <div class="component-label">IoT Sensors</div>
+                    <div class="component-desc">Real-time soil, water, weather data</div>
+                </div>
+                <div class="component-large">
+                    <div class="component-icon"><i class="fas fa-helicopter"></i></div>
+                    <div class="component-amount">R40,000</div>
+                    <div class="component-label">Drone Monitoring</div>
+                    <div class="component-desc">Precision agriculture & analytics</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: More Package Components -->
+        <div class="slide">
+            <h2>R250,000 Loan Package: Additional Value</h2>
+            <div class="package-simple">
+                <div class="component-large">
+                    <div class="component-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="component-amount">R50,000</div>
+                    <div class="component-label">Organic Inputs</div>
+                    <div class="component-desc">Conservation Compost™ + bio-inputs</div>
+                </div>
+                <div class="component-large">
+                    <div class="component-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="component-amount">R20,000</div>
+                    <div class="component-label">Training Program</div>
+                    <div class="component-desc">11-language certification course</div>
+                </div>
+                <div class="component-large">
+                    <div class="component-icon"><i class="fas fa-store"></i></div>
+                    <div class="component-amount">R10,000</div>
+                    <div class="component-label">Marketplace Access</div>
+                    <div class="component-desc">Premium buyers + auto-repayment</div>
+                </div>
+            </div>
+            <div class="repayment-box">
+                <i class="fas fa-shield-alt"></i>
+                <span>24-month repayment | 8-12% default vs 15% industry</span>
+            </div>
+        </div>
+
+        <!-- Slide 6: Financial Returns -->
+        <div class="slide">
+            <h2>Investment Returns</h2>
+            <div class="opportunity-single">
+                <div class="opportunity-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Financial Performance</h3>
+                </div>
+                <div class="stats-large">
+                    <div class="stat-large">
+                        <div class="stat-large-label">Total Investment</div>
+                        <div class="stat-large-value">R508.6M</div>
+                    </div>
+                    <div class="stat-large">
+                        <div class="stat-large-label">Net Present Value</div>
+                        <div class="stat-large-value highlight">R3.29B</div>
+                    </div>
+                    <div class="stat-large">
+                        <div class="stat-large-label">Internal Rate of Return</div>
+                        <div class="stat-large-value">28.9%</div>
+                    </div>
+                    <div class="stat-large">
+                        <div class="stat-large-label">Year 5 Revenue</div>
+                        <div class="stat-large-value">R1.65B</div>
+                    </div>
+                    <div class="stat-large">
+                        <div class="stat-large-label">Exit Valuation</div>
+                        <div class="stat-large-value highlight">R9.8B</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Development Impact -->
+        <div class="slide">
+            <h2>Development Impact</h2>
+            <div class="opportunity-single">
+                <div class="opportunity-header">
+                    <i class="fas fa-heart"></i>
+                    <h3>Social & Environmental Returns</h3>
+                </div>
+                <div class="stats-large">
+                    <div class="stat-large">
+                        <div class="stat-large-label">Farmers Served</div>
+                        <div class="stat-large-value">25,000</div>
+                    </div>
+                    <div class="stat-large">
+                        <div class="stat-large-label">Lifted Above Poverty Line</div>
+                        <div class="stat-large-value highlight">18,000</div>
+                    </div>
+                    <div class="stat-large">
+                        <div class="stat-large-label">Jobs Created</div>
+                        <div class="stat-large-value">1,565</div>
+                    </div>
+                    <div class="stat-large">
+                        <div class="stat-large-label">Land Conserved</div>
+                        <div class="stat-large-value">2,373 ha</div>
+                    </div>
+                    <div class="stat-large">
+                        <div class="stat-large-label">CO₂ Sequestered</div>
+                        <div class="stat-large-value highlight">45,000 tons</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mandate-box">
+                Strong Returns + Measurable Impact = IDC Mandate Fulfilled
+            </div>
+        </div>
+
+        <!-- Slide 8: Revenue Growth Chart -->
         <div class="slide">
             <h2>5-Year Revenue Trajectory</h2>
             <div class="chart-container">
@@ -130,65 +282,772 @@
                     </div>
                 </div>
             </div>
+            <div class="chart-note">
+                Click any bar for detailed breakdown
+            </div>
         </div>
 
-        <!-- Slide 4: Six Revenue Streams -->
+        <!-- Slide 9: Revenue Streams 1-3 -->
         <div class="slide">
-            <h2>Six Integrated Revenue Streams</h2>
-            <div class="platform-grid">
-                <div class="platform-card" onclick="showModal('marketplace')">
-                    <div class="platform-header">
-                        <div class="platform-icon"><i class="fas fa-store"></i></div>
-                        <h4>Marketplace</h4>
-                    </div>
-                    <div class="revenue">51.4% (R850M Y5)</div>
-                    <div class="description">Commission-based trading with automatic loan repayment and premium pricing</div>
-                    <div class="click-indicator"></div>
+            <h2>Revenue Streams: Part 1</h2>
+            <div class="streams-grid-large">
+                <div class="stream-card-large" onclick="showModal('marketplace')">
+                    <div class="stream-icon"><i class="fas fa-store"></i></div>
+                    <h3>Marketplace</h3>
+                    <div class="stream-percentage-large">51.4%</div>
+                    <div class="stream-amount-large">R850M (Year 5)</div>
+                    <p class="stream-description">Commission-based trading platform with integrated auto-repayment system</p>
                 </div>
-                <div class="platform-card" onclick="showModal('precision')">
-                    <div class="platform-header">
-                        <div class="platform-icon"><i class="fas fa-satellite-dish"></i></div>
-                        <h4>Precision Agriculture</h4>
-                    </div>
-                    <div class="revenue">16.3% (R270M Y5)</div>
-                    <div class="description">IoT sensors, drone monitoring, and AI-powered analytics</div>
-                    <div class="click-indicator"></div>
+                <div class="stream-card-large" onclick="showModal('precision')">
+                    <div class="stream-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h3>Precision Agriculture</h3>
+                    <div class="stream-percentage-large">16.3%</div>
+                    <div class="stream-amount-large">R270M (Year 5)</div>
+                    <p class="stream-description">IoT sensors, drone monitoring, AI-powered analytics and recommendations</p>
                 </div>
-                <div class="platform-card" onclick="showModal('bioinputs')">
-                    <div class="platform-header">
-                        <div class="platform-icon"><i class="fas fa-leaf"></i></div>
-                        <h4>Bio-Inputs</h4>
-                    </div>
-                    <div class="revenue">14.4% (R238M Y5)</div>
-                    <div class="description">Conservation Compost™ with 22% organic premium</div>
-                    <div class="click-indicator"></div>
+                <div class="stream-card-large" onclick="showModal('bioinputs')">
+                    <div class="stream-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Bio-Inputs Manufacturing</h3>
+                    <div class="stream-percentage-large">14.4%</div>
+                    <div class="stream-amount-large">R238M (Year 5)</div>
+                    <p class="stream-description">Conservation Compost™ with 22% organic premium pricing advantage</p>
                 </div>
-                <div class="platform-card" onclick="showModal('training')">
-                    <div class="platform-header">
-                        <div class="platform-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <h4>Training</h4>
-                    </div>
-                    <div class="revenue">5.3% (R88M Y5)</div>
-                    <div class="description">11-language conservation agriculture certification</div>
-                    <div class="click-indicator"></div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Revenue Streams 4-6 -->
+        <div class="slide">
+            <h2>Revenue Streams: Part 2</h2>
+            <div class="streams-grid-large">
+                <div class="stream-card-large" onclick="showModal('training')">
+                    <div class="stream-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Training & Certification</h3>
+                    <div class="stream-percentage-large">5.3%</div>
+                    <div class="stream-amount-large">R88M (Year 5)</div>
+                    <p class="stream-description">11-language certification program with continuous education modules</p>
                 </div>
-                <div class="platform-card" onclick="showModal('b2b')">
-                    <div class="platform-header">
-                        <div class="platform-icon"><i class="fas fa-handshake"></i></div>
-                        <h4>B2B Services</h4>
-                    </div>
-                    <div class="revenue">5.3% (R88M Y5)</div>
-                    <div class="description">Data, carbon credits, corporate partnerships</div>
-                    <div class="click-indicator"></div>
+                <div class="stream-card-large" onclick="showModal('b2b')">
+                    <div class="stream-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>B2B Services</h3>
+                    <div class="stream-percentage-large">5.3%</div>
+                    <div class="stream-amount-large">R88M (Year 5)</div>
+                    <p class="stream-description">Agricultural data licensing, carbon credits, strategic partnerships</p>
                 </div>
-                <div class="platform-card" onclick="showModal('finance')">
-                    <div class="platform-header">
-                        <div class="platform-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                        <h4>AgriFinance</h4>
+                <div class="stream-card-large" onclick="showModal('finance')">
+                    <div class="stream-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>AgriFinance</h3>
+                    <div class="stream-percentage-large">7.3%</div>
+                    <div class="stream-amount-large">R121M (Year 5)</div>
+                    <p class="stream-description">Innovative loan-as-gateway financial products for smallholders</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Investment Ready -->
+        <div class="slide">
+            <h2>Investment-Ready Platform</h2>
+            <div class="ready-grid">
+                <div class="ready-section">
+                    <h3><i class="fas fa-building"></i> Operational Assets</h3>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> R62.5M Farm + Sanctuary</li>
+                        <li><i class="fas fa-check"></i> 100-year pecan orchards</li>
+                        <li><i class="fas fa-check"></i> Wildlife sanctuary live</li>
+                        <li><i class="fas fa-check"></i> 20+ years experience</li>
+                    </ul>
+                </div>
+                <div class="ready-section">
+                    <h3><i class="fas fa-check-circle"></i> Market Validation</h3>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> Gauteng Hub shortlisted</li>
+                        <li><i class="fas fa-check"></i> 1,200 farmers consulted</li>
+                        <li><i class="fas fa-check"></i> R18M buyer commitments</li>
+                        <li><i class="fas fa-check"></i> Technology partners ready</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="derisked-box">
+                <i class="fas fa-shield-alt"></i>
+                <span>Not a startup idea — De-risked investment</span>
+            </div>
+        </div>
+
+        <!-- Slide 12: Budget Breakdown -->
+        <div class="slide">
+            <h2>Budget Required: R508.6M</h2>
+            <div class="budget-single">
+                <h3>Investment Allocation</h3>
+                <div class="budget-items-large">
+                    <div class="budget-item-large">
+                        <div class="budget-category">CAPEX</div>
+                        <div class="budget-percentage">60.9%</div>
+                        <div class="budget-amount">R309.6M</div>
+                        <div class="budget-breakdown">IoT: R75M | Drones: R50M | Storage: R90M | Compost: R45M</div>
                     </div>
-                    <div class="revenue">7.3% (R121M Y5)</div>
-                    <div class="description">Loan-as-gateway achieving 100% tech adoption</div>
-                    <div class="click-indicator"></div>
+                    <div class="budget-item-large">
+                        <div class="budget-category">Working Capital</div>
+                        <div class="budget-percentage">15.5%</div>
+                        <div class="budget-amount">R79M</div>
+                        <div class="budget-breakdown">Loan disbursements and operational liquidity</div>
+                    </div>
+                    <div class="budget-item-large">
+                        <div class="budget-category">Pre-Operational</div>
+                        <div class="budget-percentage">15.7%</div>
+                        <div class="budget-amount">R80M</div>
+                        <div class="budget-breakdown">Team hiring, platform development, legal compliance</div>
+                    </div>
+                    <div class="budget-item-large">
+                        <div class="budget-category">Contingency Reserve</div>
+                        <div class="budget-percentage">7.9%</div>
+                        <div class="budget-amount">R40M</div>
+                        <div class="budget-breakdown">Risk mitigation and unforeseen expenses</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Funding Structure -->
+        <div class="slide">
+            <h2>Funding Structure: R508.6M</h2>
+            <div class="funding-structure">
+                <div class="funding-box-large idc">
+                    <div class="funding-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="funding-header">IDC Loan (70%)</div>
+                    <div class="funding-amount-large">R356M</div>
+                    <div class="funding-details-large">
+                        <div class="funding-detail-item">
+                            <i class="fas fa-percent"></i>
+                            <span>7.5% fixed interest rate</span>
+                        </div>
+                        <div class="funding-detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>10-year repayment term</span>
+                        </div>
+                        <div class="funding-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2-year grace period</span>
+                        </div>
+                        <div class="funding-detail-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>159% gross return to IDC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="funding-box-large grants">
+                    <div class="funding-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="funding-header">Government Grants (30%)</div>
+                    <div class="funding-amount-large">R152.6M</div>
+                    <div class="funding-details-large">
+                        <div class="funding-detail-item">
+                            <i class="fas fa-gift"></i>
+                            <span>Non-repayable grant funding</span>
+                        </div>
+                        <div class="funding-detail-item">
+                            <i class="fas fa-tools"></i>
+                            <span>Asset-based allocation</span>
+                        </div>
+                        <div class="funding-detail-item">
+                            <i class="fas fa-money-bill"></i>
+                            <span>R650M+ tax revenue (5yr)</span>
+                        </div>
+                        <div class="funding-detail-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>4.3× ROI for government</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="return-box">
+                R6.45 return per R1 invested | Zero equity dilution
+            </div>
+        </div>
+
+        <!-- Slide 14: Timeline Table -->
+        <div class="slide">
+            <h2>5-Year Deployment Timeline</h2>
+            <div class="timeline-table-large">
+                <div class="timeline-row-large header">
+                    <div>Year</div>
+                    <div>Farmers</div>
+                    <div>Revenue</div>
+                    <div>Net Income</div>
+                    <div>Key Milestone</div>
+                </div>
+                <div class="timeline-row-large" onclick="showModal('year1')">
+                    <div class="year-badge">1</div>
+                    <div class="timeline-data">500</div>
+                    <div class="timeline-data">R21M</div>
+                    <div class="timeline-data negative">-R58M</div>
+                    <div class="timeline-data">Technology proven</div>
+                </div>
+                <div class="timeline-row-large" onclick="showModal('year2')">
+                    <div class="year-badge">2</div>
+                    <div class="timeline-data">1,500</div>
+                    <div class="timeline-data">R197M</div>
+                    <div class="timeline-data positive">R13M</div>
+                    <div class="timeline-data">Break-even achieved</div>
+                </div>
+                <div class="timeline-row-large" onclick="showModal('year3')">
+                    <div class="year-badge">3</div>
+                    <div class="timeline-data">5,000</div>
+                    <div class="timeline-data">R526M</div>
+                    <div class="timeline-data positive">R156M</div>
+                    <div class="timeline-data">All streams active</div>
+                </div>
+                <div class="timeline-row-large" onclick="showModal('year4')">
+                    <div class="year-badge">4</div>
+                    <div class="timeline-data">15,000</div>
+                    <div class="timeline-data">R874M</div>
+                    <div class="timeline-data positive">R315M</div>
+                    <div class="timeline-data">Full Limpopo coverage</div>
+                </div>
+                <div class="timeline-row-large" onclick="showModal('year5')">
+                    <div class="year-badge">5</div>
+                    <div class="timeline-data">25,000</div>
+                    <div class="timeline-data">R1,654M</div>
+                    <div class="timeline-data positive">R692M</div>
+                    <div class="timeline-data">Exit-ready valuation</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 15: Year 1 Quarterly Focus -->
+        <div class="slide">
+            <h2>Year 1 Execution Plan</h2>
+            <div class="quarters-container">
+                <div class="quarter-card">
+                    <div class="quarter-header">
+                        <div class="quarter-badge">Q1</div>
+                        <div class="quarter-name">Foundation</div>
+                    </div>
+                    <div class="quarter-content">
+                        <div class="quarter-item">
+                            <i class="fas fa-users"></i>
+                            <span>Hire 50-person core team</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-satellite-dish"></i>
+                            <span>Deploy IoT infrastructure</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-helicopter"></i>
+                            <span>Acquire drone fleet</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-warehouse"></i>
+                            <span>Establish storage facilities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="quarter-card">
+                    <div class="quarter-header">
+                        <div class="quarter-badge">Q2</div>
+                        <div class="quarter-name">Pilot Launch</div>
+                    </div>
+                    <div class="quarter-content">
+                        <div class="quarter-item">
+                            <i class="fas fa-seedling"></i>
+                            <span>Onboard 300 pilot farmers</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>Disburse R75M in loans</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Launch training program</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Platform beta testing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="quarter-card">
+                    <div class="quarter-header">
+                        <div class="quarter-badge">Q3</div>
+                        <div class="quarter-name">Scale & Validate</div>
+                    </div>
+                    <div class="quarter-content">
+                        <div class="quarter-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Expand to 500 farmers</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>First compost production</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-store"></i>
+                            <span>Marketplace transactions begin</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Validate unit economics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="quarter-card">
+                    <div class="quarter-header">
+                        <div class="quarter-badge">Q4</div>
+                        <div class="quarter-name">Analysis & Optimize</div>
+                    </div>
+                    <div class="quarter-content">
+                        <div class="quarter-item">
+                            <i class="fas fa-analytics"></i>
+                            <span>Measure adoption rates</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Track default rates</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Optimize processes</span>
+                        </div>
+                        <div class="quarter-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Prepare Year 2 scale-up</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 16: Economic Impact -->
+        <div class="slide">
+            <h2>Economic Impact Metrics</h2>
+            <div class="impact-single">
+                <div class="impact-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Transforming Rural Economies</h3>
+                </div>
+                <div class="impact-grid-large">
+                    <div class="impact-card">
+                        <div class="impact-icon economic"><i class="fas fa-coins"></i></div>
+                        <div class="impact-title">Farmer Income Growth</div>
+                        <div class="impact-value">R50k → R180k</div>
+                        <div class="impact-change">+300% increase</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon economic"><i class="fas fa-users"></i></div>
+                        <div class="impact-title">Above Poverty Line</div>
+                        <div class="impact-value">18,000</div>
+                        <div class="impact-change">72% of farmers served</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon economic"><i class="fas fa-building"></i></div>
+                        <div class="impact-title">GDP Contribution</div>
+                        <div class="impact-value">R662M</div>
+                        <div class="impact-change">Annual by Year 5</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon economic"><i class="fas fa-briefcase"></i></div>
+                        <div class="impact-title">Jobs Created</div>
+                        <div class="impact-value">1,565</div>
+                        <div class="impact-change">Direct + indirect employment</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon economic"><i class="fas fa-money-bill-wave"></i></div>
+                        <div class="impact-title">Tax Revenue Generated</div>
+                        <div class="impact-value">R650M+</div>
+                        <div class="impact-change">5-year cumulative</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bee-box">
+                <i class="fas fa-award"></i>
+                BEE Level 1 | 76% Black | 30% Women | 15% Youth
+            </div>
+        </div>
+
+        <!-- Slide 17: Environmental Impact -->
+        <div class="slide">
+            <h2>Environmental Impact Metrics</h2>
+            <div class="impact-single">
+                <div class="impact-header">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Conservation-Driven Agriculture</h3>
+                </div>
+                <div class="impact-grid-large">
+                    <div class="impact-card">
+                        <div class="impact-icon environmental"><i class="fas fa-tree"></i></div>
+                        <div class="impact-title">Conservation Land</div>
+                        <div class="impact-value">2,373 ha</div>
+                        <div class="impact-change">Protected biodiversity</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon environmental"><i class="fas fa-cloud"></i></div>
+                        <div class="impact-title">Carbon Sequestered</div>
+                        <div class="impact-value">45,000 tons</div>
+                        <div class="impact-change">CO₂ equivalent</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon environmental"><i class="fas fa-tint"></i></div>
+                        <div class="impact-title">Water Saved</div>
+                        <div class="impact-value">8.64M m³</div>
+                        <div class="impact-change">Precision irrigation</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon environmental"><i class="fas fa-seedling"></i></div>
+                        <div class="impact-title">Seeds Preserved</div>
+                        <div class="impact-value">120 varieties</div>
+                        <div class="impact-change">Indigenous heritage</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon environmental"><i class="fas fa-paw"></i></div>
+                        <div class="impact-title">Wildlife Sanctuary</div>
+                        <div class="impact-value">R62.5M</div>
+                        <div class="impact-change">Live & operating</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carbon-box">
+                <i class="fas fa-certificate"></i>
+                Carbon Credits: 45,000 tons eligible for international markets
+            </div>
+        </div>
+
+        <!-- Slide 18: Competitive Moats 1-3 -->
+        <div class="slide">
+            <h2>Competitive Moats: Part 1</h2>
+            <div class="moats-large">
+                <div class="moat-card-large">
+                    <div class="moat-badge">1</div>
+                    <div class="moat-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Loan-as-Gateway Innovation</h3>
+                    <div class="moat-stat-large">100% adoption</div>
+                    <div class="moat-vs">vs 2-5% industry</div>
+                    <p class="moat-explanation">
+                        Farmers need capital, not subscriptions. By embedding technology inside loan products,
+                        UAEI achieves near-100% adoption compared to traditional AgTech's 2-5% failure rate.
+                    </p>
+                </div>
+                <div class="moat-card-large">
+                    <div class="moat-badge">2</div>
+                    <div class="moat-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Conservation Moat</h3>
+                    <div class="moat-stat-large">10-15 year barrier</div>
+                    <div class="moat-vs">R62.5M assets + 100-year orchards</div>
+                    <p class="moat-explanation">
+                        Operating wildlife sanctuary and century-old pecan orchards create impossible-to-replicate
+                        competitive advantage. Competitors would need 10-15 years to catch up.
+                    </p>
+                </div>
+                <div class="moat-card-large">
+                    <div class="moat-badge">3</div>
+                    <div class="moat-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Moat</h3>
+                    <div class="moat-stat-large">82% credit accuracy</div>
+                    <div class="moat-vs">125k farmer-years of data</div>
+                    <p class="moat-explanation">
+                        Each loan cycle generates proprietary data that improves credit predictions.
+                        Network effects compound as platform scales, creating unbreachable data advantage.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 19: Competitive Moats 4-5 -->
+        <div class="slide">
+            <h2>Competitive Moats: Part 2</h2>
+            <div class="moats-large">
+                <div class="moat-card-large">
+                    <div class="moat-badge">4</div>
+                    <div class="moat-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Swarm Intelligence</h3>
+                    <div class="moat-stat-large">2.25× profit/hectare</div>
+                    <div class="moat-vs">60× equipment cost savings</div>
+                    <p class="moat-explanation">
+                        300-farmer swarms share expensive equipment (drones, harvesters), reducing individual
+                        costs by 60× while doubling yields through collective precision agriculture.
+                    </p>
+                </div>
+                <div class="moat-card-large">
+                    <div class="moat-badge">5</div>
+                    <div class="moat-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Ecosystem Lock-In</h3>
+                    <div class="moat-stat-large">95% retention</div>
+                    <div class="moat-vs">R150k switching cost</div>
+                    <p class="moat-explanation">
+                        Farmers invest in specialized training, equipment, and conservation practices.
+                        Switching costs exceed R150k, creating natural 95% retention without contracts.
+                    </p>
+                </div>
+            </div>
+            <div class="moats-footer">
+                Each moat reinforces the others — Unbeatable competitive position
+            </div>
+        </div>
+
+        <!-- Slide 20: Market Opportunity - South Africa -->
+        <div class="slide">
+            <h2>Market Opportunity: South Africa</h2>
+            <div class="market-single">
+                <div class="market-header">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Massive Underserved Domestic Market</h3>
+                </div>
+                <div class="market-stats-large">
+                    <div class="market-card">
+                        <div class="market-number-large">2.3M</div>
+                        <div class="market-label-large">Smallholder Farmers</div>
+                        <div class="market-sublabel">Total addressable market</div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-number-large">90%</div>
+                        <div class="market-label-large">Unbanked</div>
+                        <div class="market-sublabel">Limited financial access</div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-number-large">R70B</div>
+                        <div class="market-label-large">Market Size</div>
+                        <div class="market-sublabel">Annual addressable value</div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-number-large">1.1%</div>
+                        <div class="market-label-large">Year 5 Share</div>
+                        <div class="market-sublabel">25,000 farmers served</div>
+                    </div>
+                </div>
+                <div class="market-highlight-large">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>98.9% of market remains unserved after Year 5 — Decade of growth ahead</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 21: Market Opportunity - SADC -->
+        <div class="slide">
+            <h2>Market Opportunity: SADC Expansion</h2>
+            <div class="market-single">
+                <div class="market-header">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>Regional Scale Potential</h3>
+                </div>
+                <div class="market-stats-large">
+                    <div class="market-card">
+                        <div class="market-number-large">220M</div>
+                        <div class="market-label-large">SADC Population</div>
+                        <div class="market-sublabel">80% rural smallholders</div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-number-large">Year 10</div>
+                        <div class="market-label-large">Expansion Target</div>
+                        <div class="market-sublabel">100k farmers across 5 countries</div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-number-large">R8B+</div>
+                        <div class="market-label-large">Revenue Potential</div>
+                        <div class="market-sublabel">Regional expansion upside</div>
+                    </div>
+                    <div class="market-card">
+                        <div class="market-number-large">5 Countries</div>
+                        <div class="market-label-large">Initial Rollout</div>
+                        <div class="market-sublabel">Zimbabwe, Zambia, Botswana, Namibia, Mozambique</div>
+                    </div>
+                </div>
+                <div class="market-highlight-large">
+                    <i class="fas fa-language"></i>
+                    <span>Mandarin marketplace ready — Technology platform proven and scalable</span>
+                </div>
+            </div>
+            <div class="firstmover-box">
+                <i class="fas fa-rocket"></i>
+                First-mover advantage: 12-18 month lead before competition catches up
+            </div>
+        </div>
+
+        <!-- Slide 22: De-Risked Investment -->
+        <div class="slide">
+            <h2>De-Risked Investment</h2>
+            <div class="derisk-container">
+                <div class="stress-test-box">
+                    <h3><i class="fas fa-shield-alt"></i> Financial Stress Testing</h3>
+                    <p class="stress-main">Model survives 30% revenue decline</p>
+                    <p class="stress-detail">10 scenarios tested, all pass | Julia-optimized with 99.2% probability</p>
+                </div>
+
+                <div class="derisk-grid">
+                    <div class="derisk-section">
+                        <h4>Operational</h4>
+                        <ul class="derisk-list">
+                            <li>20+ years experience</li>
+                            <li>R62.5M assets operational</li>
+                            <li>Gauteng Hub shortlisted</li>
+                            <li>1,200 farmers validated</li>
+                        </ul>
+                    </div>
+                    <div class="derisk-section">
+                        <h4>Technology</h4>
+                        <ul class="derisk-list">
+                            <li>No invention needed</li>
+                            <li>Platform tested</li>
+                            <li>Partners identified (DJI, sensors)</li>
+                            <li>M-Pesa precedent proven</li>
+                        </ul>
+                    </div>
+                    <div class="derisk-section">
+                        <h4>Market</h4>
+                        <ul class="derisk-list">
+                            <li>Government backing</li>
+                            <li>R18M buyer commitments</li>
+                            <li>Conservative assumptions</li>
+                            <li>6 revenue streams diversification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="risk-footer">
+                Lower risk than typical AgTech startup — Assets + Team + Validation
+            </div>
+        </div>
+
+        <!-- Slide 23: The Ask -->
+        <div class="slide">
+            <h2>The Ask: Support This Initiative</h2>
+            <div class="ask-container">
+                <div class="ask-amount-box">
+                    <div class="ask-amount">R508.6M</div>
+                    <div class="ask-structure">70% IDC Loan + 30% Government Grants</div>
+                    <div class="ask-dilution">Zero Equity Dilution</div>
+                </div>
+
+                <div class="ask-grid">
+                    <div class="ask-section returns">
+                        <h3>What You Get</h3>
+                        <div class="ask-items">
+                            <div class="ask-item">
+                                <i class="fas fa-percentage"></i>
+                                <span>28.9% IRR</span>
+                            </div>
+                            <div class="ask-item">
+                                <i class="fas fa-coins"></i>
+                                <span>R3.3B NPV</span>
+                            </div>
+                            <div class="ask-item">
+                                <i class="fas fa-users"></i>
+                                <span>25,000 farmers</span>
+                            </div>
+                            <div class="ask-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>1,565 jobs</span>
+                            </div>
+                            <div class="ask-item">
+                                <i class="fas fa-award"></i>
+                                <span>BEE Level 1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ask-section ready">
+                        <h3>Why Now</h3>
+                        <div class="ask-items">
+                            <div class="ask-item">
+                                <i class="fas fa-rocket"></i>
+                                <span>12-18 month lead</span>
+                            </div>
+                            <div class="ask-item">
+                                <i class="fas fa-user-check"></i>
+                                <span>Team ready</span>
+                            </div>
+                            <div class="ask-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Market validated</span>
+                            </div>
+                            <div class="ask-item">
+                                <i class="fas fa-landmark"></i>
+                                <span>Gauteng endorsed</span>
+                            </div>
+                            <div class="ask-item">
+                                <i class="fas fa-building"></i>
+                                <span>Assets operational</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mandate-final">
+                IDC Mandate: Strong returns + measurable impact
+            </div>
+        </div>
+
+        <!-- Slide 24: Investment Thesis -->
+        <div class="slide">
+            <h2>The Investment Thesis</h2>
+            <div class="thesis-container">
+                <div class="thesis-flow">
+                    <div class="thesis-step">
+                        <div class="thesis-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3>Loan</h3>
+                        <p>creates the</p>
+                    </div>
+                    <div class="thesis-arrow">→</div>
+                    <div class="thesis-step">
+                        <div class="thesis-icon"><i class="fas fa-users"></i></div>
+                        <h3>Swarm</h3>
+                        <p>which creates</p>
+                    </div>
+                    <div class="thesis-arrow">→</div>
+                    <div class="thesis-step">
+                        <div class="thesis-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Profits</h3>
+                        <p>that fund</p>
+                    </div>
+                    <div class="thesis-arrow">→</div>
+                    <div class="thesis-step">
+                        <div class="thesis-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Conservation</h3>
+                        <p>creating the</p>
+                    </div>
+                    <div class="thesis-arrow">→</div>
+                    <div class="thesis-step success">
+                        <div class="thesis-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Moat</h3>
+                        <p>unbeatable</p>
+                    </div>
+                </div>
+            </div>
+            <div class="thesis-result">
+                <div class="result-stat">100% adoption</div>
+                <div class="result-vs">vs</div>
+                <div class="result-stat competitor">2-5% industry</div>
+            </div>
+        </div>
+
+        <!-- Slide 25: Thank You / Contact -->
+        <div class="slide final-slide">
+            <div class="final-layout">
+                <div class="final-left">
+                    <h1>Thank You</h1>
+                    <p class="final-subtitle">for considering UAEI</p>
+
+                    <div class="ubuntu-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Together, we transform agriculture through Ubuntu.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+
+                    <div class="contact-grid">
+                        <div class="contact-section">
+                            <h3>Kutlwano Holdings (Pty) Ltd</h3>
+                            <p class="reg-number">Company Reg: 2022/404945/07</p>
+                        </div>
+                        <div class="contact-section">
+                            <p><i class="fas fa-user"></i> <strong>Keletso Kingwane</strong></p>
+                            <p><i class="fas fa-phone"></i> 084 478 8872</p>
+                            <p><i class="fas fa-envelope"></i> keletsok@gmail.com</p>
+                            <p><i class="fas fa-envelope"></i> info@kutlwanoholdings.co.za</p>
+                        </div>
+                        <div class="contact-section">
+                            <p><i class="fas fa-map-marker-alt"></i> 10231 Kammotho Street</p>
+                            <p>Dobsonville Ext 3</p>
+                            <p>Johannesburg, Gauteng 1863</p>
+                            <p>South Africa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="final-right">
+                    <img src="assets/UAEI Logo for dark BG.png" alt="UAEI Logo" class="final-logo">
                 </div>
             </div>
         </div>
@@ -204,7 +1063,7 @@
 
     <!-- Navigation -->
     <div class="slide-counter">
-        <span id="current-slide">1</span> / <span id="total-slides">4</span>
+        <span id="current-slide">1</span> / <span id="total-slides">25</span>
     </div>
     <div class="navigation">
         <button class="nav-btn" id="prev-btn" onclick="previousSlide()">
