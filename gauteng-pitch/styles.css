@@ -3346,3 +3346,996 @@ h2 {
         padding: 3vh 4vw;
     }
 }
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 2 (CRISIS)
+   ============================================ */
+.crisis-stat-large {
+    text-align: center;
+    margin-bottom: 2vh !important;
+    padding: 1vh 0 !important;
+}
+
+.crisis-number-huge {
+    font-size: clamp(3.5rem, 7vw, 6rem) !important;
+    font-weight: 900;
+    color: #ff5252;
+    line-height: 1;
+    margin-bottom: 1vh;
+}
+
+.crisis-label-large {
+    font-size: clamp(0.95rem, 1.8vw, 1.2rem) !important;
+    color: #999;
+}
+
+.failure-flow {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: clamp(2vw, 3vw, 4vw) !important;
+    margin: 2vh auto !important;
+    max-width: 95% !important;
+}
+
+.failure-step {
+    flex: 1 !important;
+    max-width: 280px !important;
+    padding: 2vh 1.5vw !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 2px solid rgba(76, 175, 80, 0.2) !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+}
+
+.failure-step.farmer {
+    border-color: rgba(255, 193, 7, 0.3) !important;
+    background: rgba(255, 193, 7, 0.03) !important;
+}
+
+.failure-step.fail {
+    border-color: rgba(255, 82, 82, 0.3) !important;
+    background: rgba(255, 82, 82, 0.03) !important;
+}
+
+.failure-icon {
+    font-size: clamp(2rem, 3.5vw, 2.8rem) !important;
+    margin-bottom: 1vh !important;
+    color: #4CAF50;
+}
+
+.failure-step.farmer .failure-icon {
+    color: #FFC107;
+}
+
+.failure-step.fail .failure-icon {
+    color: #ff5252;
+}
+
+.failure-step h3 {
+    font-size: clamp(1.1rem, 2vw, 1.4rem) !important;
+    margin-bottom: 1vh !important;
+    color: #fff !important;
+}
+
+.failure-step p {
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+    color: #aaa;
+    line-height: 1.4;
+}
+
+.failure-arrow {
+    font-size: clamp(1.8rem, 3vw, 2.5rem) !important;
+    color: #4CAF50;
+    flex-shrink: 0;
+}
+
+.insight-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    padding: 2vh 2.5vw !important;
+    background: rgba(76, 175, 80, 0.08);
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    margin-top: 2vh !important;
+}
+
+.insight-box i {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: #4CAF50;
+    flex-shrink: 0;
+}
+
+.insight-text {
+    font-size: clamp(1rem, 1.8vw, 1.2rem) !important;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 3 (INNOVATION)
+   ============================================ */
+.innovation-section {
+    text-align: center;
+    margin-bottom: 2vh !important;
+    padding: 1.5vh 2vw;
+    background: rgba(76, 175, 80, 0.05);
+    border-radius: 12px;
+}
+
+.innovation-section h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem) !important;
+    color: #4CAF50;
+    margin-bottom: 0.5vh !important;
+}
+
+.innovation-desc {
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+    color: #aaa;
+    margin: 0 !important;
+}
+
+.platform-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5vh 2vw !important;
+    margin-top: 2vh !important;
+    max-height: 50vh !important;
+}
+
+.platform-item {
+    padding: 2vh 1.5vw !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 2px solid rgba(76, 175, 80, 0.2) !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    transition: all 0.3s ease;
+}
+
+.platform-item:hover {
+    background: rgba(76, 175, 80, 0.05) !important;
+    border-color: #4CAF50 !important;
+    transform: translateY(-3px);
+}
+
+.platform-item .platform-icon {
+    font-size: clamp(1.8rem, 3vw, 2.5rem) !important;
+    color: #4CAF50;
+    margin-bottom: 1vh !important;
+}
+
+.platform-item h4 {
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    color: #fff;
+    margin-bottom: 0.5vh !important;
+}
+
+.platform-item p {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #999;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.genius-callout {
+    text-align: center;
+    padding: 1.5vh 2.5vw !important;
+    background: rgba(76, 175, 80, 0.1);
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    margin-top: 2vh !important;
+    font-size: clamp(1rem, 1.9vw, 1.3rem) !important;
+    color: #4CAF50;
+}
+
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 4 (COMPONENT)
+   ============================================ */
+.component-explanation {
+    display: grid !important;
+    grid-template-columns: 1fr 1.5fr !important;
+    gap: 3vw !important;
+    margin: 2vh 0 !important;
+    align-items: start !important;
+}
+
+.component-left {
+    text-align: center;
+    padding: 2vh 1.5vw;
+    background: rgba(76, 175, 80, 0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.component-stat .stat-value {
+    font-size: clamp(3rem, 6vw, 5rem) !important;
+    font-weight: 900;
+    color: #4CAF50;
+    line-height: 1;
+    margin-bottom: 1vh;
+}
+
+.component-stat .stat-label {
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    color: #aaa;
+    margin-bottom: 2vh;
+}
+
+.component-desc {
+    font-size: clamp(0.95rem, 1.7vw, 1.15rem) !important;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.component-right h3 {
+    font-size: clamp(1.1rem, 2vw, 1.4rem) !important;
+    color: #fff;
+    margin-bottom: 1vh !important;
+}
+
+.not-list, .is-list {
+    list-style: none;
+    margin-bottom: 2vh !important;
+}
+
+.not-list li, .is-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1vw;
+    margin-bottom: 0.8vh !important;
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.not-list i {
+    color: #ff5252;
+    flex-shrink: 0;
+    margin-top: 0.3vh;
+}
+
+.is-list i {
+    color: #4CAF50;
+    flex-shrink: 0;
+    margin-top: 0.3vh;
+}
+
+.analogy-box {
+    text-align: center;
+    padding: 1.5vh 2.5vw !important;
+    background: rgba(33, 150, 243, 0.08);
+    border: 2px solid rgba(33, 150, 243, 0.3);
+    border-radius: 12px;
+    margin-top: 2vh !important;
+    font-size: clamp(0.95rem, 1.7vw, 1.15rem) !important;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 5 (BUDGET)
+   ============================================ */
+.budget-visual {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2vh !important;
+    margin: 2vh auto !important;
+    max-width: 100% !important;
+}
+
+.budget-bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.budget-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3vh;
+}
+
+.budget-category {
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+    color: #ccc;
+    font-weight: 600;
+}
+
+.budget-amount {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+.budget-bar {
+    width: 100%;
+    height: clamp(20px, 2.5vh, 28px) !important;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.budget-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #2E7D32);
+    border-radius: 8px;
+    transition: width 0.5s ease;
+}
+
+.budget-percent {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+    color: #888;
+    text-align: right;
+}
+
+.budget-footer {
+    text-align: center;
+    padding: 1.5vh 2vw !important;
+    background: rgba(76, 175, 80, 0.08);
+    border-radius: 12px;
+    margin-top: 2vh !important;
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+    color: #ccc;
+}
+
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 6 (ROADMAP)
+   ============================================ */
+.timeline-phases {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2vh 2.5vw !important;
+    margin: 2vh auto !important;
+    max-width: 100% !important;
+}
+
+.phase-card {
+    padding: 2vh 1.5vw !important;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(76, 175, 80, 0.25);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.phase-card:hover {
+    background: rgba(76, 175, 80, 0.05);
+    border-color: #4CAF50;
+    transform: translateY(-5px);
+}
+
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: 1vh !important;
+}
+
+.phase-number {
+    width: clamp(35px, 4vw, 45px);
+    height: clamp(35px, 4vw, 45px);
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.phase-title {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+    color: #fff;
+    font-weight: 700;
+}
+
+.phase-timeline {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #4CAF50;
+    margin-bottom: 0.5vh !important;
+}
+
+.phase-budget {
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem) !important;
+    color: #4CAF50;
+    font-weight: 800;
+    margin-bottom: 1vh !important;
+}
+
+.phase-milestones {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.phase-milestones li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8vw;
+    margin-bottom: 0.8vh !important;
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.phase-milestones i {
+    color: #4CAF50;
+    flex-shrink: 0;
+    margin-top: 0.2vh;
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+}
+
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 7 (VALIDATION)
+   ============================================ */
+.validation-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2vh 2.5vw !important;
+    margin: 2vh auto !important;
+    max-width: 100% !important;
+}
+
+.validation-card {
+    padding: 2vh 2vw !important;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(76, 175, 80, 0.25);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.validation-card.can {
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.validation-card:hover {
+    background: rgba(76, 175, 80, 0.05);
+    border-color: #4CAF50;
+    transform: translateY(-3px);
+}
+
+.validation-header {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: 1.5vh !important;
+}
+
+.validation-header i {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+    color: #4CAF50;
+    flex-shrink: 0;
+}
+
+.validation-header h3 {
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    color: #fff;
+    margin: 0 !important;
+}
+
+.validation-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.validation-card li {
+    margin-bottom: 1vh !important;
+    padding-left: 1.2em;
+    position: relative;
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.validation-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.validation-footer {
+    text-align: center;
+    padding: 1.5vh 2.5vw !important;
+    background: rgba(76, 175, 80, 0.08);
+    border-radius: 12px;
+    margin-top: 2vh !important;
+    font-size: clamp(0.95rem, 1.7vw, 1.15rem) !important;
+    color: #ccc;
+}
+
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 8 (IMPACT)
+   ============================================ */
+.impact-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh !important;
+    margin: 2vh auto !important;
+    max-width: 100% !important;
+}
+
+.impact-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2vw !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+}
+
+.impact-metric {
+    flex: 1 !important;
+    max-width: 250px !important;
+    padding: 2vh 1.5vw !important;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(76, 175, 80, 0.25);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+.impact-metric.financial {
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.impact-metric.social {
+    border-color: rgba(33, 150, 243, 0.3);
+}
+
+.impact-metric.environmental {
+    border-color: rgba(139, 195, 74, 0.3);
+}
+
+.impact-metric:hover {
+    transform: translateY(-5px);
+    border-color: #4CAF50;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.2);
+}
+
+.impact-icon {
+    font-size: clamp(1.8rem, 3vw, 2.5rem) !important;
+    color: #4CAF50;
+    margin-bottom: 0.5vh !important;
+}
+
+.impact-value {
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem) !important;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.impact-label {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.impact-statement {
+    text-align: center;
+    padding: 2vh 2.5vw !important;
+    background: rgba(76, 175, 80, 0.08);
+    border-radius: 12px;
+    margin-top: 2vh !important;
+}
+
+.impact-statement p {
+    font-size: clamp(0.95rem, 1.7vw, 1.15rem) !important;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 9 (WHY GAUTENG)
+   ============================================ */
+.why-gauteng {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh !important;
+    margin: 2vh 0 !important;
+}
+
+.why-section {
+    padding: 2vh 2vw;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+}
+
+.why-section h3 {
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem) !important;
+    color: #4CAF50;
+    margin-bottom: 1.5vh !important;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.why-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5vh 2vw !important;
+}
+
+.why-item {
+    padding: 1.5vh 1.5vw;
+    background: rgba(76, 175, 80, 0.03);
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.why-item:hover {
+    background: rgba(76, 175, 80, 0.08);
+    border-color: #4CAF50;
+    transform: translateX(5px);
+}
+
+.why-item strong {
+    display: block;
+    font-size: clamp(0.95rem, 1.7vw, 1.15rem) !important;
+    color: #4CAF50;
+    margin-bottom: 0.5vh !important;
+}
+
+.why-item p {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #ccc;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.urgency-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2vh !important;
+}
+
+.urgency-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1.5vw !important;
+    padding: 1.5vh 1.5vw;
+    background: rgba(255, 193, 7, 0.03);
+    border: 2px solid rgba(255, 193, 7, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.urgency-item:hover {
+    background: rgba(255, 193, 7, 0.08);
+    border-color: #FFC107;
+    transform: translateX(5px);
+}
+
+.urgency-item i {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+    color: #FFC107;
+    flex-shrink: 0;
+    margin-top: 0.3vh;
+}
+
+.urgency-item strong {
+    display: block;
+    font-size: clamp(0.95rem, 1.7vw, 1.15rem) !important;
+    color: #FFC107;
+    margin-bottom: 0.3vh !important;
+}
+
+.urgency-item p {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #ccc;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.value-prop {
+    text-align: center;
+    padding: 2vh 2.5vw !important;
+    background: rgba(76, 175, 80, 0.1);
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    margin-top: 2vh !important;
+    font-size: clamp(1rem, 1.8vw, 1.2rem) !important;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* ============================================
+   LANDSCAPE OPTIMIZATION - SLIDE 10 (THE ASK)
+   ============================================ */
+.ask-layout {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr !important;
+    gap: 3vw !important;
+    margin: 2vh 0 !important;
+    align-items: start !important;
+}
+
+.ask-main h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    color: #fff;
+    margin-bottom: 2vh !important;
+}
+
+.ask-amount-box {
+    text-align: center;
+    padding: 2vh 2vw;
+    background: rgba(76, 175, 80, 0.1);
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    margin-bottom: 2vh !important;
+}
+
+.ask-amount {
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 900;
+    color: #4CAF50;
+    line-height: 1;
+}
+
+.ask-duration {
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    color: #aaa;
+    margin-top: 0.5vh;
+}
+
+.ask-outcomes h3 {
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem) !important;
+    color: #fff;
+    margin-bottom: 1.5vh !important;
+}
+
+.outcome-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh !important;
+    margin-bottom: 2vh !important;
+}
+
+.outcome-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1vw;
+    padding: 1vh 1.5vw;
+    background: rgba(76, 175, 80, 0.03);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.outcome-item:hover {
+    background: rgba(76, 175, 80, 0.08);
+    transform: translateX(5px);
+}
+
+.outcome-item i {
+    color: #4CAF50;
+    flex-shrink: 0;
+    margin-top: 0.2vh;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.outcome-item span {
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.ask-sequencing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    margin: 2vh 0 !important;
+}
+
+.sequence-step {
+    text-align: center;
+    padding: 1.5vh 1.5vw;
+    background: rgba(76, 175, 80, 0.05);
+    border: 2px solid rgba(76, 175, 80, 0.25);
+    border-radius: 10px;
+    flex: 1;
+    max-width: 180px;
+}
+
+.sequence-label {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #4CAF50;
+    font-weight: 700;
+    margin-bottom: 0.5vh !important;
+}
+
+.sequence-action {
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.sequence-arrow {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+    color: #4CAF50;
+    flex-shrink: 0;
+}
+
+.ubuntu-quote-box {
+    padding: 2vh 2.5vw !important;
+    background: rgba(33, 150, 243, 0.08);
+    border: 2px solid rgba(33, 150, 243, 0.3);
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    margin-top: 2vh !important;
+}
+
+.ubuntu-quote-box i {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    color: rgba(33, 150, 243, 0.4);
+}
+
+.ubuntu-quote-box p {
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    color: #ccc;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 1vh 0;
+}
+
+.ask-sidebar {
+    padding: 2vh 1.5vw;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(76, 175, 80, 0.25);
+    border-radius: 12px;
+}
+
+.contact-info-compact h4 {
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    color: #4CAF50;
+    margin-bottom: 1vh !important;
+    margin-top: 1.5vh !important;
+}
+
+.contact-info-compact h4:first-child {
+    margin-top: 0 !important;
+}
+
+.contact-info-compact p {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #ccc;
+    margin-bottom: 0.5vh !important;
+    line-height: 1.5;
+}
+
+.contact-info-compact i {
+    color: #4CAF50;
+    margin-right: 0.5vw;
+}
+
+.ask-logo {
+    max-width: 120px;
+    width: 100%;
+    margin-bottom: 2vh;
+    filter: drop-shadow(0 5px 15px rgba(76, 175, 80, 0.3));
+}
+
+.partners-compact {
+    margin-top: 2vh !important;
+}
+
+.partner-badge {
+    padding: 0.8vh 1vw;
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 8px;
+    font-size: clamp(0.75rem, 1.3vw, 0.85rem) !important;
+    color: #4CAF50;
+    margin-bottom: 0.5vh;
+    text-align: center;
+}
+
+.final-cta {
+    text-align: center;
+    padding: 2vh 2.5vw !important;
+    background: rgba(76, 175, 80, 0.1);
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    margin-top: 2vh !important;
+    font-size: clamp(1.1rem, 2vw, 1.4rem) !important;
+    color: #ccc;
+}
+
+/* ============================================
+   TITLE SLIDE LANDSCAPE OPTIMIZATION
+   ============================================ */
+.title-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2vh 3vw !important;
+    max-width: 900px !important;
+    margin: 0 auto 3vh auto !important;
+}
+
+.title-box {
+    padding: 2vh 2vw !important;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(76, 175, 80, 0.25);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.title-box.primary {
+    border-color: #4CAF50;
+    background: rgba(76, 175, 80, 0.05);
+}
+
+.title-box.secondary {
+    border-color: rgba(33, 150, 243, 0.3);
+    background: rgba(33, 150, 243, 0.03);
+}
+
+.title-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.2);
+}
+
+.title-label {
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5vh;
+}
+
+.title-value {
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 900;
+    color: #4CAF50;
+    line-height: 1;
+    margin-bottom: 0.5vh;
+}
+
+.title-box.secondary .title-value {
+    color: #2196F3;
+}
+
+.title-desc {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+    color: #999;
+    line-height: 1.4;
+}
+
+.presenter-info {
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+    color: #888;
+    line-height: 1.6;
+}
+
+.presenter-info strong {
+    color: #4CAF50;
+}
+
+/* ============================================
+   GLOBAL LANDSCAPE SPACING REDUCTIONS
+   ============================================ */
+.slide {
+    padding: 2.5vh 3.5vw 10vh 3.5vw !important;
+}
+
+h2 {
+    margin-bottom: 1.5vh !important;
+    padding-bottom: 0.5vh !important;
+}
