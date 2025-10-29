@@ -248,27 +248,30 @@ h2 {
    ============================================ */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2vh 2vw;
-    margin-top: 3vh;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 22vw, 260px), 1fr));
+    gap: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
+    margin-top: clamp(2vh, 3vh, 4vh);
     max-height: 75vh;
+    width: 100%;
 }
 
 .stat-card {
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.04), rgba(76, 175, 80, 0.01));
     border: 2px solid rgba(76, 175, 80, 0.2);
     border-radius: 18px;
-    padding: 3vh 2vw;
+    padding: clamp(2.5vh, 3vh, 4vh) clamp(1.5vw, 2vw, 3vw);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 180px;
+    gap: clamp(1vh, 1.5vh, 2vh);
+    min-height: clamp(160px, 20vh, 220px);
+    height: auto;
 }
 
 .stat-card::before {
@@ -294,25 +297,32 @@ h2 {
 }
 
 .stat-card .icon {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     color: #4CAF50;
-    margin-bottom: 2vh;
+    flex-shrink: 0;
 }
 
 .stat-card .number {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 4.5vw, 4rem);
     font-weight: 900;
     color: #fff;
-    margin-bottom: 1vh;
+    white-space: nowrap;
+    overflow: visible;
+    flex-shrink: 0;
+    line-height: 1.1;
 }
 
 .stat-card .label {
-    font-size: clamp(0.75rem, 1.3vw, 0.95rem);
+    font-size: clamp(0.8rem, 1.4vw, 1.05rem);
     color: #999;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.5;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* ============================================
@@ -320,8 +330,8 @@ h2 {
    ============================================ */
 .platform-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2vh 2vw;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 30vw, 350px), 1fr));
+    gap: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
     margin-top: 3vh;
     max-height: 75vh;
 }
@@ -330,10 +340,16 @@ h2 {
     background: rgba(255, 255, 255, 0.02);
     border: 2px solid rgba(76, 175, 80, 0.2);
     border-radius: 18px;
-    padding: 2.5vh 2vw;
+    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
     transition: all 0.35s ease;
     cursor: pointer;
     position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1vh, 1.5vh, 2vh);
+    height: auto;
+    min-height: clamp(140px, 18vh, 180px);
 }
 
 .platform-card::before {
@@ -363,8 +379,8 @@ h2 {
 .platform-header {
     display: flex;
     align-items: center;
-    gap: 1.5vw;
-    margin-bottom: 1.5vh;
+    gap: clamp(1vw, 1.5vw, 2vw);
+    flex-shrink: 0;
 }
 
 .platform-icon {
@@ -381,21 +397,28 @@ h2 {
 
 .platform-card h4 {
     color: #fff;
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-weight: 700;
+    white-space: nowrap;
+    overflow: visible;
+    margin: 0;
 }
 
 .platform-card .revenue {
-    font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 800;
     color: #4CAF50;
-    margin-bottom: 1.5vh;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .platform-card .description {
     color: #999;
-    font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
     line-height: 1.6;
+    flex: 1;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 /* ============================================
@@ -3247,4 +3270,56 @@ h2 {
 
 .modal-stat.enhanced:hover {
     animation: pulse 1.5s infinite;
+}
+
+/* ============================================
+   COMPREHENSIVE RESPONSIVE CARD FIXES
+   ============================================ */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 28vw, 240px), 1fr));
+    }
+
+    .platform-grid {
+        grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 40vw, 320px), 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2vh 2vw;
+    }
+
+    .stat-card {
+        min-height: clamp(140px, 18vh, 180px);
+        padding: 2.5vh 2vw;
+    }
+
+    .stat-card .number {
+        font-size: clamp(1.8rem, 5vw, 3.5rem);
+    }
+
+    .stat-card .label {
+        font-size: clamp(0.75rem, 1.8vw, 1rem);
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-card {
+        min-height: clamp(120px, 16vh, 160px);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        min-height: auto;
+        padding: 3vh 4vw;
+    }
 }
