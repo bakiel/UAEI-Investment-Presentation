@@ -2242,13 +2242,13 @@ h2 {
 }
 
 .stat-large {
-    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw);
     background: rgba(255, 255, 255, 0.02);
     border: 2px solid rgba(76, 175, 80, 0.25);
-    border-radius: 15px;
+    border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
-    min-height: clamp(100px, 12vh, 130px);
+    min-height: clamp(90px, 11vh, 120px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2288,11 +2288,11 @@ h2 {
 /* Streams Grid Large (Slides 9-10) */
 .streams-grid-large {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2vh 2vw;
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
+    max-width: 100%;
     margin: 0 auto;
-    padding: 1vh 2vw;
+    padding: 0;
 }
 
 .stream-card-large {
@@ -2937,12 +2937,15 @@ h2 {
     }
 
     .package-simple,
-    .streams-grid-large,
     .funding-structure,
     .quarters-container,
     .impact-grid-large,
     .market-stats-large {
         grid-template-columns: 1fr;
+    }
+
+    .streams-grid-large {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .timeline-row-large {
