@@ -80,16 +80,6 @@ const modalContent = {
             { value: '100%', label: 'Adoption Rate' }
         ]
     },
-    bioinputs: {
-        title: 'Bio-Inputs Manufacturing',
-        content: 'Conservation Compost™ leveraging 373 hectares of wildlife habitat to produce premium organic fertilizer.',
-        stats: [
-            { value: '14.4%', label: 'Revenue Share' },
-            { value: 'R238M', label: 'Year 5 Revenue' },
-            { value: '22%', label: 'Price Premium' },
-            { value: '2,373ha', label: 'Conservation Land' }
-        ]
-    },
     training: {
         title: 'Conservation Training Platform',
         content: '11-language training program delivering conservation agriculture certification and continuous farmer education.',
@@ -98,26 +88,6 @@ const modalContent = {
             { value: 'R88M', label: 'Year 5 Revenue' },
             { value: '11', label: 'Languages' },
             { value: '25,000', label: 'Farmers Trained' }
-        ]
-    },
-    b2b: {
-        title: 'B2B Services Platform',
-        content: 'Data services, carbon credits, and corporate partnerships leveraging platform ecosystem.',
-        stats: [
-            { value: '5.3%', label: 'Revenue Share' },
-            { value: 'R88M', label: 'Year 5 Revenue' },
-            { value: '45,000T', label: 'CO₂ Sequestered' },
-            { value: '350', label: 'Data Variables' }
-        ]
-    },
-    finance: {
-        title: 'AgriFinance Platform',
-        content: 'Loan-as-gateway strategy embedding technology adoption in financial products, achieving 100% uptake.',
-        stats: [
-            { value: '7.3%', label: 'Revenue Share' },
-            { value: 'R121M', label: 'Year 5 Revenue' },
-            { value: '8-12%', label: 'Default Rate' },
-            { value: 'R250k', label: 'Average Loan' }
         ]
     },
     year1: {
@@ -169,8 +139,7 @@ const modalContent = {
             { value: '25,000', label: 'Farmers' },
             { value: 'R9.8B', label: 'Exit Valuation' }
         ]
-    }
-};
+    },
     // WhatsApp & Language Accessibility Modals
     whatsapp: {
         title: 'WhatsApp-Based Platform',
