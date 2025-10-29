@@ -102,17 +102,15 @@ function showModal(key) {
 function extractNumber(value) {
     if (typeof value !== 'string') return null;
 
-    // Extract numeric value from strings like "R1.6B", "25,000", "28.9%"
+    // Extract numeric value from strings like "R1.6B", "25,000", "28.9%", "8-12%"
+    // For ranges like "8-12%", extract just the first number
     const match = value.match(/[\d,.]+/);
     if (!match) return null;
 
     const num = parseFloat(match[0].replace(/,/g, ''));
 
-    // Handle billions (B) and millions (M)
-    if (value.includes('B')) return num * 1000;
-    if (value.includes('M')) return num;
-    if (value.includes('k')) return num / 1000;
-
+    // Return the raw number - suffix will be added back in the animation callback
+    // Don't multiply/divide here, just extract the numeric value as-is
     return num;
 }
 
@@ -120,8 +118,13 @@ function getProgressPercentage(value) {
     const num = extractNumber(value);
     if (num === null) return 0;
 
-    // Percentages
+    // Percentages - use as-is
     if (value.includes('%')) return Math.min(num, 100);
+
+    // For large values (billions/millions), scale to percentage
+    if (value.includes('B')) return Math.min((num / 10) * 100, 100);
+    if (value.includes('M')) return Math.min((num / 1000) * 100, 100);
+    if (value.includes('k')) return Math.min((num / 500) * 100, 100);
 
     // Scale other values to 0-100 range
     if (num < 1) return num * 100;
@@ -164,13 +167,23 @@ function animateModalElements() {
 
             if (!countUp.error) {
                 countUp.start(() => {
-                    // Add final formatting for B/M/k
+                    // Add final formatting for B/M/k/ha/tons and ranges
                     if (targetValue.includes('B')) {
-                        element.textContent = element.textContent.replace(/[\d,.]+/, match => match) + 'B';
+                        element.textContent = element.textContent + 'B';
                     } else if (targetValue.includes('M')) {
-                        element.textContent = element.textContent.replace(/[\d,.]+/, match => match) + 'M';
-                    } else if (targetValue.includes('k')) {
-                        element.textContent = element.textContent.replace(/[\d,.]+/, match => match) + 'k';
+                        element.textContent = element.textContent + 'M';
+                    } else if (targetValue.includes('k') && !targetValue.includes('k%')) {
+                        element.textContent = element.textContent + 'k';
+                    } else if (targetValue.includes(' ha')) {
+                        element.textContent = element.textContent + ' ha';
+                    } else if (targetValue.includes(' tons')) {
+                        element.textContent = element.textContent + ' tons';
+                    } else if (targetValue.match(/\d+-\d+%/)) {
+                        // Handle ranges like "8-12%"
+                        const range = targetValue.match(/(\d+)-(\d+)%/);
+                        if (range) {
+                            element.textContent = `${range[1]}-${range[2]}%`;
+                        }
                     }
                 });
             } else {
