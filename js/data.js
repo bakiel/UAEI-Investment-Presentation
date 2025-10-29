@@ -231,5 +231,66 @@ const modalContent = {
             { value: 'Carbon', label: 'Credit Sales' },
             { value: 'Partnerships', label: 'Strategic Deals' }
         ]
+    },
+    // Loan Package Components
+    cashCapital: {
+        title: 'R100,000 Cash Capital',
+        content: 'Working capital that gives farmers the liquidity they desperately need. Used for seeds, fertilizer, labor, and operational expenses during the growing season.',
+        stats: [
+            { value: 'R100k', label: 'Per Farmer' },
+            { value: '40%', label: 'Of Loan Package' },
+            { value: 'Immediate', label: 'Deployment' },
+            { value: '3-6 months', label: 'Harvest Cycle' }
+        ]
+    },
+    iotSensors: {
+        title: 'R30,000 IoT Sensors Package',
+        content: 'Real-time monitoring system providing soil moisture, temperature, pH levels, and weather data. Enables precision irrigation and prevents crop failure.',
+        stats: [
+            { value: 'R30k', label: 'Hardware + Installation' },
+            { value: '24/7', label: 'Real-time Monitoring' },
+            { value: '30%', label: 'Water Savings' },
+            { value: '25%', label: 'Yield Increase' }
+        ]
+    },
+    droneMonitoring: {
+        title: 'R40,000 Drone Monitoring',
+        content: 'Weekly aerial surveillance with multispectral imaging. Identifies pest infestations, nutrient deficiencies, and irrigation issues before they become catastrophic.',
+        stats: [
+            { value: 'R40k', label: 'Drone Service Credit' },
+            { value: 'Weekly', label: 'Flight Schedule' },
+            { value: 'Early', label: 'Disease Detection' },
+            { value: 'AI-Powered', label: 'Analytics' }
+        ]
+    },
+    organicInputs: {
+        title: 'R50,000 Organic Inputs',
+        content: 'Conservation Compost™ produced from 445-hectare wildlife sanctuary. Premium organic fertilizer with 22% price premium and superior soil health benefits.',
+        stats: [
+            { value: 'R50k', label: 'Input Credit' },
+            { value: '445ha', label: 'Wildlife Sanctuary' },
+            { value: '22%', label: 'Price Premium' },
+            { value: 'Certified', label: 'Conservation Product' }
+        ]
+    },
+    trainingProgram: {
+        title: 'R20,000 Training Program',
+        content: 'Comprehensive conservation agriculture certification delivered in 11 languages via WhatsApp. Combines traditional knowledge with modern techniques.',
+        stats: [
+            { value: 'R20k', label: 'Training Value' },
+            { value: '11', label: 'Languages' },
+            { value: 'WhatsApp', label: 'Delivery Platform' },
+            { value: 'Certified', label: 'Qualification' }
+        ]
+    },
+    marketplaceAccess: {
+        title: 'R10,000 Marketplace Access',
+        content: 'Direct connection to premium buyers with automatic loan repayment from sales. Eliminates middlemen and guarantees payment collection.',
+        stats: [
+            { value: 'R10k', label: 'Platform Setup' },
+            { value: 'Direct', label: 'Premium Buyers' },
+            { value: 'Auto', label: 'Loan Repayment' },
+            { value: '22%', label: 'Organic Premium' }
+        ]
     }
 };

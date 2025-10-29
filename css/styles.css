@@ -2116,57 +2116,70 @@ h2 {
 /* Package Simple Layout (Slides 4-5) */
 .package-simple {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2vh 2vw;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(240px, 28vw, 320px), 1fr));
+    gap: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
-    padding: 1vh 2vw;
+    padding: clamp(1vh, 2vh, 3vh) clamp(1vw, 2vw, 3vw);
 }
 
 .component-large {
-    padding: 2vh 2vw;
+    padding: clamp(2.5vh, 3vh, 4vh) clamp(2vw, 2.5vw, 3vw);
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.08), rgba(76, 175, 80, 0.02));
     border: 2px solid rgba(76, 175, 80, 0.3);
-    border-radius: 15px;
+    border-radius: clamp(15px, 1.5vw, 20px);
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: clamp(1vh, 1.5vh, 2vh);
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    min-height: clamp(180px, 22vh, 240px);
+    height: auto;
 }
 
 .component-large:hover {
-    transform: translateY(-5px);
+    transform: translateY(-12px) scale(1.03);
     border-color: #4CAF50;
-    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
-    background: linear-gradient(135deg, rgba(76, 175, 80, 0.12), rgba(76, 175, 80, 0.04));
+    box-shadow: 0 20px 50px rgba(76, 175, 80, 0.4);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(76, 175, 80, 0.05));
 }
 
 .component-icon {
-    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-size: clamp(2.5rem, 4.5vw, 3.5rem);
     color: #4CAF50;
-    margin-bottom: 1.5vh;
+    flex-shrink: 0;
 }
 
 .component-amount {
-    font-size: clamp(1.6rem, 3.2vw, 2.2rem);
-    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
     color: #fff;
-    margin-bottom: 1vh;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .component-label {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    font-weight: 600;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: 700;
     color: #4CAF50;
-    margin-bottom: 1vh;
+    white-space: nowrap;
+    overflow: visible;
 }
 
 .component-desc {
-    font-size: clamp(0.85rem, 1.6vw, 1rem);
-    color: #aaa;
-    line-height: 1.5;
+    font-size: clamp(0.9rem, 1.7vw, 1.1rem);
+    color: #bbb;
+    line-height: 1.6;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Opportunity Single Layout (Slides 6-7) */
@@ -3319,6 +3332,16 @@ h2 {
     }
 
     .stat-card {
+        min-height: auto;
+        padding: 3vh 4vw;
+    }
+
+    .package-simple {
+        grid-template-columns: 1fr;
+        gap: 2vh;
+    }
+
+    .component-large {
         min-height: auto;
         padding: 3vh 4vw;
     }
