@@ -52,11 +52,11 @@ function showModal(key) {
     // Create stats with animated counters and progress bars
     const statsHTML = data.stats.map((stat, index) => {
         const numericValue = extractNumber(stat.value);
-        const hasNumber = numericValue !== null;
+        const hasNumber = numericValue !== null && !isNaN(numericValue);
 
         return `
         <div class="modal-stat enhanced" style="animation-delay: ${index * 0.1}s">
-            <div class="modal-stat-value" data-value="${stat.value}" data-numeric="${numericValue}">
+            <div class="modal-stat-value" ${hasNumber ? `data-value="${stat.value}" data-numeric="${numericValue}"` : ''}>
                 ${hasNumber ? '0' : stat.value}
             </div>
             <div class="modal-stat-label">${stat.label}</div>

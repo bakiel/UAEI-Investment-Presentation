@@ -536,9 +536,10 @@ h2 {
 
 .modal-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 25vw, 240px), 1fr));
-    gap: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw);
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw);
     margin-top: clamp(2vh, 3vh, 4vh);
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -550,12 +551,18 @@ h2 {
 
 .modal-stat {
     background: rgba(76, 175, 80, 0.08);
-    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
+    padding: clamp(2.5vh, 3vh, 4vh) clamp(2vw, 2.5vw, 3vw);
     border-radius: clamp(12px, 1.5vw, 18px);
     border: 1px solid rgba(76, 175, 80, 0.25);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: clamp(100px, 12vh, 140px);
 }
 
 .modal-stat:hover {
@@ -564,16 +571,18 @@ h2 {
 }
 
 .modal-stat-value {
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
     color: #4CAF50;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh);
+    line-height: 1.1;
 }
 
 .modal-stat-label {
-    font-size: clamp(0.85rem, 1.6vw, 0.95rem);
-    color: #999;
-    margin-top: clamp(0.5vh, 0.8vh, 1vh);
-    line-height: 1.4;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+    color: #bbb;
+    line-height: 1.5;
+    font-weight: 600;
 }
 
 /* ============================================
