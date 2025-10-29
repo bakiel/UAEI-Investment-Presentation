@@ -2447,15 +2447,15 @@ h2 {
 .funding-structure {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 4vh 4vw;
+    gap: 2vh 3vw;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2vh 2vw;
+    padding: 1vh 2vw;
 }
 
 .funding-box-large {
-    padding: 4vh 3vw;
-    border-radius: 20px;
+    padding: 2vh 2.5vw;
+    border-radius: 16px;
     text-align: center;
     transition: all 0.4s ease;
     position: relative;
@@ -2478,8 +2478,8 @@ h2 {
 }
 
 .funding-icon {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    margin-bottom: 2vh;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 1vh;
 }
 
 .funding-box-large.idc .funding-icon {
@@ -2491,9 +2491,9 @@ h2 {
 }
 
 .funding-box-large .funding-header {
-    font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
     font-weight: 700;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 .funding-box-large.idc .funding-header {
@@ -2505,25 +2505,25 @@ h2 {
 }
 
 .funding-amount-large {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(2.2rem, 4.5vw, 3rem);
     font-weight: 900;
     color: #fff;
-    margin-bottom: 3vh;
+    margin-bottom: 1.5vh;
 }
 
 .funding-details-large {
     display: grid;
-    gap: 2vh;
+    gap: 1vh;
     text-align: left;
 }
 
 .funding-detail-item {
     display: flex;
     align-items: center;
-    gap: 1.5vw;
-    padding: 1.5vh 2vw;
+    gap: 1vw;
+    padding: 1vh 1.5vw;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: clamp(1rem, 1.9vw, 1.2rem);
     color: #ccc;
 }
