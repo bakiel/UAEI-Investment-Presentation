@@ -248,10 +248,14 @@ h2 {
    ============================================ */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2vh 2vw;
-    margin-top: 3vh;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
+    margin-top: clamp(2vh, 3vh, 4vh);
     max-height: 75vh;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .stat-card {
@@ -3254,7 +3258,8 @@ h2 {
    ============================================ */
 @media (max-width: 1024px) {
     .stats-grid {
-        grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 28vw, 240px), 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
     }
 
     .platform-grid {
