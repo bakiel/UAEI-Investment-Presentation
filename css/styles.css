@@ -2274,13 +2274,13 @@ h2 {
 }
 
 .stat-large {
-    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw);
+    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
     background: rgba(255, 255, 255, 0.02);
     border: 2px solid rgba(76, 175, 80, 0.25);
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
-    min-height: clamp(90px, 11vh, 120px);
+    min-height: clamp(110px, 13vh, 140px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2294,9 +2294,9 @@ h2 {
 }
 
 .stat-large-label {
-    font-size: clamp(0.75rem, 1.4vw, 0.9rem);
+    font-size: clamp(0.9rem, 1.7vw, 1.1rem);
     color: #aaa;
-    margin-bottom: clamp(0.5vh, 1vh, 1.5vh);
+    margin-bottom: clamp(0.8vh, 1.2vh, 1.6vh);
     font-weight: 500;
     line-height: 1.3;
     word-wrap: break-word;
@@ -2304,7 +2304,7 @@ h2 {
 }
 
 .stat-large-value {
-    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
     font-weight: 900;
     color: #fff;
     margin-bottom: 0;
@@ -2761,33 +2761,54 @@ h2 {
     font-weight: 900;
 }
 
-/* Contact Grid Final (Slide 25 Rebuilt) */
-.contact-grid-final {
+/* Final Landscape (Slide 25 - Counter 27/27) */
+.final-landscape {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(2vw, 3vw, 4vw);
-    margin: 2vh auto;
-    max-width: 1200px;
+    grid-template-columns: 2fr 1fr;
+    gap: clamp(3vw, 5vw, 6vw);
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 2vh 3vw;
 }
 
-.contact-card {
-    background: rgba(76, 175, 80, 0.05);
-    border: 2px solid rgba(76, 175, 80, 0.3);
-    border-radius: 12px;
-    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
-    text-align: center;
+.final-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
 }
 
-.contact-card p {
-    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.contact-item {
+    padding: 1.5vh 0;
+}
+
+.contact-item p {
     color: #ccc;
     margin: 0.5vh 0;
     line-height: 1.5;
 }
 
-.contact-card i {
+.contact-item i {
     color: #4CAF50;
-    margin-right: 0.5vw;
+    margin-right: 0.8vw;
+}
+
+.final-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh;
+}
+
+.final-logo img {
+    filter: drop-shadow(0 0 30px rgba(76, 175, 80, 0.3));
 }
 
 /* Impact Single & Grid Large (Slides 16-17) */
