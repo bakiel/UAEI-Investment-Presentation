@@ -263,10 +263,21 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-// Close modal on outside click
+// Close modal on outside click (only on backdrop, not modal content)
 document.getElementById('modal').addEventListener('click', function(e) {
-    if (e.target === this) {
+    // Only close if clicking directly on the modal backdrop, not on modal-content or its children
+    if (e.target.id === 'modal' && e.target === e.currentTarget) {
         closeModal();
+    }
+});
+
+// Prevent modal from closing when clicking inside modal-content
+document.addEventListener('DOMContentLoaded', function() {
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
     }
 });
 
