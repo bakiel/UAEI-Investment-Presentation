@@ -2765,46 +2765,45 @@ h2 {
 .final-landscape {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: clamp(3vw, 5vw, 6vw);
+    gap: clamp(2vw, 3vw, 4vw);
     align-items: center;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
-    height: 100%;
-    padding: 2vh 3vw;
+    padding: 1vh 3vw;
 }
 
 .final-content {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 1vh;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 1vh;
 }
 
 .contact-item {
-    padding: 1.5vh 0;
+    padding: 0.8vh 0;
 }
 
 .contact-item p {
     color: #ccc;
-    margin: 0.5vh 0;
-    line-height: 1.5;
+    margin: 0.3vh 0;
+    line-height: 1.4;
 }
 
 .contact-item i {
     color: #4CAF50;
-    margin-right: 0.8vw;
+    margin-right: 0.6vw;
 }
 
 .final-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3vh;
+    padding: 2vh;
 }
 
 .final-logo img {
