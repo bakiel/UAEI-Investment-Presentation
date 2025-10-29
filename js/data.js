@@ -292,5 +292,16 @@ const modalContent = {
             { value: 'Auto', label: 'Loan Repayment' },
             { value: '22%', label: 'Organic Premium' }
         ]
+    },
+    swarmIntelligence: {
+        title: 'Swarm Intelligence: Collective Equipment Sharing',
+        content: '300-farmer swarms share expensive equipment (drones, harvesters, IoT systems) reducing individual costs by 60× while doubling yields through coordinated precision agriculture.',
+        stats: [
+            { value: '2.25×', label: 'Profit per Hectare' },
+            { value: '60×', label: 'Equipment Cost Savings' },
+            { value: '300', label: 'Farmers per Swarm' },
+            { value: 'R1.8M', label: 'Shared Equipment Pool' }
+        ],
+        animation: true
     }
 };

@@ -49,6 +49,12 @@ function showModal(key) {
         activeChart = null;
     }
 
+    // Check if this modal has animation
+    if (data.animation) {
+        renderSwarmAnimation(data);
+        return;
+    }
+
     // Create stats with animated counters and progress bars
     const statsHTML = data.stats.map((stat, index) => {
         const numericValue = extractNumber(stat.value);
@@ -221,6 +227,123 @@ function renderModalChart(stats) {
             }
         }
     });
+}
+
+function renderSwarmAnimation(data) {
+    // Create stats HTML
+    const statsHTML = data.stats.map((stat, index) => `
+        <div class="modal-stat enhanced animated" style="animation-delay: ${index * 0.1}s">
+            <div class="modal-stat-value">${stat.value}</div>
+            <div class="modal-stat-label">${stat.label}</div>
+        </div>
+    `).join('');
+
+    // Render comparative animation HTML
+    document.getElementById('modal-body').innerHTML = `
+        <h3 class="fade-in">${data.title}</h3>
+        <p class="fade-in" style="animation-delay: 0.1s">${data.content}</p>
+
+        <div class="swarm-comparison">
+            <div class="swarm-column">
+                <h4><i class="fas fa-user"></i> Traditional Farming</h4>
+                <div class="swarm-animation-container" id="traditional-swarm">
+                    ${generateFarmers(8, 'isolated')}
+                </div>
+                <div class="swarm-label">
+                    <span class="negative">❌ Each farmer buys own equipment</span>
+                    <span class="negative">❌ R1.8M per farm = R14.4M total</span>
+                    <span class="negative">❌ Equipment underutilized</span>
+                </div>
+            </div>
+
+            <div class="swarm-column">
+                <h4><i class="fas fa-project-diagram"></i> Swarm Intelligence</h4>
+                <div class="swarm-animation-container" id="swarm-intelligence">
+                    ${generateFarmers(8, 'connected')}
+                    <div class="swarm-equipment">
+                        <i class="fas fa-helicopter equipment-icon drone"></i>
+                        <i class="fas fa-tractor equipment-icon harvester"></i>
+                        <i class="fas fa-satellite-dish equipment-icon iot"></i>
+                    </div>
+                </div>
+                <div class="swarm-label">
+                    <span class="positive">✓ 300 farmers share equipment</span>
+                    <span class="positive">✓ R1.8M ÷ 300 = R6k per farm</span>
+                    <span class="positive">✓ 60× cost reduction</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-stats">
+            ${statsHTML}
+        </div>
+    `;
+
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Start animations
+    setTimeout(() => {
+        animateSwarmIntelligence();
+    }, 300);
+}
+
+function generateFarmers(count, type) {
+    let html = '';
+    const positions = [
+        { top: '15%', left: '20%' },
+        { top: '15%', left: '50%' },
+        { top: '15%', left: '80%' },
+        { top: '45%', left: '35%' },
+        { top: '45%', left: '65%' },
+        { top: '75%', left: '20%' },
+        { top: '75%', left: '50%' },
+        { top: '75%', left: '80%' }
+    ];
+
+    for (let i = 0; i < count; i++) {
+        const pos = positions[i];
+        html += `<div class="farmer-node ${type}" style="top: ${pos.top}; left: ${pos.left};" data-index="${i}">
+            <i class="fas fa-tractor"></i>
+        </div>`;
+    }
+
+    return html;
+}
+
+function animateSwarmIntelligence() {
+    // Animate connections between swarm nodes
+    const swarmNodes = document.querySelectorAll('#swarm-intelligence .farmer-node');
+    const equipment = document.querySelectorAll('.equipment-icon');
+
+    // Add pulse animation to nodes
+    swarmNodes.forEach((node, i) => {
+        setTimeout(() => {
+            node.classList.add('active');
+        }, i * 100);
+    });
+
+    // Rotate equipment around the center
+    let angle = 0;
+    setInterval(() => {
+        angle += 0.5;
+        equipment.forEach((icon, i) => {
+            const offset = (i * 120); // 120 degrees apart
+            const rad = (angle + offset) * Math.PI / 180;
+            const centerX = 50; // center percentage
+            const centerY = 50;
+            const radius = 35; // orbit radius percentage
+
+            const x = centerX + radius * Math.cos(rad);
+            const y = centerY + radius * Math.sin(rad);
+
+            icon.style.left = x + '%';
+            icon.style.top = y + '%';
+        });
+    }, 30);
 }
 
 function closeModal() {

@@ -2040,10 +2040,12 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5vw;
+    gap: clamp(2vw, 5vw, 6vw);
     width: 100%;
     max-width: 1400px;
-    padding: 2vh 3vw;
+    max-height: 75vh;
+    padding: 2vh 3vw 10vh 3vw;
+    overflow-y: auto;
 }
 
 .final-left {
@@ -2097,7 +2099,7 @@ h2 {
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2vh 2vw;
+    gap: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw);
     margin-top: 2vh;
     text-align: left;
 }
@@ -2576,18 +2578,21 @@ h2 {
 .quarters-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2vh 2vw;
+    gap: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw);
     max-width: 1300px;
+    max-height: 70vh;
     margin: 0 auto;
-    padding: 1vh 2vw;
+    padding: 1vh 2vw 10vh 2vw;
+    overflow-y: auto;
 }
 
 .quarter-card {
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.08), rgba(76, 175, 80, 0.02));
     border: 2px solid rgba(76, 175, 80, 0.3);
     border-radius: 15px;
-    padding: 1.5vh 2vw;
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1vw, 1.5vw, 2vw);
     transition: all 0.4s ease;
+    min-height: auto;
 }
 
 .quarter-card:hover {
@@ -2782,6 +2787,10 @@ h2 {
     position: relative;
 }
 
+.moat-card-large[onclick] {
+    cursor: pointer;
+}
+
 .moat-card-large:hover {
     transform: translateY(-3px);
     border-color: #4CAF50;
@@ -2974,6 +2983,210 @@ h2 {
     .market-header {
         flex-direction: column;
         gap: 1vh;
+    }
+
+    .final-layout {
+        flex-direction: column;
+        max-height: 80vh;
+        padding-bottom: 12vh;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5vh 1.5vw;
+    }
+}
+
+/* ============================================
+   SWARM INTELLIGENCE ANIMATION
+   ============================================ */
+.swarm-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2vw, 3vw, 4vw);
+    margin: clamp(2vh, 3vh, 4vh) 0;
+}
+
+.swarm-column {
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    border-radius: 15px;
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw);
+}
+
+.swarm-column h4 {
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    color: #4CAF50;
+    margin-bottom: 1.5vh;
+    text-align: center;
+    font-weight: 700;
+}
+
+.swarm-column h4 i {
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+.swarm-animation-container {
+    position: relative;
+    width: 100%;
+    height: clamp(200px, 30vh, 300px);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5vh;
+}
+
+.farmer-node {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.1));
+    border: 2px solid rgba(76, 175, 80, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    font-size: 18px;
+    color: #4CAF50;
+}
+
+.farmer-node.isolated {
+    opacity: 0.6;
+}
+
+.farmer-node.isolated i {
+    color: #999;
+}
+
+.farmer-node.connected {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+}
+
+.farmer-node.connected.active {
+    animation: pulse 2s infinite;
+}
+
+.farmer-node.connected.active::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    border-radius: 50%;
+    animation: ripple 2s infinite;
+    pointer-events: none;
+}
+
+.swarm-equipment {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.equipment-icon {
+    position: absolute;
+    font-size: clamp(20px, 3vw, 28px);
+    color: #4CAF50;
+    filter: drop-shadow(0 0 10px rgba(76, 175, 80, 0.6));
+    animation: float 3s ease-in-out infinite;
+    transform: translate(-50%, -50%);
+}
+
+.equipment-icon.drone {
+    animation-delay: 0s;
+}
+
+.equipment-icon.harvester {
+    animation-delay: 1s;
+}
+
+.equipment-icon.iot {
+    animation-delay: 2s;
+}
+
+.swarm-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vh;
+}
+
+.swarm-label span {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+    padding: 0.8vh 1.5vw;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.swarm-label .positive {
+    background: rgba(76, 175, 80, 0.15);
+    color: #8BC34A;
+    border-left: 3px solid #4CAF50;
+}
+
+.swarm-label .negative {
+    background: rgba(244, 67, 54, 0.1);
+    color: #ff8a80;
+    border-left: 3px solid #f44336;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 30px rgba(76, 175, 80, 0.8);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 300%;
+        height: 300%;
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .swarm-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .swarm-animation-container {
+        height: clamp(180px, 25vh, 220px);
+    }
+
+    .farmer-node {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .equipment-icon {
+        font-size: clamp(16px, 2.5vw, 20px);
     }
 }
 
