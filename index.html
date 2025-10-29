@@ -124,47 +124,44 @@
 
         <!-- Slide 3.5: Cultural Accessibility Innovation -->
         <div class="slide">
-            <h2>Why Farmers Actually Adopt: Language + WhatsApp</h2>
-
-            <div class="accessibility-hero">
-                <h3><i class="fas fa-comments"></i> WhatsApp-Based Platform</h3>
-                <p>Farmers already use WhatsApp. We meet them where they are.</p>
-            </div>
-
-            <div class="accessibility-grid">
-                <div class="language-box">
-                    <h4><i class="fas fa-language"></i> 11 Indigenous Languages</h4>
-                    <div class="language-grid">
-                        <div>• isiZulu</div>
-                        <div>• Sesotho</div>
-                        <div>• isiXhosa</div>
-                        <div>• Setswana</div>
-                        <div>• Sepedi</div>
-                        <div>• siSwati</div>
-                        <div>• Xitsonga</div>
-                        <div>• Tshivenda</div>
-                        <div>• isiNdebele</div>
-                        <div>• English</div>
-                        <div>• Afrikaans</div>
-                        <div class="mandarin">+ Mandarin</div>
-                    </div>
+            <h2>Why Farmers Actually Adopt</h2>
+            <div class="stats-grid">
+                <div class="stat-card" onclick="showModal('whatsapp')">
+                    <div class="icon"><i class="fas fa-comments"></i></div>
+                    <div class="number">WhatsApp</div>
+                    <div class="label">No App Download</div>
+                    <div class="click-indicator"></div>
                 </div>
-
-                <div class="features-box">
-                    <h4><i class="fas fa-mobile-alt"></i> Zero Barriers</h4>
-                    <ul>
-                        <li><strong>No app download</strong> — Works on WhatsApp</li>
-                        <li><strong>Voice notes</strong> — Low literacy OK</li>
-                        <li><strong>Basic smartphones</strong> — No expensive devices</li>
-                        <li><strong>Offline capability</strong> — Syncs when connected</li>
-                        <li><strong>Group chat</strong> — Farmers help each other</li>
-                    </ul>
+                <div class="stat-card" onclick="showModal('languages')">
+                    <div class="icon"><i class="fas fa-language"></i></div>
+                    <div class="number">11</div>
+                    <div class="label">Indigenous Languages</div>
+                    <div class="click-indicator"></div>
                 </div>
-            </div>
-
-            <div class="moat-callout">
-                <strong><i class="fas fa-trophy"></i> Competitive Moat:</strong>
-                <span>Competitors need 18-24 months to build 11-language WhatsApp training system</span>
+                <div class="stat-card" onclick="showModal('voice')">
+                    <div class="icon"><i class="fas fa-microphone"></i></div>
+                    <div class="number">Voice</div>
+                    <div class="label">Low Literacy Support</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="stat-card" onclick="showModal('offline')">
+                    <div class="icon"><i class="fas fa-wifi"></i></div>
+                    <div class="number">Offline</div>
+                    <div class="label">Sync Capability</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="stat-card" onclick="showModal('stokvel')">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <div class="number">Stokvel</div>
+                    <div class="label">Group Integration</div>
+                    <div class="click-indicator"></div>
+                </div>
+                <div class="stat-card" onclick="showModal('moat')">
+                    <div class="icon"><i class="fas fa-trophy"></i></div>
+                    <div class="number">18-24mo</div>
+                    <div class="label">Competitor Barrier</div>
+                    <div class="click-indicator"></div>
+                </div>
             </div>
         </div>
 
@@ -363,52 +360,62 @@
 
         <!-- Slide 9.5: Revenue Stream Integration -->
         <div class="slide">
-            <h2>The Magic: Same Farmers = 6 Revenue Streams</h2>
-
-            <div class="revenue-hero">
-                <h3><i class="fas fa-users"></i> 25,000 Farmers</h3>
-                <p>Not 6 separate businesses — 1 integrated ecosystem</p>
-            </div>
-
-            <div class="revenue-streams-grid">
-                <div class="revenue-stream-button" onclick="showModal('finance')">
-                    <span class="emoji">💰</span>
-                    <h4>AgriFinance</h4>
-                    <p>R250k loan generates interest + creates entire ecosystem</p>
+            <h2>Same Farmers = 6 Revenue Streams</h2>
+            <div class="platform-grid">
+                <div class="platform-card" onclick="showModal('finance')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h4>AgriFinance</h4>
+                    </div>
+                    <div class="revenue">7.3%</div>
+                    <div class="description">R250k loan generates interest + creates entire ecosystem</div>
+                    <div class="click-indicator"></div>
                 </div>
-                <div class="revenue-stream-button" onclick="showModal('precision')">
-                    <span class="emoji">📡</span>
-                    <h4>Precision Ag</h4>
-                    <p>IoT + drones embedded in loan, recurring revenue</p>
+                <div class="platform-card" onclick="showModal('precision')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-satellite-dish"></i></div>
+                        <h4>Precision Ag</h4>
+                    </div>
+                    <div class="revenue">16.3%</div>
+                    <div class="description">IoT + drones embedded in loan, recurring revenue</div>
+                    <div class="click-indicator"></div>
                 </div>
-                <div class="revenue-stream-button" onclick="showModal('bioinputs')">
-                    <span class="emoji">🌱</span>
-                    <h4>Bio-Inputs</h4>
-                    <p>Conservation sanctuary produces organic fertilizer</p>
+                <div class="platform-card" onclick="showModal('bioinputs')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-leaf"></i></div>
+                        <h4>Bio-Inputs</h4>
+                    </div>
+                    <div class="revenue">14.4%</div>
+                    <div class="description">Conservation sanctuary produces organic fertilizer</div>
+                    <div class="click-indicator"></div>
                 </div>
-                <div class="revenue-stream-button" onclick="showModal('marketplace')">
-                    <span class="emoji">🏪</span>
-                    <h4>Marketplace</h4>
-                    <p>WhatsApp-based trading, commission + auto-repayment</p>
+                <div class="platform-card" onclick="showModal('marketplace')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-store"></i></div>
+                        <h4>Marketplace</h4>
+                    </div>
+                    <div class="revenue">51.4%</div>
+                    <div class="description">WhatsApp-based trading, commission + auto-repayment</div>
+                    <div class="click-indicator"></div>
                 </div>
-                <div class="revenue-stream-button" onclick="showModal('training')">
-                    <span class="emoji">🎓</span>
-                    <h4>Training</h4>
-                    <p>11-language WhatsApp courses, continuous education</p>
+                <div class="platform-card" onclick="showModal('training')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4>Training</h4>
+                    </div>
+                    <div class="revenue">5.3%</div>
+                    <div class="description">11-language WhatsApp courses, continuous education</div>
+                    <div class="click-indicator"></div>
                 </div>
-                <div class="revenue-stream-button" onclick="showModal('b2b')">
-                    <span class="emoji">🤝</span>
-                    <h4>B2B Services</h4>
-                    <p>Data licensing, carbon credits, partnerships</p>
+                <div class="platform-card" onclick="showModal('b2b')">
+                    <div class="platform-header">
+                        <div class="platform-icon"><i class="fas fa-handshake"></i></div>
+                        <h4>B2B Services</h4>
+                    </div>
+                    <div class="revenue">5.3%</div>
+                    <div class="description">Data licensing, carbon credits, partnerships</div>
+                    <div class="click-indicator"></div>
                 </div>
-            </div>
-
-            <div class="revenue-insight">
-                <strong><i class="fas fa-lightbulb"></i> Why This Is Genius:</strong>
-                <p>
-                    Traditional AgTech: 1 farmer = 1 subscription = R6k/year<br>
-                    <span class="highlight">UAEI: 1 farmer = 6 revenue streams = R66k/year average</span>
-                </p>
             </div>
         </div>
 

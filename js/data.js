@@ -171,3 +171,96 @@ const modalContent = {
         ]
     }
 };
+    // WhatsApp & Language Accessibility Modals
+    whatsapp: {
+        title: 'WhatsApp-Based Platform',
+        content: 'Farmers already use WhatsApp daily for communication. UAEI meets them where they are - no app download, no training barrier.',
+        stats: [
+            { value: '90%', label: 'SA Farmers Use WhatsApp' },
+            { value: 'Zero', label: 'Download Friction' },
+            { value: '100%', label: 'Smartphone Compatible' },
+            { value: 'Instant', label: 'Onboarding Time' }
+        ]
+    },
+    languages: {
+        title: '11 Indigenous Languages',
+        content: 'Full platform support for all 11 South African languages plus Mandarin: isiZulu, isiXhosa, Sepedi, Setswana, Sesotho, siSwati, Xitsonga, Tshivenda, isiNdebele, English, Afrikaans + Mandarin.',
+        stats: [
+            { value: '11', label: 'SA Official Languages' },
+            { value: '+Mandarin', label: 'Chinese Investment' },
+            { value: '100%', label: 'Coverage' },
+            { value: 'Voice + Text', label: 'Multi-modal' }
+        ]
+    },
+    voice: {
+        title: 'Voice Note Support',
+        content: 'Low literacy is not a barrier. Farmers can use voice notes in their native language for all platform interactions.',
+        stats: [
+            { value: '67%', label: 'SA Farmers Low Literacy' },
+            { value: 'Voice', label: 'Primary Interface' },
+            { value: 'Native', label: 'Language Support' },
+            { value: 'Zero', label: 'Reading Required' }
+        ]
+    },
+    offline: {
+        title: 'Offline Sync Capability',
+        content: 'Works in low-connectivity rural areas. Data syncs automatically when connection is available.',
+        stats: [
+            { value: 'Offline', label: 'Core Functions Work' },
+            { value: 'Auto', label: 'Sync When Online' },
+            { value: 'Rural', label: 'Optimized For' },
+            { value: '2G+', label: 'Network Compatible' }
+        ]
+    },
+    stokvel: {
+        title: 'Stokvel Integration',
+        content: 'Leverages traditional African savings groups (stokvels) for trust-building, peer support, and collective learning.',
+        stats: [
+            { value: '11M', label: 'SA Stokvel Members' },
+            { value: 'R50B', label: 'Annual Stokvel Value' },
+            { value: 'Trust', label: 'Built-in Social Capital' },
+            { value: 'Peer', label: 'Learning Model' }
+        ]
+    },
+    moat: {
+        title: '18-24 Month Competitive Barrier',
+        content: 'Building 11-language WhatsApp training system with cultural trust integration requires 18-24 months. Competitors cannot replicate quickly.',
+        stats: [
+            { value: '18-24mo', label: 'Build Timeline' },
+            { value: '11', label: 'Languages to Translate' },
+            { value: 'Cultural', label: 'Trust Relationships' },
+            { value: 'First Mover', label: 'UAEI Advantage' }
+        ]
+    },
+    // Revenue Stream Integration Modals
+    finance: {
+        title: 'AgriFinance: 7.3% of Revenue',
+        content: 'R250k loans generate interest income while creating the entire ecosystem. The loan is the gateway that enables all other revenue streams.',
+        stats: [
+            { value: 'R121M', label: 'Year 5 Revenue' },
+            { value: 'R250k', label: 'Average Loan Size' },
+            { value: '8-12%', label: 'Default Rate' },
+            { value: '100%', label: 'Tech Adoption Created' }
+        ]
+    },
+    bioinputs: {
+        title: 'Bio-Inputs: 14.4% of Revenue',
+        content: 'Conservation sanctuary (445ha) produces organic fertilizer from wildlife. 22% premium pricing from conservation certification.',
+        stats: [
+            { value: 'R238M', label: 'Year 5 Revenue' },
+            { value: '445ha', label: 'Wildlife Sanctuary' },
+            { value: '22%', label: 'Premium Pricing' },
+            { value: '570+ tons', label: 'Annual Manure Gift' }
+        ]
+    },
+    b2b: {
+        title: 'B2B Services: 5.3% of Revenue',
+        content: 'Agricultural data licensing, carbon credits, and strategic partnerships leveraging ecosystem intelligence.',
+        stats: [
+            { value: 'R88M', label: 'Year 5 Revenue' },
+            { value: 'Data', label: 'Licensing' },
+            { value: 'Carbon', label: 'Credit Sales' },
+            { value: 'Partnerships', label: 'Strategic Deals' }
+        ]
+    }
+};
