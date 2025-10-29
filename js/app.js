@@ -263,21 +263,16 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-// Close modal on outside click (only on backdrop, not modal content)
-document.getElementById('modal').addEventListener('click', function(e) {
-    // Only close if clicking directly on the modal backdrop, not on modal-content or its children
-    if (e.target.id === 'modal' && e.target === e.currentTarget) {
-        closeModal();
-    }
-});
+// Close modal on backdrop click only
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modal-content');
 
-// Prevent modal from closing when clicking inside modal-content
-document.addEventListener('DOMContentLoaded', function() {
-    const modalContent = document.querySelector('.modal-content');
-    if (modalContent) {
-        modalContent.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
+    // Only close if clicking on the modal backdrop (not on modal-content or its descendants)
+    if (modal.classList.contains('show') &&
+        !modalContent.contains(e.target) &&
+        e.target === modal) {
+        closeModal();
     }
 });
 
