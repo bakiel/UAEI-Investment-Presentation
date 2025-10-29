@@ -153,11 +153,11 @@ const modalContent = {
     },
     languages: {
         title: '11 Indigenous Languages',
-        content: 'Full platform support for all 11 South African languages plus Mandarin: isiZulu, isiXhosa, Sepedi, Setswana, Sesotho, siSwati, Xitsonga, Tshivenda, isiNdebele, English, Afrikaans + Mandarin.',
+        content: 'Full platform support for all 11 South African official languages: isiZulu, isiXhosa, Sepedi, Setswana, Sesotho, siSwati, Xitsonga, Tshivenda, isiNdebele, English, and Afrikaans. Expandable to other African languages as we grow across the continent.',
         stats: [
             { value: '11', label: 'SA Official Languages' },
-            { value: '+Mandarin', label: 'Chinese Investment' },
-            { value: '100%', label: 'Coverage' },
+            { value: 'Expandable', label: 'African Languages' },
+            { value: '100%', label: 'SA Coverage' },
             { value: 'Voice + Text', label: 'Multi-modal' }
         ]
     },
