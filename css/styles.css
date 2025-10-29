@@ -225,30 +225,31 @@ h2 {
     padding-bottom: 1vh;
 }
 
-/* Compact slides - ONLY for slides 15, 23, and 25 */
+/* Compact slides - ONLY for slides 15, 23, and 25 - Landscape optimized */
 .compact-slide,
 .final-slide {
-    padding: 2vh 2vw 6vh 2vw !important;
+    padding: 1.5vh 3vw 8vh 3vw !important;
 }
 
 .compact-slide h2,
 .final-slide h2:not(.final-slide h1) {
-    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
-    margin-bottom: 1vh;
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    margin-bottom: 1.2vh;
 }
 
 .compact-slide .mandate-final,
 .compact-slide .ask-amount-box {
-    margin-top: 1vh;
-    padding: 1vh 2vw;
+    margin-top: 0;
+    margin-bottom: 1.5vh;
+    padding: 1.5vh 2vw;
 }
 
 .compact-slide .ask-grid {
-    gap: 1vw;
+    gap: 1.5vw;
 }
 
 .compact-slide .ask-section {
-    padding: 1.5vh 1.5vw;
+    padding: 1.8vh 1.8vw;
 }
 
 /* Scrollbar styling for slides */
@@ -1860,29 +1861,29 @@ h2 {
 
 .ask-amount-box {
     text-align: center;
-    padding: 3vh 3vw;
+    padding: 2vh 3vw;
     background: rgba(76, 175, 80, 0.1);
     border: 3px solid #4CAF50;
-    border-radius: 20px;
-    margin-bottom: 3vh;
+    border-radius: 16px;
+    margin-bottom: 2vh;
 }
 
 .ask-amount {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
     color: #4CAF50;
     line-height: 1;
-    margin-bottom: 1vh;
+    margin-bottom: 0.8vh;
 }
 
 .ask-structure {
-    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.35rem);
     color: #ccc;
-    margin-bottom: 0.5vh;
+    margin-bottom: 0.4vh;
 }
 
 .ask-dilution {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
     color: #999;
     font-weight: 600;
 }
@@ -1890,7 +1891,7 @@ h2 {
 .ask-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3vw;
+    gap: 2vw;
 }
 
 @media (max-width: 768px) {
@@ -1900,8 +1901,8 @@ h2 {
 }
 
 .ask-section {
-    padding: 3vh 2vw;
-    border-radius: 18px;
+    padding: 2.5vh 2vw;
+    border-radius: 14px;
 }
 
 .ask-section.returns {
@@ -1915,8 +1916,8 @@ h2 {
 }
 
 .ask-section h3 {
-    font-size: clamp(1.4rem, 2.8vw, 1.9rem);
-    margin-bottom: 2.5vh;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    margin-bottom: 1.8vh;
 }
 
 .ask-section.returns h3 {
@@ -1930,7 +1931,7 @@ h2 {
 .ask-items {
     display: flex;
     flex-direction: column;
-    gap: 1.8vh;
+    gap: 1.3vh;
 }
 
 .ask-item {
@@ -2607,7 +2608,7 @@ h2 {
 .quarters-container {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.8vh, 1.2vh, 1.5vh);
+    gap: clamp(0.6vh, 0.9vh, 1.2vh);
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
@@ -2617,11 +2618,11 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: clamp(1vw, 1.5vw, 2vw);
+    gap: clamp(0.8vw, 1.2vw, 1.5vw);
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.08), rgba(76, 175, 80, 0.02));
     border: 2px solid rgba(76, 175, 80, 0.3);
-    border-radius: 10px;
-    padding: clamp(0.8vh, 1.2vh, 1.5vh) clamp(1vw, 1.5vw, 2vw);
+    border-radius: 8px;
+    padding: clamp(0.6vh, 0.9vh, 1.2vh) clamp(1vw, 1.3vw, 1.6vw);
     transition: all 0.3s ease;
 }
 
@@ -2663,21 +2664,21 @@ h2 {
 .quarter-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(0.4vh, 0.6vh, 0.8vh) clamp(0.8vw, 1.2vw, 1.5vw);
+    gap: clamp(0.3vh, 0.5vh, 0.7vh) clamp(0.6vw, 0.9vw, 1.2vw);
     flex: 1;
 }
 
 .quarter-item {
     display: flex;
     align-items: center;
-    gap: 0.6vw;
-    padding: clamp(0.4vh, 0.6vh, 0.8vh) clamp(0.6vw, 0.8vw, 1vw);
+    gap: 0.5vw;
+    padding: clamp(0.3vh, 0.5vh, 0.7vh) clamp(0.5vw, 0.7vw, 0.9vw);
     background: rgba(255, 255, 255, 0.02);
-    border-radius: 6px;
-    font-size: clamp(0.65rem, 1.2vw, 0.8rem);
+    border-radius: 5px;
+    font-size: clamp(0.7rem, 1.25vw, 0.85rem);
     color: #ddd;
     transition: all 0.3s ease;
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 .quarter-item:hover {
