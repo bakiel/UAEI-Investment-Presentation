@@ -2692,6 +2692,104 @@ h2 {
     flex-shrink: 0;
 }
 
+/* Quarters Grid (Slide 15 Rebuilt) */
+.quarters-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.5vw, 2vw, 2.5vw);
+    margin: 2vh auto;
+    max-width: 1400px;
+}
+
+.quarter-box {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.08), rgba(76, 175, 80, 0.02));
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    border-radius: 12px;
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.quarter-box:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+    transform: translateY(-3px);
+}
+
+.quarter-badge-large {
+    width: clamp(50px, 6vw, 65px);
+    height: clamp(50px, 6vw, 65px);
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: 900;
+    color: #fff;
+    margin: 0 auto 1.5vh;
+}
+
+.quarter-box h3 {
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    color: #4CAF50;
+    margin-bottom: 1.5vh;
+    font-weight: 700;
+}
+
+.quarter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.quarter-list li {
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    color: #ddd;
+    padding: 0.6vh 0;
+    padding-left: 1.5vw;
+    position: relative;
+    line-height: 1.4;
+}
+
+.quarter-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: 900;
+}
+
+/* Contact Grid Final (Slide 25 Rebuilt) */
+.contact-grid-final {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(2vw, 3vw, 4vw);
+    margin: 2vh auto;
+    max-width: 1200px;
+}
+
+.contact-card {
+    background: rgba(76, 175, 80, 0.05);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    border-radius: 12px;
+    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
+    text-align: center;
+}
+
+.contact-card p {
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+    color: #ccc;
+    margin: 0.5vh 0;
+    line-height: 1.5;
+}
+
+.contact-card i {
+    color: #4CAF50;
+    margin-right: 0.5vw;
+}
+
 /* Impact Single & Grid Large (Slides 16-17) */
 .impact-single {
     max-width: 1300px;
