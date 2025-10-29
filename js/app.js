@@ -56,8 +56,8 @@ function showModal(key) {
 
         return `
         <div class="modal-stat enhanced animated" style="animation-delay: ${index * 0.1}s">
-            <div class="modal-stat-value" ${hasNumber ? `data-value="${stat.value}" data-numeric="${numericValue}"` : ''}>
-                ${hasNumber ? '0' : stat.value}
+            <div class="modal-stat-value">
+                ${stat.value}
             </div>
             <div class="modal-stat-label">${stat.label}</div>
             ${hasNumber ? `<div class="progress-bar"><div class="progress-fill" data-progress="${getProgressPercentage(stat.value)}"></div></div>` : ''}
@@ -141,63 +141,12 @@ function hasChartableData(stats) {
 }
 
 function animateModalElements() {
-    // Animate numbers with CountUp.js
-    document.querySelectorAll('.modal-stat-value[data-numeric]').forEach(element => {
-        const targetValue = element.getAttribute('data-value');
-        const numericValue = parseFloat(element.getAttribute('data-numeric'));
-
-        if (numericValue !== null && !isNaN(numericValue)) {
-            // Determine decimal places
-            const decimals = targetValue.includes('.') ? (targetValue.split('.')[1].match(/\d+/) || [''])[0].length : 0;
-
-            const countUp = new countUp.CountUp(element, numericValue, {
-                duration: 2.5,
-                decimal: '.',
-                suffix: targetValue.includes('%') ? '%' : '',
-                prefix: targetValue.includes('R') ? 'R' : '',
-                separator: ',',
-                decimals: Math.min(decimals, 2),
-                useEasing: true,
-                useGrouping: true,
-                easingFn: function (t, b, c, d) {
-                    // Custom easing: easeOutQuart
-                    return -c * ((t = t / d - 1) * t * t * t - 1) + b;
-                }
-            });
-
-            if (!countUp.error) {
-                countUp.start(() => {
-                    // Add final formatting for B/M/k/ha/tons and ranges
-                    if (targetValue.includes('B')) {
-                        element.textContent = element.textContent + 'B';
-                    } else if (targetValue.includes('M')) {
-                        element.textContent = element.textContent + 'M';
-                    } else if (targetValue.includes('k') && !targetValue.includes('k%')) {
-                        element.textContent = element.textContent + 'k';
-                    } else if (targetValue.includes(' ha')) {
-                        element.textContent = element.textContent + ' ha';
-                    } else if (targetValue.includes(' tons')) {
-                        element.textContent = element.textContent + ' tons';
-                    } else if (targetValue.match(/\d+-\d+%/)) {
-                        // Handle ranges like "8-12%"
-                        const range = targetValue.match(/(\d+)-(\d+)%/);
-                        if (range) {
-                            element.textContent = `${range[1]}-${range[2]}%`;
-                        }
-                    }
-                });
-            } else {
-                element.textContent = targetValue;
-            }
-        }
-    });
-
-    // Animate progress bars with staggered timing
+    // Simply animate progress bars - values are already displayed
     document.querySelectorAll('.progress-fill').forEach((bar, index) => {
         const progress = bar.getAttribute('data-progress');
         setTimeout(() => {
             bar.style.width = progress + '%';
-        }, 500 + (index * 100)); // Stagger by 100ms per bar
+        }, 300 + (index * 100)); // Stagger by 100ms per bar
     });
 }
 
