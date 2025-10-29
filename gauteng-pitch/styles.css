@@ -334,10 +334,10 @@ h2 {
    ============================================ */
 .platform-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2vh 2vw;
-    margin-top: 3vh;
-    max-height: 75vh;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw);
+    margin-top: clamp(2vh, 3vh, 4vh);
+    max-height: 65vh;
 }
 
 .platform-card {
@@ -1187,17 +1187,18 @@ h2 {
     color: #4CAF50;
 }
 
-.mandate-box, .derisked-box, .bee-box, .moats-footer, 
+.mandate-box, .derisked-box, .bee-box, .moats-footer,
 .firstmover-box, .risk-footer, .mandate-final, .return-box {
-    margin-top: 3vh;
-    padding: 2vh 3vw;
+    margin-top: clamp(2vh, 2.5vh, 3vh);
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(2vw, 3vw, 4vw);
     background: rgba(76, 175, 80, 0.1);
     border: 2px solid #4CAF50;
     border-radius: 15px;
     text-align: center;
-    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    font-size: clamp(0.95rem, 1.8vw, 1.2rem);
     font-weight: 700;
     color: #4CAF50;
+    line-height: 1.4;
 }
 
 .chart-note {
@@ -2206,8 +2207,8 @@ h2 {
 
 .stats-large {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 20vw, 220px), 1fr));
-    gap: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw);
     max-width: 100%;
 }
 
