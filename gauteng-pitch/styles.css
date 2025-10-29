@@ -3286,8 +3286,12 @@ h2 {
         gap: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
     }
 
+    .stats-large {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .platform-grid {
-        grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 40vw, 320px), 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
