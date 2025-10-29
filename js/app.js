@@ -32,8 +32,10 @@ function previousSlide() {
 }
 
 // ============================================
-// MODAL FUNCTIONS
+// ENHANCED MODAL FUNCTIONS WITH ANIMATIONS
 // ============================================
+let activeChart = null;
+
 function showModal(key) {
     const data = modalContent[key];
     if (!data) {
@@ -41,16 +43,39 @@ function showModal(key) {
         return;
     }
 
-    const statsHTML = data.stats.map(stat => `
-        <div class="modal-stat">
-            <div class="modal-stat-value">${stat.value}</div>
+    // Destroy existing chart if any
+    if (activeChart) {
+        activeChart.destroy();
+        activeChart = null;
+    }
+
+    // Create stats with animated counters and progress bars
+    const statsHTML = data.stats.map((stat, index) => {
+        const numericValue = extractNumber(stat.value);
+        const hasNumber = numericValue !== null;
+
+        return `
+        <div class="modal-stat enhanced" style="animation-delay: ${index * 0.1}s">
+            <div class="modal-stat-value" data-value="${stat.value}" data-numeric="${numericValue}">
+                ${hasNumber ? '0' : stat.value}
+            </div>
             <div class="modal-stat-label">${stat.label}</div>
+            ${hasNumber ? `<div class="progress-bar"><div class="progress-fill" data-progress="${getProgressPercentage(stat.value)}"></div></div>` : ''}
         </div>
-    `).join('');
+    `}).join('');
+
+    // Check if we should render a chart
+    const shouldRenderChart = hasChartableData(data.stats);
+    const chartHTML = shouldRenderChart ? `
+        <div class="modal-chart-container">
+            <canvas id="modal-chart"></canvas>
+        </div>
+    ` : '';
 
     document.getElementById('modal-body').innerHTML = `
-        <h3>${data.title}</h3>
-        <p>${data.content}</p>
+        <h3 class="fade-in">${data.title}</h3>
+        <p class="fade-in" style="animation-delay: 0.1s">${data.content}</p>
+        ${chartHTML}
         <div class="modal-stats">
             ${statsHTML}
         </div>
@@ -58,6 +83,169 @@ function showModal(key) {
 
     document.getElementById('modal').classList.add('show');
     document.body.style.overflow = 'hidden';
+
+    // Animate numbers and progress bars
+    setTimeout(() => {
+        animateModalElements();
+        if (shouldRenderChart) {
+            renderModalChart(data.stats);
+        }
+    }, 100);
+}
+
+function extractNumber(value) {
+    if (typeof value !== 'string') return null;
+
+    // Extract numeric value from strings like "R1.6B", "25,000", "28.9%"
+    const match = value.match(/[\d,.]+/);
+    if (!match) return null;
+
+    const num = parseFloat(match[0].replace(/,/g, ''));
+
+    // Handle billions (B) and millions (M)
+    if (value.includes('B')) return num * 1000;
+    if (value.includes('M')) return num;
+    if (value.includes('k')) return num / 1000;
+
+    return num;
+}
+
+function getProgressPercentage(value) {
+    const num = extractNumber(value);
+    if (num === null) return 0;
+
+    // Percentages
+    if (value.includes('%')) return Math.min(num, 100);
+
+    // Scale other values to 0-100 range
+    if (num < 1) return num * 100;
+    if (num < 100) return num;
+    if (num < 1000) return Math.min((num / 1000) * 100, 100);
+
+    return Math.min((num / 2000) * 100, 100);
+}
+
+function hasChartableData(stats) {
+    // Check if at least 3 stats have numeric values for a meaningful chart
+    const numericStats = stats.filter(stat => extractNumber(stat.value) !== null);
+    return numericStats.length >= 3;
+}
+
+function animateModalElements() {
+    // Animate numbers with CountUp.js
+    document.querySelectorAll('.modal-stat-value[data-numeric]').forEach(element => {
+        const targetValue = element.getAttribute('data-value');
+        const numericValue = parseFloat(element.getAttribute('data-numeric'));
+
+        if (numericValue !== null && !isNaN(numericValue)) {
+            // Determine decimal places
+            const decimals = targetValue.includes('.') ? (targetValue.split('.')[1].match(/\d+/) || [''])[0].length : 0;
+
+            const countUp = new countUp.CountUp(element, numericValue, {
+                duration: 2,
+                decimal: '.',
+                suffix: targetValue.includes('%') ? '%' : '',
+                prefix: targetValue.includes('R') ? 'R' : '',
+                separator: ',',
+                decimals: Math.min(decimals, 2)
+            });
+
+            if (!countUp.error) {
+                countUp.start(() => {
+                    // Add final formatting for B/M/k
+                    if (targetValue.includes('B')) {
+                        element.textContent = element.textContent.replace(/[\d,.]+/, match => match) + 'B';
+                    } else if (targetValue.includes('M')) {
+                        element.textContent = element.textContent.replace(/[\d,.]+/, match => match) + 'M';
+                    } else if (targetValue.includes('k')) {
+                        element.textContent = element.textContent.replace(/[\d,.]+/, match => match) + 'k';
+                    }
+                });
+            } else {
+                element.textContent = targetValue;
+            }
+        }
+    });
+
+    // Animate progress bars
+    document.querySelectorAll('.progress-fill').forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        setTimeout(() => {
+            bar.style.width = progress + '%';
+        }, 300);
+    });
+}
+
+function renderModalChart(stats) {
+    const canvas = document.getElementById('modal-chart');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    const labels = stats.map(s => s.label);
+    const dataValues = stats.map(s => extractNumber(s.value) || 0);
+
+    activeChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: dataValues,
+                backgroundColor: [
+                    'rgba(76, 175, 80, 0.8)',
+                    'rgba(139, 195, 74, 0.8)',
+                    'rgba(255, 193, 7, 0.8)',
+                    'rgba(33, 150, 243, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(76, 175, 80, 1)',
+                    'rgba(139, 195, 74, 1)',
+                    'rgba(255, 193, 7, 1)',
+                    'rgba(33, 150, 243, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: '#ffffff',
+                        font: {
+                            family: 'Poppins',
+                            size: 12
+                        },
+                        padding: 15
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleColor: '#4CAF50',
+                    bodyColor: '#ffffff',
+                    titleFont: {
+                        family: 'Poppins',
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    bodyFont: {
+                        family: 'Poppins',
+                        size: 12
+                    },
+                    padding: 12,
+                    cornerRadius: 8
+                }
+            },
+            animation: {
+                animateRotate: true,
+                animateScale: true,
+                duration: 2000,
+                easing: 'easeInOutQuart'
+            }
+        }
+    });
 }
 
 function closeModal() {
