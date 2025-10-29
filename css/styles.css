@@ -2267,24 +2267,27 @@ h2 {
 }
 
 .stats-large {
-    display: flex;
-    gap: clamp(1.5vw, 2vw, 2.5vw);
-    max-width: 100%;
-    align-items: stretch;
+    display: flex !important;
+    gap: clamp(1.5vw, 2vw, 2.5vw) !important;
+    max-width: 100% !important;
+    align-items: stretch !important;
+    grid-template-columns: none !important;
 }
 
 .stat-large {
-    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw);
-    background: rgba(255, 255, 255, 0.02);
-    border: 2px solid rgba(76, 175, 80, 0.25);
-    border-radius: 12px;
-    text-align: center;
-    transition: all 0.3s ease;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 2px solid rgba(76, 175, 80, 0.25) !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 0 !important;
+    height: auto !important;
 }
 
 .stat-large:hover {
