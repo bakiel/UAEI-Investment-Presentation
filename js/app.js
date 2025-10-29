@@ -55,7 +55,7 @@ function showModal(key) {
         const hasNumber = numericValue !== null && !isNaN(numericValue);
 
         return `
-        <div class="modal-stat enhanced" style="animation-delay: ${index * 0.1}s">
+        <div class="modal-stat enhanced animated" style="animation-delay: ${index * 0.1}s">
             <div class="modal-stat-value" ${hasNumber ? `data-value="${stat.value}" data-numeric="${numericValue}"` : ''}>
                 ${hasNumber ? '0' : stat.value}
             </div>
@@ -81,8 +81,11 @@ function showModal(key) {
         </div>
     `;
 
-    document.getElementById('modal').classList.add('show');
-    document.body.style.overflow = 'hidden';
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
 
     // Animate numbers and progress bars with staggered timing
     setTimeout(() => {
@@ -259,22 +262,25 @@ function renderModalChart(stats) {
 }
 
 function closeModal() {
-    document.getElementById('modal').classList.remove('show');
-    document.body.style.overflow = '';
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
 }
 
-// Close modal on backdrop click only
-document.addEventListener('click', function(e) {
+// Close modal ONLY on backdrop click (simple approach)
+setTimeout(function() {
     const modal = document.getElementById('modal');
-    const modalContent = document.getElementById('modal-content');
-
-    // Only close if clicking on the modal backdrop (not on modal-content or its descendants)
-    if (modal.classList.contains('show') &&
-        !modalContent.contains(e.target) &&
-        e.target === modal) {
-        closeModal();
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            // Only close if the click is directly on the modal backdrop
+            if (e.target.id === 'modal') {
+                closeModal();
+            }
+        });
     }
-});
+}, 100);
 
 // ============================================
 // FULLSCREEN FUNCTIONALITY

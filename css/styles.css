@@ -3214,11 +3214,17 @@ h2 {
 .fade-in {
     animation: fadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     opacity: 0;
+    animation-fill-mode: forwards !important;
 }
 
 .modal-stat.enhanced {
     animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     opacity: 0;
+    animation-fill-mode: forwards !important;
+}
+
+.modal-stat.enhanced.animated {
+    opacity: 1;
 }
 
 /* Progress Bar Styles */
@@ -3306,6 +3312,7 @@ h2 {
 
 .modal-stat.enhanced:hover {
     animation: pulse 1.5s infinite;
+    opacity: 1 !important;
 }
 
 /* ============================================
