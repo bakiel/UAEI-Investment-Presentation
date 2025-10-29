@@ -84,13 +84,16 @@ function showModal(key) {
     document.getElementById('modal').classList.add('show');
     document.body.style.overflow = 'hidden';
 
-    // Animate numbers and progress bars
+    // Animate numbers and progress bars with staggered timing
     setTimeout(() => {
-        animateModalElements();
         if (shouldRenderChart) {
             renderModalChart(data.stats);
         }
-    }, 100);
+        // Delay number animations slightly after chart starts
+        setTimeout(() => {
+            animateModalElements();
+        }, 300);
+    }, 150);
 }
 
 function extractNumber(value) {
@@ -142,12 +145,18 @@ function animateModalElements() {
             const decimals = targetValue.includes('.') ? (targetValue.split('.')[1].match(/\d+/) || [''])[0].length : 0;
 
             const countUp = new countUp.CountUp(element, numericValue, {
-                duration: 2,
+                duration: 2.5,
                 decimal: '.',
                 suffix: targetValue.includes('%') ? '%' : '',
                 prefix: targetValue.includes('R') ? 'R' : '',
                 separator: ',',
-                decimals: Math.min(decimals, 2)
+                decimals: Math.min(decimals, 2),
+                useEasing: true,
+                useGrouping: true,
+                easingFn: function (t, b, c, d) {
+                    // Custom easing: easeOutQuart
+                    return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+                }
             });
 
             if (!countUp.error) {
@@ -167,12 +176,12 @@ function animateModalElements() {
         }
     });
 
-    // Animate progress bars
-    document.querySelectorAll('.progress-fill').forEach(bar => {
+    // Animate progress bars with staggered timing
+    document.querySelectorAll('.progress-fill').forEach((bar, index) => {
         const progress = bar.getAttribute('data-progress');
         setTimeout(() => {
             bar.style.width = progress + '%';
-        }, 300);
+        }, 500 + (index * 100)); // Stagger by 100ms per bar
     });
 }
 
@@ -241,7 +250,8 @@ function renderModalChart(stats) {
             animation: {
                 animateRotate: true,
                 animateScale: true,
-                duration: 2000,
+                duration: 2200,
+                delay: 200,
                 easing: 'easeInOutQuart'
             }
         }
