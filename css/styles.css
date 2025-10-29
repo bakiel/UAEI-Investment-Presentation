@@ -225,7 +225,7 @@ h2 {
     padding-bottom: 1vh;
 }
 
-/* Compact slides - ONLY for slides 15 and 25 */
+/* Compact slides - ONLY for slides 15, 23, and 25 */
 .compact-slide,
 .final-slide {
     padding: 2vh 2vw 6vh 2vw !important;
@@ -235,6 +235,20 @@ h2 {
 .final-slide h2:not(.final-slide h1) {
     font-size: clamp(1.2rem, 2.4vw, 1.8rem);
     margin-bottom: 1vh;
+}
+
+.compact-slide .mandate-final,
+.compact-slide .ask-amount-box {
+    margin-top: 1vh;
+    padding: 1vh 2vw;
+}
+
+.compact-slide .ask-grid {
+    gap: 1vw;
+}
+
+.compact-slide .ask-section {
+    padding: 1.5vh 1.5vw;
 }
 
 /* Scrollbar styling for slides */
