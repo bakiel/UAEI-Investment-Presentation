@@ -5376,3 +5376,38 @@ body {
     max-width: clamp(120px, 18vw, 180px) !important;
     max-height: clamp(120px, 18vw, 180px) !important;
 }
+
+/* ============================================
+   LOGO SIZE - MAKE EVEN BIGGER
+   ============================================ */
+.logo-img {
+    max-width: clamp(180px, 25vw, 280px) !important;
+    max-height: clamp(180px, 25vw, 280px) !important;
+}
+
+.logo-container {
+    margin-bottom: clamp(20px, 3vh, 35px) !important;
+}
+
+/* ============================================
+   BUTTON - FORCE CLICKABLE
+   ============================================ */
+.nav-btn {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 9999999 !important;
+    touch-action: manipulation !important;
+}
+
+.nav-btn:disabled {
+    opacity: 0.3 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+.navigation {
+    pointer-events: auto !important;
+    z-index: 9999999 !important;
+    touch-action: manipulation !important;
+}

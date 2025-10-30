@@ -43,33 +43,24 @@ function updateSlide() {
     nextBtn.disabled = currentSlide === totalSlides - 1;
 }
 
-// Global functions for inline onclick handlers (highest priority)
+// Global functions for inline onclick handlers - ONLY METHOD NOW
 window.goToPrevSlide = function() {
-    console.log('🔥 PREV BUTTON CLICKED - Global onclick function');
+    console.log('🔥🔥🔥 PREV BUTTON CLICKED 🔥🔥🔥');
+    console.log('Current slide before:', currentSlide);
     previousSlide();
+    console.log('Current slide after:', currentSlide);
     return false;
 };
 
 window.goToNextSlide = function() {
-    console.log('🔥 NEXT BUTTON CLICKED - Global onclick function');
+    console.log('🔥🔥🔥 NEXT BUTTON CLICKED 🔥🔥🔥');
+    console.log('Current slide before:', currentSlide);
     nextSlide();
+    console.log('Current slide after:', currentSlide);
     return false;
 };
 
-// Event listeners with failsafe (backup)
-prevBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    e.preventDefault();
-    console.log('PREV clicked - event listener backup');
-    previousSlide();
-}, true);
-
-nextBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    e.preventDefault();
-    console.log('NEXT clicked - event listener backup');
-    nextSlide();
-}, true);
+// NO EVENT LISTENERS - inline onclick only for maximum reliability
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
