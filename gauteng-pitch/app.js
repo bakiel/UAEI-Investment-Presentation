@@ -405,7 +405,7 @@ function createThumbnailNav() {
         bottom: 100px;
         left: 50%;
         transform: translateX(-50%);
-        display: flex;
+        display: none;
         gap: 8px;
         z-index: 999;
         background: rgba(0, 0, 0, 0.8);
@@ -413,6 +413,7 @@ function createThumbnailNav() {
         border-radius: 25px;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(76, 175, 80, 0.3);
+        pointer-events: auto;
     `;
 
     for (let i = 0; i < totalSlides; i++) {
@@ -425,6 +426,7 @@ function createThumbnailNav() {
             background: ${i === currentSlide ? '#4CAF50' : 'rgba(255, 255, 255, 0.3)'};
             cursor: pointer;
             transition: all 0.3s ease;
+            pointer-events: auto;
         `;
 
         dot.addEventListener('click', () => showSlide(i));
@@ -445,6 +447,21 @@ function createThumbnailNav() {
     }
 
     document.body.appendChild(nav);
+
+    // Show/hide thumbnail nav based on fullscreen state
+    function toggleThumbnailNav() {
+        if (document.fullscreenElement) {
+            nav.style.display = 'flex';
+        } else {
+            nav.style.display = 'none';
+        }
+    }
+
+    // Listen for fullscreen changes
+    document.addEventListener('fullscreenchange', toggleThumbnailNav);
+
+    // Initial state
+    toggleThumbnailNav();
 
     // Update active dot on slide change
     const originalUpdateSlide2 = updateSlide;

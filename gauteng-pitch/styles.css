@@ -5919,3 +5919,67 @@ body {
 .illustration-placeholder img[src$=".svg"]:not([src]) {
     display: none;
 }
+
+/* ============================================
+   v81 - NAVIGATION & LAYOUT FIXES
+   ============================================ */
+
+/* Ensure slides don't overflow and have proper bottom spacing */
+.slide {
+    max-height: 100vh !important;
+    padding-bottom: clamp(10vh, 12vh, 14vh) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Navigation must always be clickable */
+.navigation {
+    position: fixed !important;
+    bottom: clamp(20px, 3vh, 30px) !important;
+    right: clamp(20px, 3vw, 30px) !important;
+    z-index: 99999999 !important;
+    pointer-events: auto !important;
+}
+
+.nav-btn {
+    z-index: 99999999 !important;
+    pointer-events: auto !important;
+    position: relative !important;
+}
+
+/* Thumbnail nav hidden by default, shown only in fullscreen */
+.thumbnail-nav {
+    display: none !important;
+}
+
+/* When in fullscreen, show thumbnail nav */
+:fullscreen .thumbnail-nav {
+    display: flex !important;
+}
+
+/* Slide counter */
+.slide-counter {
+    position: fixed !important;
+    bottom: clamp(20px, 3vh, 30px) !important;
+    left: clamp(20px, 3vw, 30px) !important;
+    z-index: 99999999 !important;
+    pointer-events: none !important;
+}
+
+/* Ensure no background elements block navigation */
+.visual-story-bg,
+.mega-icon,
+.illustration-placeholder,
+.story-card {
+    z-index: -1 !important;
+    pointer-events: none !important;
+}
+
+/* But allow clicks on clickable elements within slides */
+.stat-card,
+.platform-item,
+.loan-item,
+.revenue-card {
+    z-index: 1 !important;
+    pointer-events: auto !important;
+}
