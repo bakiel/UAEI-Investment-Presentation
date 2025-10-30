@@ -1,8 +1,21 @@
 /* ============================================
    UAEI PRESENTATION - IMAGE INTEGRATION CSS
-   v85: Professional stock photography integration
-   All images: 16:9 landscape optimized
+   v86: Hybrid approach - Stock photos + unDraw storytelling
+   Stock photos: realistic backgrounds/hero images
+   unDraw illustrations: storytelling/concept sections
    ============================================ */
+
+/* Show illustration placeholders for storytelling (override v84 hiding) */
+.illustration-placeholder {
+    display: block !important;
+    max-width: 400px;
+    margin: 0 auto 2vh auto;
+}
+
+.illustration-placeholder img {
+    max-height: 25vh;
+    width: auto;
+}
 
 /* ============================================
    GLOBAL IMAGE PATTERNS
