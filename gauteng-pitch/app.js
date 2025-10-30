@@ -63,24 +63,7 @@ window.goToNextSlide = function() {
     return false;
 };
 
-// BACKUP EVENT LISTENERS (in addition to inline onclick)
-if (prevBtn) {
-    prevBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('🔥 PREV CLICKED VIA EVENT LISTENER');
-        previousSlide();
-    });
-}
-
-if (nextBtn) {
-    nextBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('🔥 NEXT CLICKED VIA EVENT LISTENER');
-        nextSlide();
-    });
-}
+// Event listeners removed - using inline onclick handlers only to prevent double-firing
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
