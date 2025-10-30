@@ -305,3 +305,7 @@ const modalContent = {
         animation: true
     }
 };
+
+// Attach to window object for global access
+window.modalContent = modalContent;
+console.log('✅ modalContent attached to window with', Object.keys(modalContent).length, 'items');
