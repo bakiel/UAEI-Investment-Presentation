@@ -254,3 +254,230 @@ setTimeout(function() {
 console.log('🎭 Modal functions loaded');
 console.log('   modalContent available:', typeof window.modalContent !== 'undefined');
 
+// ============================================
+// ADVANCED ANIMATIONS & INTERACTIVITY
+// ============================================
+
+// Number Counter Animation
+function animateCounter(element, target, duration = 2000, suffix = '') {
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+
+    element.classList.add('counting');
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target.toLocaleString() + suffix;
+            element.classList.remove('counting');
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current).toLocaleString() + suffix;
+        }
+    }, 16);
+}
+
+// Entrance Animation Observer
+const entranceObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+
+            // Trigger number counters if they exist
+            const counters = entry.target.querySelectorAll('.counter-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const suffix = counter.getAttribute('data-suffix') || '';
+                if (target && !counter.classList.contains('counted')) {
+                    counter.classList.add('counted');
+                    animateCounter(counter, target, 2000, suffix);
+                }
+            });
+        }
+    });
+}, { threshold: 0.2 });
+
+// Observe all animatable elements when slide becomes active
+function observeSlideAnimations() {
+    const activeSlide = document.querySelector('.slide.active');
+    if (!activeSlide) return;
+
+    // Find all elements with animation classes
+    const animatables = activeSlide.querySelectorAll('.animate-in, .animate-slide-left, .animate-slide-right, .animate-scale, .stagger-children');
+
+    animatables.forEach(el => {
+        entranceObserver.observe(el);
+        // Trigger immediately for active slide
+        setTimeout(() => el.classList.add('visible'), 100);
+    });
+}
+
+// Enhanced slide transition
+function enhanceSlideTransition() {
+    const activeSlide = document.querySelector('.slide.active');
+    if (activeSlide) {
+        // Reset animations
+        const animated = activeSlide.querySelectorAll('.visible');
+        animated.forEach(el => el.classList.remove('visible'));
+
+        // Re-trigger after short delay
+        setTimeout(() => {
+            observeSlideAnimations();
+        }, 50);
+    }
+}
+
+// Override existing slide functions to add animations
+const originalShowSlide = showSlide;
+function showSlide(n) {
+    originalShowSlide(n);
+    enhanceSlideTransition();
+}
+
+// Add hover effects to cards
+function addHoverEffects() {
+    const cards = document.querySelectorAll('.stat-card, .platform-item, .why-item, .urgency-item');
+    cards.forEach(card => {
+        if (!card.classList.contains('hover-lift')) {
+            card.classList.add('hover-lift');
+        }
+    });
+
+    const boxes = document.querySelectorAll('.title-box, .component-left, .component-right');
+    boxes.forEach(box => {
+        if (!box.classList.contains('hover-glow')) {
+            box.classList.add('hover-glow');
+        }
+    });
+}
+
+// Progress indicator
+function createProgressIndicator() {
+    const existingProgress = document.querySelector('.slide-progress');
+    if (existingProgress) return;
+
+    const progressContainer = document.createElement('div');
+    progressContainer.className = 'slide-progress';
+    progressContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 9999;
+    `;
+
+    const progressBar = document.createElement('div');
+    progressBar.className = 'slide-progress-bar';
+    progressBar.style.cssText = `
+        height: 100%;
+        background: linear-gradient(90deg, #4CAF50, #66BB6A);
+        width: ${((currentSlide + 1) / totalSlides) * 100}%;
+        transition: width 0.5s ease;
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+    `;
+
+    progressContainer.appendChild(progressBar);
+    document.body.appendChild(progressContainer);
+
+    // Update progress on slide change
+    const originalUpdateSlide = updateSlide;
+    window.updateSlide = function() {
+        originalUpdateSlide();
+        const bar = document.querySelector('.slide-progress-bar');
+        if (bar) {
+            bar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+        }
+    };
+}
+
+// Slide thumbnails navigation (optional - can be toggled)
+function createThumbnailNav() {
+    const existingNav = document.querySelector('.thumbnail-nav');
+    if (existingNav) return;
+
+    const nav = document.createElement('div');
+    nav.className = 'thumbnail-nav';
+    nav.style.cssText = `
+        position: fixed;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px 15px;
+        border-radius: 25px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(76, 175, 80, 0.3);
+    `;
+
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'thumb-dot';
+        dot.style.cssText = `
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: ${i === currentSlide ? '#4CAF50' : 'rgba(255, 255, 255, 0.3)'};
+            cursor: pointer;
+            transition: all 0.3s ease;
+        `;
+
+        dot.addEventListener('click', () => showSlide(i));
+        dot.addEventListener('mouseenter', () => {
+            if (i !== currentSlide) {
+                dot.style.background = 'rgba(76, 175, 80, 0.6)';
+                dot.style.transform = 'scale(1.3)';
+            }
+        });
+        dot.addEventListener('mouseleave', () => {
+            if (i !== currentSlide) {
+                dot.style.background = 'rgba(255, 255, 255, 0.3)';
+                dot.style.transform = 'scale(1)';
+            }
+        });
+
+        nav.appendChild(dot);
+    }
+
+    document.body.appendChild(nav);
+
+    // Update active dot on slide change
+    const originalUpdateSlide2 = updateSlide;
+    window.updateSlide = function() {
+        originalUpdateSlide2();
+        const dots = document.querySelectorAll('.thumb-dot');
+        dots.forEach((dot, i) => {
+            dot.style.background = i === currentSlide ? '#4CAF50' : 'rgba(255, 255, 255, 0.3)';
+            dot.style.transform = i === currentSlide ? 'scale(1.3)' : 'scale(1)';
+        });
+    };
+}
+
+// Initialize all enhancements
+setTimeout(() => {
+    console.log('🚀 Initializing advanced features...');
+
+    // Add hover effects
+    addHoverEffects();
+
+    // Create progress indicator
+    createProgressIndicator();
+
+    // Create thumbnail navigation
+    createThumbnailNav();
+
+    // Trigger initial animations
+    observeSlideAnimations();
+
+    console.log('✅ Advanced features loaded!');
+    console.log('   - Entrance animations');
+    console.log('   - Hover effects');
+    console.log('   - Progress indicator');
+    console.log('   - Thumbnail navigation');
+}, 500);
+

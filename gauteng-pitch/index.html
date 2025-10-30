@@ -7,7 +7,7 @@
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - R7.5M Technology Validation Request for Gauteng Innovation Hub">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=75">
+    <link rel="stylesheet" href="styles.css?v=76">
 </head>
 <body>
     <button class="fullscreen-btn" id="fullscreen-btn" title="Toggle Fullscreen (F)">
@@ -17,27 +17,27 @@
     <div class="slide-container">
         <!-- Slide 1: Title -->
         <div class="slide active title-slide">
-            <div class="logo-container">
+            <div class="logo-container animate-scale">
                 <img src="../assets/UAEI Logo for dark BG.png" alt="UAEI Logo" class="logo-img">
             </div>
-            <h1>
+            <h1 class="animate-in">
                 <span class="highlight">TECHNOLOGY VALIDATION</span><br>
                 REQUEST
             </h1>
-            <p class="subtitle">Ubuntu Agricultural Empowerment Initiative</p>
-            <div class="title-grid">
-                <div class="title-box primary">
+            <p class="subtitle animate-in">Ubuntu Agricultural Empowerment Initiative</p>
+            <div class="title-grid stagger-children">
+                <div class="title-box primary hover-glow">
                     <div class="title-label">Gauteng Request</div>
                     <div class="title-value">R7.5M</div>
                     <div class="title-desc">Technology Validation Component</div>
                 </div>
-                <div class="title-box secondary">
+                <div class="title-box secondary hover-glow">
                     <div class="title-label">Full Project</div>
                     <div class="title-value">R508.6M</div>
                     <div class="title-desc">Scale Deployment (IDC)</div>
                 </div>
             </div>
-            <div class="presenter-info">
+            <div class="presenter-info animate-in">
                 <p><strong>Keletso Kingwane</strong> | Kutlwano Holdings (Pty) Ltd</p>
                 <p>October 28, 2025 | Gauteng Innovation Hub Pitch</p>
             </div>
@@ -128,31 +128,31 @@
 
         <!-- Slide 3.5: Why It Works - WhatsApp + Languages -->
         <div class="slide">
-            <h2>Why Farmers Actually Adopt</h2>
-            <div class="stats-grid">
-                <div class="stat-card" onclick="showModal('whatsapp')">
+            <h2 class="animate-in">Why Farmers Actually Adopt</h2>
+            <div class="stats-grid stagger-children">
+                <div class="stat-card hover-lift" onclick="showModal('whatsapp')">
                     <div class="icon"><i class="fas fa-comments"></i></div>
                     <div class="number">WhatsApp</div>
                     <div class="label">Zero Download</div>
-                    <div class="click-indicator"></div>
+                    <div class="click-indicator pulse-icon"></div>
                 </div>
-                <div class="stat-card" onclick="showModal('languages')">
+                <div class="stat-card hover-lift" onclick="showModal('languages')">
                     <div class="icon"><i class="fas fa-language"></i></div>
                     <div class="number">11</div>
                     <div class="label">Languages</div>
-                    <div class="click-indicator"></div>
+                    <div class="click-indicator pulse-icon"></div>
                 </div>
-                <div class="stat-card" onclick="showModal('voice')">
+                <div class="stat-card hover-lift" onclick="showModal('voice')">
                     <div class="icon"><i class="fas fa-microphone"></i></div>
                     <div class="number">Voice</div>
                     <div class="label">Low Literacy OK</div>
-                    <div class="click-indicator"></div>
+                    <div class="click-indicator pulse-icon"></div>
                 </div>
-                <div class="stat-card" onclick="showModal('stokvel')">
+                <div class="stat-card hover-lift" onclick="showModal('stokvel')">
                     <div class="icon"><i class="fas fa-users"></i></div>
                     <div class="number">Stokvel</div>
                     <div class="label">Trust Integration</div>
-                    <div class="click-indicator"></div>
+                    <div class="click-indicator pulse-icon"></div>
                 </div>
             </div>
         </div>
@@ -531,10 +531,10 @@
         <!-- Slide 10: The Ask -->
         <div class="slide">
             <div style="max-width: 1200px; margin: 0 auto;">
-                <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: clamp(2vh, 3vh, 4vh); text-align: center; color: #4CAF50;">The Ask</h1>
+                <h1 class="animate-scale" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: clamp(2vh, 3vh, 4vh); text-align: center; color: #4CAF50;">The Ask</h1>
 
                 <!-- Amount Box -->
-                <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 3px solid #4CAF50; border-radius: 20px; padding: clamp(2vh, 3vh, 4vh) clamp(2vw, 3vw, 4vw); text-align: center; margin-bottom: clamp(3vh, 4vh, 5vh); max-width: 700px; margin-left: auto; margin-right: auto;">
+                <div class="animate-in hover-glow" style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 3px solid #4CAF50; border-radius: 20px; padding: clamp(2vh, 3vh, 4vh) clamp(2vw, 3vw, 4vw); text-align: center; margin-bottom: clamp(3vh, 4vh, 5vh); max-width: 700px; margin-left: auto; margin-right: auto;">
                     <div style="font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; color: #4CAF50; letter-spacing: -2px; line-height: 1;">R7,500,000</div>
                     <div style="font-size: clamp(1.2rem, 2.2vw, 1.8rem); color: #fff; margin-top: 1vh; font-weight: 500;">24-Month Pilot Programme</div>
                     <div style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); color: #4CAF50; margin-top: 0.5vh; font-weight: 600;">20-50 Farmer Technology Validation</div>
@@ -544,9 +544,9 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3vw, 4vw, 5vw); align-items: start;">
 
                     <!-- Left: What Gauteng Gets -->
-                    <div>
+                    <div class="animate-slide-left">
                         <h3 style="font-size: clamp(1.4rem, 2.5vw, 2rem); color: #4CAF50; margin-bottom: clamp(2vh, 2.5vh, 3vh); text-align: center;">Pilot Deliverables</h3>
-                        <div style="display: grid; gap: clamp(1vh, 1.5vh, 2vh);">
+                        <div class="stagger-children" style="display: grid; gap: clamp(1vh, 1.5vh, 2vh);">
                             <div style="display: flex; gap: 1vw; align-items: start; background: rgba(76, 175, 80, 0.08); padding: clamp(1vh, 1.5vh, 2vh) clamp(1vw, 1.5vw, 2vw); border-radius: 10px; border-left: 4px solid #4CAF50;">
                                 <i class="fas fa-check-circle" style="color: #4CAF50; font-size: clamp(1.2rem, 2vw, 1.6rem); margin-top: 0.2vh; flex-shrink: 0;"></i>
                                 <span style="font-size: clamp(0.9rem, 1.6vw, 1.15rem); line-height: 1.4;"><strong>MVP Technology Stack</strong> validated at 20-50 farmer scale</span>
@@ -567,7 +567,7 @@
                     </div>
 
                     <!-- Right: Timeline + Quote -->
-                    <div>
+                    <div class="animate-slide-right">
                         <h3 style="font-size: clamp(1.4rem, 2.5vw, 2rem); color: #4CAF50; margin-bottom: clamp(2vh, 2.5vh, 3vh); text-align: center;">Timeline to Scale</h3>
 
                         <!-- Timeline Flow -->
@@ -673,14 +673,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
 
     <!-- Modal data FIRST -->
-    <script src="../js/data.js?v=75"></script>
+    <script src="../js/data.js?v=76"></script>
 
     <!-- LOAD NAVIGATION (now includes modal functions) -->
-    <script src="app.js?v=75"></script>
+    <script src="app.js?v=76"></script>
 
     <!-- Debug click logger -->
     <script>
-        console.log('🚀 GAUTENG PITCH LOADED - v75');
+        console.log('🚀 GAUTENG PITCH LOADED - v76');
         console.log('Navigation functions available:', typeof window.goToNextSlide, typeof window.goToPrevSlide);
         console.log('showModal function available:', typeof window.showModal);
         console.log('closeModal function available:', typeof window.closeModal);
