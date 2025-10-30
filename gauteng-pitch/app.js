@@ -43,9 +43,20 @@ function updateSlide() {
     nextBtn.disabled = currentSlide === totalSlides - 1;
 }
 
-// Event listeners
-prevBtn.addEventListener('click', previousSlide);
-nextBtn.addEventListener('click', nextSlide);
+// Event listeners with failsafe
+prevBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    console.log('PREV clicked');
+    previousSlide();
+}, true);
+
+nextBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    console.log('NEXT clicked');
+    nextSlide();
+}, true);
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {

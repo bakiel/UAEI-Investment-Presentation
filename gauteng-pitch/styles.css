@@ -4820,3 +4820,551 @@ h2 {
 .presenter-info {
     font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
 }
+/* ============================================
+   EMERGENCY LANDSCAPE FIX - AGGRESSIVE REDUCTION
+   ============================================ */
+
+/* CRITICAL: Hide overflow completely */
+.slide {
+    padding: 1.5vh 2.5vw 8vh 2.5vw !important;
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    justify-content: center !important;
+}
+
+.title-slide {
+    padding: 2vh 3vw !important;
+    overflow: hidden !important;
+}
+
+/* TITLE SLIDE - DRAMATIC REDUCTION */
+.logo-container {
+    margin-bottom: clamp(15px, 2.5vh, 25px) !important;
+}
+
+.logo-img {
+    max-width: clamp(80px, 12vw, 120px) !important;
+    max-height: clamp(80px, 12vw, 120px) !important;
+}
+
+.title-slide h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    margin-bottom: clamp(10px, 1.5vh, 20px) !important;
+    letter-spacing: -1px !important;
+    line-height: 1.1 !important;
+}
+
+.title-slide .subtitle {
+    font-size: clamp(0.9rem, 1.6vw, 1.2rem) !important;
+    margin-bottom: clamp(15px, 2.5vh, 30px) !important;
+}
+
+.title-grid {
+    gap: clamp(1vh, 1.5vh, 2vh) clamp(2vw, 2.5vw, 3vw) !important;
+    margin: 0 auto clamp(15px, 2vh, 25px) auto !important;
+    max-width: 800px !important;
+}
+
+.title-box {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.title-label {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.title-value {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.title-desc {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.presenter-info {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+    margin-top: clamp(10px, 1.5vh, 20px) !important;
+}
+
+.presenter-info p {
+    margin: 0.3vh 0 !important;
+}
+
+/* ALL OTHER SLIDES - AGGRESSIVE REDUCTION */
+h2 {
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem) !important;
+    margin-bottom: 1vh !important;
+    padding-bottom: 0.5vh !important;
+}
+
+/* Crisis slide */
+.crisis-number-huge {
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.crisis-label-large {
+    font-size: clamp(0.75rem, 1.4vw, 1rem) !important;
+}
+
+.failure-flow {
+    gap: 1.5vw !important;
+    margin: 1vh auto !important;
+}
+
+.failure-step {
+    padding: 1.5vh 1vw !important;
+    max-width: 250px !important;
+}
+
+.failure-icon {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.failure-step h3 {
+    font-size: clamp(0.9rem, 1.6vw, 1.2rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.failure-step p {
+    font-size: clamp(0.7rem, 1.3vw, 0.9rem) !important;
+}
+
+.failure-arrow {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+}
+
+.insight-box {
+    padding: 1.5vh 2vw !important;
+    margin-top: 1vh !important;
+}
+
+.insight-box i {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+}
+
+.insight-text {
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+}
+
+/* Platform grid - MORE COMPACT */
+.innovation-section {
+    margin-bottom: 1vh !important;
+    padding: 1vh 1.5vw !important;
+}
+
+.innovation-section h3 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.innovation-desc {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+}
+
+.platform-grid {
+    gap: 1vh 1.5vw !important;
+    margin-top: 1vh !important;
+}
+
+.platform-item {
+    padding: 1.5vh 1vw !important;
+}
+
+.platform-item .platform-icon {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.platform-item h4 {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.platform-item p {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.genius-callout {
+    padding: 1vh 2vw !important;
+    margin-top: 1vh !important;
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+}
+
+/* Component explanation */
+.component-explanation {
+    gap: 2vw !important;
+    margin: 1vh 0 !important;
+}
+
+.component-left {
+    padding: 1.5vh 1vw !important;
+}
+
+.component-stat .stat-value {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.component-stat .stat-label {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+    margin-bottom: 1vh !important;
+}
+
+.component-desc {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+}
+
+.component-right h3 {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.not-list li, .is-list li {
+    margin-bottom: 0.5vh !important;
+    font-size: clamp(0.7rem, 1.3vw, 0.9rem) !important;
+}
+
+.analogy-box {
+    padding: 1vh 2vw !important;
+    margin-top: 1vh !important;
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+}
+
+/* Budget - MORE COMPACT */
+.budget-visual {
+    gap: 0.8vh !important;
+    margin: 1vh auto !important;
+}
+
+.budget-category {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+}
+
+.budget-amount {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+}
+
+.budget-bar {
+    height: clamp(16px, 2vh, 22px) !important;
+}
+
+.budget-percent {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.budget-footer {
+    padding: 1vh 1.5vw !important;
+    margin-top: 1vh !important;
+    font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;
+}
+
+/* Timeline phases */
+.timeline-phases {
+    gap: 1.5vh 1.5vw !important;
+    margin: 1vh auto !important;
+}
+
+.phase-card {
+    padding: 1.5vh 1vw !important;
+}
+
+.phase-header {
+    margin-bottom: 0.5vh !important;
+}
+
+.phase-number {
+    width: clamp(28px, 3vw, 35px) !important;
+    height: clamp(28px, 3vw, 35px) !important;
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+}
+
+.phase-title {
+    font-size: clamp(0.95rem, 1.7vw, 1.3rem) !important;
+}
+
+.phase-timeline {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.phase-budget {
+    font-size: clamp(1rem, 1.8vw, 1.4rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.phase-milestones li {
+    margin-bottom: 0.5vh !important;
+    font-size: clamp(0.65rem, 1.1vw, 0.8rem) !important;
+}
+
+/* Validation grid */
+.validation-grid {
+    gap: 1.5vh 1.5vw !important;
+    margin: 1vh auto !important;
+}
+
+.validation-card {
+    padding: 1.5vh 1.5vw !important;
+}
+
+.validation-header {
+    margin-bottom: 1vh !important;
+}
+
+.validation-header i {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem) !important;
+}
+
+.validation-header h3 {
+    font-size: clamp(0.9rem, 1.6vw, 1.2rem) !important;
+}
+
+.validation-card li {
+    margin-bottom: 0.5vh !important;
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.validation-footer {
+    padding: 1vh 2vw !important;
+    margin-top: 1vh !important;
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+}
+
+/* Impact metrics */
+.impact-metrics {
+    gap: 1.5vh !important;
+    margin: 1vh auto !important;
+}
+
+.impact-row {
+    gap: 1.5vw !important;
+}
+
+.impact-metric {
+    padding: 1.5vh 1vw !important;
+    gap: 0.5vh !important;
+    max-width: 220px !important;
+}
+
+.impact-icon {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.impact-value {
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem) !important;
+}
+
+.impact-label {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.impact-statement {
+    padding: 1.5vh 2vw !important;
+    margin-top: 1vh !important;
+}
+
+.impact-statement p {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+}
+
+/* Why Gauteng */
+.why-gauteng {
+    gap: 1.5vh !important;
+    margin: 1vh 0 !important;
+}
+
+.why-section {
+    padding: 1.5vh 1.5vw !important;
+}
+
+.why-section h3 {
+    font-size: clamp(1rem, 1.8vw, 1.4rem) !important;
+    margin-bottom: 1vh !important;
+}
+
+.why-grid {
+    gap: 1vh 1.5vw !important;
+}
+
+.why-item {
+    padding: 1vh 1vw !important;
+}
+
+.why-item strong {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.why-item p {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.urgency-list {
+    gap: 1vh !important;
+}
+
+.urgency-item {
+    gap: 1vw !important;
+    padding: 1vh 1vw !important;
+}
+
+.urgency-item i {
+    font-size: clamp(1.2rem, 2vw, 1.6rem) !important;
+}
+
+.urgency-item strong {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+    margin-bottom: 0.2vh !important;
+}
+
+.urgency-item p {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.value-prop {
+    padding: 1.5vh 2vw !important;
+    margin-top: 1vh !important;
+    font-size: clamp(0.85rem, 1.5vw, 1.05rem) !important;
+}
+
+/* The Ask */
+.ask-layout {
+    gap: 2vw !important;
+    margin: 1vh 0 !important;
+}
+
+.ask-main h1 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem) !important;
+    margin-bottom: 1vh !important;
+}
+
+.ask-amount-box {
+    padding: 1.5vh 1.5vw !important;
+    margin-bottom: 1vh !important;
+}
+
+.ask-amount {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem) !important;
+}
+
+.ask-duration {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+}
+
+.ask-outcomes h3 {
+    font-size: clamp(1rem, 1.8vw, 1.4rem) !important;
+    margin-bottom: 1vh !important;
+}
+
+.outcome-grid {
+    gap: 0.5vh !important;
+    margin-bottom: 1vh !important;
+}
+
+.outcome-item {
+    padding: 0.8vh 1vw !important;
+}
+
+.outcome-item span {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+}
+
+.ask-sequencing {
+    gap: 1vw !important;
+    margin: 1vh 0 !important;
+}
+
+.sequence-step {
+    padding: 1vh 1vw !important;
+    max-width: clamp(130px, 18vw, 160px) !important;
+}
+
+.sequence-label {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.sequence-action {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+}
+
+.ubuntu-quote-box {
+    padding: 1.5vh 2vw !important;
+    margin-top: 1vh !important;
+}
+
+.ubuntu-quote-box i {
+    font-size: clamp(1rem, 1.8vw, 1.4rem) !important;
+}
+
+.ubuntu-quote-box p {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+    margin: 0.5vh 0 !important;
+}
+
+.ask-sidebar {
+    padding: 1.5vh 1vw !important;
+}
+
+.contact-info-compact h4 {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+    margin-bottom: 0.5vh !important;
+    margin-top: 1vh !important;
+}
+
+.contact-info-compact p {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.ask-logo {
+    max-width: clamp(90px, 13vw, 110px) !important;
+    margin-bottom: 1vh !important;
+}
+
+.partner-badge {
+    padding: 0.6vh 0.8vw !important;
+    font-size: clamp(0.7rem, 1.2vw, 0.8rem) !important;
+    margin-bottom: 0.3vh !important;
+}
+
+.final-cta {
+    padding: 1.5vh 2vw !important;
+    margin-top: 1vh !important;
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+}
+
+/* NAVIGATION - FORCE ABOVE EVERYTHING */
+.navigation {
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+}
+
+.nav-btn {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 999999 !important;
+}
+
+.nav-btn:disabled {
+    opacity: 0.3 !important;
+    cursor: not-allowed !important;
+}
+
+.slide-counter {
+    z-index: 999999 !important;
+}
+
+/* Force no scrollbars */
+body {
+    overflow: hidden !important;
+}
+
+.slide-container {
+    overflow: hidden !important;
+}
