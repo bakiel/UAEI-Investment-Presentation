@@ -203,6 +203,19 @@ p, li, span { font-size: clamp(0.85rem, 1.5vw, 1.05rem) !important; }
     animation: pulse-dot 2s infinite;
 }
 
+.glow-dot-top-right {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    width: 12px;
+    height: 12px;
+    background: #4CAF50;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #4CAF50, 0 0 30px #4CAF50, 0 0 45px #4CAF50;
+    animation: pulse-dot 2s infinite;
+    z-index: 1000;
+}
+
 @keyframes pulse-dot {
     0%, 100% {
         opacity: 1;
