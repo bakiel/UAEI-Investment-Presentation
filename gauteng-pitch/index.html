@@ -7,7 +7,7 @@
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - R7.5M Technology Validation Request for Strategic Partners">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=121">
+    <link rel="stylesheet" href="styles.css?v=124">
 </head>
 <body>
     <button class="fullscreen-btn" id="fullscreen-btn" title="Toggle Fullscreen (F)">
@@ -62,46 +62,66 @@
             </div>
         </div>
 
-        <!-- Slide 2: The Crisis -->
+        <!-- Slide 2: The Crisis - Vertically Centered -->
         <div class="slide">
-            <div class="visual-story-bg"></div>
-            <i class="fas fa-exclamation-triangle mega-icon mega-icon-top-right animate-in"></i>
+            <div style="padding: 3vh 5vw; display: flex; flex-direction: column; justify-content: center; height: 100%; gap: 2.5vh;">
+                <!-- Header -->
+                <div style="text-align: center;">
+                    <h2 style="font-size: clamp(2rem, 4.5vw, 3.5rem); margin-bottom: 1vh; color: #fff; font-weight: 900;">The Crisis: Why AgTech Fails</h2>
+                </div>
 
-            <h2 class="animate-in">The Crisis: Why AgTech Fails</h2>
-            <div class="crisis-stat-large animate-scale">
-                <div class="crisis-number-huge">2-5%</div>
-                <div class="crisis-label-large">Traditional AgTech Adoption Rate</div>
-            </div>
+                <!-- Large Stat Box -->
+                <div style="background: linear-gradient(135deg, rgba(255, 87, 87, 0.2), rgba(255, 87, 87, 0.05)); border: 3px solid #ff5757; border-radius: 20px; padding: 3vh 3vw; text-align: center; max-width: 700px; margin: 0 auto; box-shadow: 0 10px 40px rgba(255, 87, 87, 0.3);">
+                    <div style="font-size: clamp(3rem, 6vw, 5rem); color: #ff5757; font-weight: 900; margin-bottom: 1vh; line-height: 1;">2-5%</div>
+                    <div style="font-size: clamp(1rem, 2vw, 1.4rem); color: #ccc; font-weight: 600;">Traditional AgTech Adoption Rate</div>
+                </div>
 
-            <div class="failure-flow stagger-children">
-                <div class="failure-step">
-                    <div class="failure-icon"><i class="fas fa-laptop"></i></div>
-                    <h3>AgTech Company</h3>
-                    <p>"Buy our R6,150/year IoT subscription"</p>
-                </div>
-                <div class="failure-arrow">→</div>
-                <div class="failure-step farmer">
-                    <div class="failure-icon"><i class="fas fa-user"></i></div>
-                    <h3>Smallholder Farmer</h3>
-                    <p>"I don't have R6,150. I need cash for seeds."</p>
-                </div>
-                <div class="failure-arrow">→</div>
-                <div class="failure-step fail">
-                    <div class="failure-icon"><i class="fas fa-times-circle"></i></div>
-                    <h3>Result</h3>
-                    <p>2-5% adoption = Industry failure</p>
-                </div>
-            </div>
+                <!-- Failure Flow -->
+                <div style="display: flex; align-items: center; justify-content: center; gap: clamp(1vw, 2vw, 3vw); max-width: 1100px; margin: 0 auto;">
+                    <!-- AgTech Company -->
+                    <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 12px; padding: 2.5vh 2vw; text-align: center; flex: 1; min-width: 0;">
+                        <div style="width: clamp(50px, 6vh, 70px); height: clamp(50px, 6vh, 70px); background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(1.5rem, 3vh, 2rem); margin: 0 auto 1.5vh auto;">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3 style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">AgTech Company</h3>
+                        <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.3; margin: 0;">"Buy our R6,150/year IoT subscription"</p>
+                    </div>
 
-            <div class="story-card animate-in hover-lift backdrop-blur" style="max-width: 900px; margin: 3vh auto 0 auto; position: relative;">
-                <div class="story-card-icon">
-                    <i class="fas fa-lightbulb"></i>
+                    <!-- Arrow -->
+                    <div style="font-size: clamp(2rem, 4vw, 3rem); color: #ff5757; flex-shrink: 0;">→</div>
+
+                    <!-- Smallholder Farmer -->
+                    <div style="background: rgba(255, 87, 87, 0.08); border: 2px solid #ff5757; border-radius: 12px; padding: 2.5vh 2vw; text-align: center; flex: 1; min-width: 0;">
+                        <div style="width: clamp(50px, 6vh, 70px); height: clamp(50px, 6vh, 70px); background: linear-gradient(135deg, #ff5757, #c62828); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(1.5rem, 3vh, 2rem); margin: 0 auto 1.5vh auto;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">Smallholder Farmer</h3>
+                        <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.3; margin: 0;">"I don't have R6,150. I need cash for seeds."</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div style="font-size: clamp(2rem, 4vw, 3rem); color: #ff5757; flex-shrink: 0;">→</div>
+
+                    <!-- Result -->
+                    <div style="background: rgba(255, 87, 87, 0.15); border: 2px solid #ff5757; border-radius: 12px; padding: 2.5vh 2vw; text-align: center; flex: 1; min-width: 0;">
+                        <div style="width: clamp(50px, 6vh, 70px); height: clamp(50px, 6vh, 70px); background: linear-gradient(135deg, #ff5757, #c62828); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(1.5rem, 3vh, 2rem); margin: 0 auto 1.5vh auto;">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <h3 style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">Result</h3>
+                        <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.3; margin: 0;">2-5% adoption = Industry failure</p>
+                    </div>
                 </div>
-                <div class="story-card-content">
-                    <h3>The Root Problem</h3>
-                    <p>Farmers don't buy technology—they desperately need capital. Traditional AgTech fails because it asks cash-strapped farmers to pay for tools instead of solving their actual problem: access to working capital.</p>
+
+                <!-- Root Problem Box -->
+                <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-left: 5px solid #4CAF50; border-radius: 12px; padding: 2.5vh 3vw; max-width: 900px; margin: 0 auto; display: flex; align-items: flex-start; gap: 2vw;">
+                    <div style="width: clamp(45px, 5vh, 60px); height: clamp(45px, 5vh, 60px); background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(1.3rem, 2.5vh, 1.8rem); flex-shrink: 0;">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h3 style="font-size: clamp(1.1rem, 2.2vw, 1.5rem); color: #4CAF50; margin-bottom: 1vh; font-weight: 700;">The Root Problem</h3>
+                        <p style="font-size: clamp(0.9rem, 1.7vw, 1.1rem); color: #ccc; line-height: 1.5; margin: 0;">Farmers don't buy technology—they desperately need capital. Traditional AgTech fails because it asks cash-strapped farmers to pay for tools instead of solving their actual problem: access to working capital.</p>
+                    </div>
                 </div>
-                <div class="glow-dot"></div>
             </div>
         </div>
 
@@ -135,65 +155,60 @@
             </div>
         </div>
 
-        <!-- Slide 4: UAEI Innovation -->
+        <!-- Slide 4: UAEI Innovation - Magazine Grid -->
         <div class="slide">
-            <div class="slide-content">
-                <!-- Left: Content -->
-                <div class="content-left">
-                    <h2 class="animate-in">UAEI's Breakthrough: Loan-as-Gateway</h2>
-
-                    <div class="innovation-section animate-in">
-                        <h3>The Primary Project: R508.6M Platform</h3>
-                        <p class="innovation-desc">Africa's first integrated conservation-agriculture-technology ecosystem</p>
-                    </div>
-
-                    <div class="platform-grid stagger-children">
-                        <div class="platform-item hover-lift">
-                            <div class="platform-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                            <h4>AgriFinance</h4>
-                            <p>R250k loans × 25,000 farmers</p>
-                        </div>
-                        <div class="platform-item hover-lift">
-                            <div class="platform-icon"><i class="fas fa-satellite-dish"></i></div>
-                            <h4>IoT Technology</h4>
-                            <p>Real-time farm monitoring</p>
-                        </div>
-                        <div class="platform-item hover-lift">
-                            <div class="platform-icon"><i class="fas fa-helicopter"></i></div>
-                            <h4>Drone Intelligence</h4>
-                            <p>Precision agriculture</p>
-                        </div>
-                        <div class="platform-item hover-lift">
-                            <div class="platform-icon"><i class="fas fa-store"></i></div>
-                            <h4>Marketplace</h4>
-                            <p>Direct farmer-to-buyer</p>
-                        </div>
-                        <div class="platform-item hover-lift">
-                            <div class="platform-icon"><i class="fas fa-leaf"></i></div>
-                            <h4>Conservation</h4>
-                            <p>Located 373ha sanctuary site</p>
-                        </div>
-                        <div class="platform-item hover-lift">
-                            <div class="platform-icon"><i class="fas fa-graduation-cap"></i></div>
-                            <h4>Training</h4>
-                            <p>11 languages + digital literacy</p>
-                        </div>
-                    </div>
-
-                    <div class="story-card animate-scale hover-lift" style="max-width: 100%; margin: 2vh 0 0 0; display: grid; grid-template-columns: 120px 1fr; gap: 2vw; align-items: center;">
-                        <div style="text-align: center;">
-                            <img src="illustrations/innovation-genius.svg" alt="Innovation" style="width: 100px; height: auto; opacity: 0.9;">
-                        </div>
-                        <div class="story-card-content">
-                            <h3>The Genius</h3>
-                            <p>Embed technology INSIDE loans → 100% adoption target (vs 2-5% industry).</p>
-                        </div>
-                    </div>
+            <div style="padding: 4vh 5vw; display: grid; grid-template-rows: auto 1fr; gap: 2vh; height: 100%;">
+                <!-- Header -->
+                <div>
+                    <h2 style="font-size: clamp(2rem, 4.5vw, 3.5rem); margin-bottom: 1vh; color: #4CAF50; font-weight: 900;">R508.6M Platform Ecosystem</h2>
+                    <p style="font-size: clamp(0.9rem, 1.8vw, 1.2rem); color: #999;">Loan-as-Gateway: 100% adoption vs 2-5% traditional</p>
                 </div>
 
-                <!-- Right: Hero Image -->
-                <div class="hero-image-container">
-                    <img src="images/slide-4-innovation.jpg" alt="African farmer using digital technology">
+                <!-- 2x2 Gallery Grid -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2vh 2.5vw; align-items: stretch;">
+                    <!-- Card 1: AgriFinance -->
+                    <div style="position: relative; border-radius: 15px; overflow: hidden; border: 2px solid rgba(76, 175, 80, 0.3); background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(0,0,0,0.8)); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4CAF50'; this.style.transform='scale(1.02)'" onmouseout="this.style.borderColor='rgba(76, 175, 80, 0.3)'; this.style.transform='scale(1)'">
+                        <div style="padding: 3vh 2.5vw;">
+                            <div style="width: clamp(50px, 6vh, 70px); height: clamp(50px, 6vh, 70px); background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: clamp(1.5rem, 3vh, 2.2rem); margin-bottom: 2vh;">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h4 style="font-size: clamp(1.1rem, 2.2vw, 1.5rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">AgriFinance</h4>
+                            <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4;">R250k loans × 25,000 farmers</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: IoT Technology -->
+                    <div style="position: relative; border-radius: 15px; overflow: hidden; border: 2px solid rgba(76, 175, 80, 0.3); background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(0,0,0,0.8)); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4CAF50'; this.style.transform='scale(1.02)'" onmouseout="this.style.borderColor='rgba(76, 175, 80, 0.3)'; this.style.transform='scale(1)'">
+                        <div style="padding: 3vh 2.5vw;">
+                            <div style="width: clamp(50px, 6vh, 70px); height: clamp(50px, 6vh, 70px); background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: clamp(1.5rem, 3vh, 2.2rem); margin-bottom: 2vh;">
+                                <i class="fas fa-satellite-dish"></i>
+                            </div>
+                            <h4 style="font-size: clamp(1.1rem, 2.2vw, 1.5rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">IoT Technology</h4>
+                            <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4;">Real-time farm monitoring</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Drones -->
+                    <div style="position: relative; border-radius: 15px; overflow: hidden; border: 2px solid rgba(76, 175, 80, 0.3); background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(0,0,0,0.8)); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4CAF50'; this.style.transform='scale(1.02)'" onmouseout="this.style.borderColor='rgba(76, 175, 80, 0.3)'; this.style.transform='scale(1)'">
+                        <div style="padding: 3vh 2.5vw;">
+                            <div style="width: clamp(50px, 6vh, 70px); height: clamp(50px, 6vh, 70px); background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: clamp(1.5rem, 3vh, 2.2rem); margin-bottom: 2vh;">
+                                <i class="fas fa-helicopter"></i>
+                            </div>
+                            <h4 style="font-size: clamp(1.1rem, 2.2vw, 1.5rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">Drone Intelligence</h4>
+                            <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4;">Precision agriculture</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Marketplace -->
+                    <div style="position: relative; border-radius: 15px; overflow: hidden; border: 2px solid rgba(76, 175, 80, 0.3); background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(0,0,0,0.8)); cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#4CAF50'; this.style.transform='scale(1.02)'" onmouseout="this.style.borderColor='rgba(76, 175, 80, 0.3)'; this.style.transform='scale(1)'">
+                        <div style="padding: 3vh 2.5vw;">
+                            <div style="width: clamp(50px, 6vh, 70px); height: clamp(50px, 6vh, 70px); background: linear-gradient(135deg, #4CAF50, #2E7D32); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: clamp(1.5rem, 3vh, 2.2rem); margin-bottom: 2vh;">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h4 style="font-size: clamp(1.1rem, 2.2vw, 1.5rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">Marketplace</h4>
+                            <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4;">Direct farmer-to-buyer</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,69 +248,50 @@
             </div>
         </div>
 
-        <!-- Slide 6: The R250k Loan Package (NEW) -->
+        <!-- Slide 6: R250k Loan Package - Asymmetric Two-Column -->
         <div class="slide">
-            <div class="slide-content">
-                <!-- Left: Hero Image -->
-                <div class="hero-image-container">
-                    <img src="images/slide-6-loan.jpg" alt="Thriving African farm with sustainable agriculture">
+            <div style="padding: 4vh 5vw; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; gap: 2vh 3vw; height: 100%;">
+                <!-- Header spans both columns -->
+                <div style="grid-column: 1 / -1;">
+                    <h2 style="font-size: clamp(2rem, 4.5vw, 3.5rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh;">R250k Loan Package</h2>
+                    <p style="font-size: clamp(0.9rem, 1.8vw, 1.2rem); color: #999;">Technology embedded INSIDE capital—100% adoption guaranteed</p>
                 </div>
 
-                <!-- Right: Content -->
-                <div class="content-right">
-                    <h2 class="animate-in">What Farmers Get: R250k Loan Package</h2>
+                <!-- Left: Content Cards -->
+                <div style="display: flex; flex-direction: column; gap: 2vh;">
+                    <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 12px; padding: 2.5vh 2vw; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.borderColor='#4CAF50'; this.style.transform='translateX(5px)'" onmouseout="this.style.borderColor='rgba(76, 175, 80, 0.3)'; this.style.transform='translateX(0)'">
+                        <div style="font-size: clamp(2rem, 4vw, 3rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh; line-height: 1;">R100k</div>
+                        <h4 style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; margin-bottom: 0.8vh; font-weight: 700;">Cash Capital</h4>
+                        <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4; margin: 0;">Seeds, fertilizer, labor costs</p>
+                    </div>
 
-                    <div class="loan-breakdown stagger-children" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5vw, 2vw, 2.5vw);">
-                <div class="loan-item hover-lift" onclick="showModal('cashCapital')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
-                    <div class="click-indicator pulse-icon"></div>
-                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R100k</div>
-                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Cash Capital</h4>
-                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Working capital for seeds, fertilizer, labor</p>
+                    <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 12px; padding: 2.5vh 2vw; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.borderColor='#4CAF50'; this.style.transform='translateX(5px)'" onmouseout="this.style.borderColor='rgba(76, 175, 80, 0.3)'; this.style.transform='translateX(0)'">
+                        <div style="font-size: clamp(2rem, 4vw, 3rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh; line-height: 1;">R50k</div>
+                        <h4 style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; margin-bottom: 0.8vh; font-weight: 700;">Conservation Compost™</h4>
+                        <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4; margin: 0;">Wildlife sanctuary organic fertilizer</p>
+                    </div>
                 </div>
 
-                <div class="loan-item hover-lift" onclick="showModal('iotSensors')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
-                    <div class="click-indicator pulse-icon"></div>
-                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R30k</div>
-                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">IoT Sensors</h4>
-                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Real-time soil, weather, irrigation monitoring</p>
-                </div>
-
-                <div class="loan-item hover-lift" onclick="showModal('droneMonitoring')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
-                    <div class="click-indicator pulse-icon"></div>
-                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R40k</div>
-                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Drone Service</h4>
-                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Weekly aerial surveillance + AI analytics</p>
-                </div>
-
-                <div class="loan-item hover-lift" onclick="showModal('organicInputs')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
-                    <div class="click-indicator pulse-icon"></div>
-                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R50k</div>
-                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Conservation Compost™</h4>
-                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Wildlife sanctuary organic fertilizer</p>
-                </div>
-
-                <div class="loan-item hover-lift" onclick="showModal('trainingProgram')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
-                    <div class="click-indicator pulse-icon"></div>
-                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R20k</div>
-                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Training</h4>
-                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">11-language WhatsApp certification</p>
-                </div>
-
-                <div class="loan-item hover-lift" onclick="showModal('marketplaceAccess')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
-                    <div class="click-indicator pulse-icon"></div>
-                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R10k</div>
-                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Marketplace</h4>
-                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Direct buyer access + auto repayment</p>
-                </div>
-            </div>
-
-                    <div class="story-card animate-scale hover-lift" style="max-width: 100%; margin: 2vh 0 0 0; display: grid; grid-template-columns: 120px 1fr; gap: 2vw; align-items: center;">
-                        <div style="text-align: center;">
-                            <img src="illustrations/breakthrough.svg" alt="Breakthrough" style="width: 100px; height: auto; opacity: 0.9;">
+                <!-- Right: Image + Bottom Cards -->
+                <div style="display: flex; flex-direction: column; gap: 2vh;">
+                    <div style="position: relative; border-radius: 15px; overflow: hidden; border: 3px solid rgba(76, 175, 80, 0.4); flex: 1;">
+                        <img src="images/slide-6-loan.jpg" alt="Farmer with technology" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; width: 100%; padding: 2vh 1.5vw; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.95)); font-style: italic; color: #fff; font-size: clamp(0.85rem, 1.6vw, 1rem);">
+                            "Automatic repayment through marketplace—farmers never pay from pocket"
                         </div>
-                        <div class="story-card-content">
-                            <h3>The Breakthrough</h3>
-                            <p>Technology embedded INSIDE loans—farmers get capital + tech. Automatic repayment through marketplace.</p>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5vw;">
+                        <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 12px; padding: 2vh 1.5vw; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.borderColor='#4CAF50'" onmouseout="this.style.borderColor='rgba(76, 175, 80, 0.3)'">
+                            <div style="font-size: clamp(1.5rem, 3vw, 2.2rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh; line-height: 1;">R40k</div>
+                            <h4 style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #fff; margin-bottom: 0.5vh; font-weight: 600;">Drones</h4>
+                            <p style="font-size: clamp(0.75rem, 1.4vw, 0.85rem); color: #ccc; line-height: 1.3; margin: 0;">Weekly surveillance</p>
+                        </div>
+
+                        <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 12px; padding: 2vh 1.5vw; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.borderColor='#4CAF50'" onmouseout="this.style.borderColor='rgba(76, 175, 80, 0.3)'">
+                            <div style="font-size: clamp(1.5rem, 3vw, 2.2rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh; line-height: 1;">R30k</div>
+                            <h4 style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #fff; margin-bottom: 0.5vh; font-weight: 600;">IoT Sensors</h4>
+                            <p style="font-size: clamp(0.75rem, 1.4vw, 0.85rem); color: #ccc; line-height: 1.3; margin: 0;">Real-time monitoring</p>
                         </div>
                     </div>
                 </div>
@@ -940,93 +936,99 @@
             </div>
         </div>
 
-        <!-- Slide 18: The Ask -->
+        <!-- Slide 18A: The Ask - What We Deliver -->
         <div class="slide">
-            <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: clamp(1.5vh, 2vh, 2.5vh); text-align: center; color: #4CAF50;">
-                <i class="fas fa-handshake"></i> The Ask
-            </h1>
-
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <!-- Amount Box -->
-                <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 3px solid #4CAF50; border-radius: 15px; padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); text-align: center; margin-bottom: clamp(2vh, 2.5vh, 3vh);">
-                    <div style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; color: #4CAF50; letter-spacing: -2px; line-height: 1;">R7,500,000</div>
-                    <div style="font-size: clamp(0.95rem, 1.8vw, 1.3rem); color: #fff; margin-top: 0.8vh; font-weight: 500;">24-Month Pilot Programme</div>
-                    <div style="font-size: clamp(0.8rem, 1.5vw, 1rem); color: #4CAF50; margin-top: 0.5vh; font-weight: 600;">20-50 Farmer Technology Validation</div>
+            <div style="padding: 4vh 5vw; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; gap: 2vh 3vw; height: 100%;">
+                <!-- Header spans both columns -->
+                <div style="grid-column: 1 / -1; text-align: center;">
+                    <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">
+                        <i class="fas fa-handshake"></i> The Ask: R7.5M
+                    </h1>
+                    <p style="font-size: clamp(1rem, 2vw, 1.4rem); color: #999;">24 months | 20-50 farmers | Technology validation</p>
                 </div>
 
-                <!-- 2-Column Layout: Deliverables + Timeline -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2vw, 3vw, 4vw); align-items: start;">
+                <!-- Left: Deliverables -->
+                <div style="display: flex; flex-direction: column; gap: 2.5vh;">
+                    <h3 style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: #4CAF50; font-weight: 700;">
+                        <i class="fas fa-clipboard-check"></i> What You Get
+                    </h3>
 
-                    <!-- Left: Pilot Deliverables -->
-                    <div>
-                        <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: clamp(1.5vh, 2vh, 2.5vh); text-align: center;">
-                            <i class="fas fa-clipboard-check"></i> Pilot Deliverables
-                        </h3>
-                        <div style="display: grid; gap: clamp(1vh, 1.3vh, 1.5vh);">
-                            <div style="display: flex; gap: 1vw; align-items: start; background: rgba(76, 175, 80, 0.08); padding: clamp(1vh, 1.3vh, 1.5vh) clamp(1vw, 1.3vw, 1.5vw); border-radius: 8px; border-left: 4px solid #4CAF50;">
-                                <i class="fas fa-check-circle" style="color: #4CAF50; font-size: clamp(1rem, 1.8vw, 1.3rem); margin-top: 0.2vh; flex-shrink: 0;"></i>
-                                <span style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.4;"><strong>MVP Technology Stack</strong> validated at 20-50 farmer scale</span>
+                    <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 12px; padding: 3vh 2vw; border-left: 5px solid #4CAF50;">
+                        <div style="display: flex; align-items: start; gap: 1.5vw; margin-bottom: 2vh;">
+                            <i class="fas fa-check-circle" style="color: #4CAF50; font-size: clamp(1.5rem, 3vw, 2rem); flex-shrink: 0;"></i>
+                            <div>
+                                <h4 style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; margin-bottom: 0.5vh; font-weight: 700;">MVP Technology Stack</h4>
+                                <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4; margin: 0;">Validated at 20-50 farmer scale</p>
                             </div>
-                            <div style="display: flex; gap: 1vw; align-items: start; background: rgba(76, 175, 80, 0.08); padding: clamp(1vh, 1.3vh, 1.5vh) clamp(1vw, 1.3vw, 1.5vw); border-radius: 8px; border-left: 4px solid #4CAF50;">
-                                <i class="fas fa-check-circle" style="color: #4CAF50; font-size: clamp(1rem, 1.8vw, 1.3rem); margin-top: 0.2vh; flex-shrink: 0;"></i>
-                                <span style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.4;"><strong>AI Credit Model</strong> trained (82% accuracy target)</span>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 1.5vw; margin-bottom: 2vh;">
+                            <i class="fas fa-check-circle" style="color: #4CAF50; font-size: clamp(1.5rem, 3vw, 2rem); flex-shrink: 0;"></i>
+                            <div>
+                                <h4 style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; margin-bottom: 0.5vh; font-weight: 700;">AI Credit Model</h4>
+                                <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4; margin: 0;">82% accuracy target achieved</p>
                             </div>
-                            <div style="display: flex; gap: 1vw; align-items: start; background: rgba(76, 175, 80, 0.08); padding: clamp(1vh, 1.3vh, 1.5vh) clamp(1vw, 1.3vw, 1.5vw); border-radius: 8px; border-left: 4px solid #4CAF50;">
-                                <i class="fas fa-check-circle" style="color: #4CAF50; font-size: clamp(1rem, 1.8vw, 1.3rem); margin-top: 0.2vh; flex-shrink: 0;"></i>
-                                <span style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.4;"><strong>Open Source LLM</strong> fine-tuned for farmer automation</span>
-                            </div>
-                            <div style="display: flex; gap: 1vw; align-items: start; background: rgba(76, 175, 80, 0.08); padding: clamp(1vh, 1.3vh, 1.5vh) clamp(1vw, 1.3vw, 1.5vw); border-radius: 8px; border-left: 4px solid #4CAF50;">
-                                <i class="fas fa-check-circle" style="color: #4CAF50; font-size: clamp(1rem, 1.8vw, 1.3rem); margin-top: 0.2vh; flex-shrink: 0;"></i>
-                                <span style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.4;"><strong>Scaling Blueprint</strong> + infrastructure for broader deployment</span>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 1.5vw;">
+                            <i class="fas fa-check-circle" style="color: #4CAF50; font-size: clamp(1.5rem, 3vw, 2rem); flex-shrink: 0;"></i>
+                            <div>
+                                <h4 style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; margin-bottom: 0.5vh; font-weight: 700;">Scaling Blueprint</h4>
+                                <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #ccc; line-height: 1.4; margin: 0;">Ready for R508.6M deployment</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Timeline to Scale -->
-                    <div>
-                        <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: clamp(1.5vh, 2vh, 2.5vh); text-align: center;">
-                            <i class="fas fa-calendar-alt"></i> Timeline to Scale
-                        </h3>
-
-                        <!-- Vertical Timeline -->
-                        <div style="display: grid; gap: clamp(1vh, 1.3vh, 1.5vh);">
-                            <div style="background: rgba(76, 175, 80, 0.1); border: 2px solid #4CAF50; border-radius: 8px; padding: clamp(1.2vh, 1.5vh, 2vh) clamp(1.2vw, 1.5vw, 2vw);">
-                                <div style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); font-weight: 700; color: #4CAF50; margin-bottom: 0.3vh;">
-                                    <i class="fas fa-flask"></i> Month 24
-                                </div>
-                                <div style="font-size: clamp(0.75rem, 1.4vw, 0.95rem); line-height: 1.3; color: #ccc;">Technology Validated at Pilot Scale</div>
-                            </div>
-
-                            <div style="text-align: center; color: #4CAF50; font-size: clamp(1.2rem, 2vw, 1.6rem);">
-                                <i class="fas fa-arrow-down"></i>
-                            </div>
-
-                            <div style="background: rgba(76, 175, 80, 0.1); border: 2px solid #4CAF50; border-radius: 8px; padding: clamp(1.2vh, 1.5vh, 2vh) clamp(1.2vw, 1.5vw, 2vw);">
-                                <div style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); font-weight: 700; color: #4CAF50; margin-bottom: 0.3vh;">
-                                    <i class="fas fa-file-alt"></i> Q1 2028
-                                </div>
-                                <div style="font-size: clamp(0.75rem, 1.4vw, 0.95rem); line-height: 1.3; color: #ccc;">IDC Proposal Submitted (R508.6M)</div>
-                            </div>
-
-                            <div style="text-align: center; color: #4CAF50; font-size: clamp(1.2rem, 2vw, 1.6rem);">
-                                <i class="fas fa-arrow-down"></i>
-                            </div>
-
-                            <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.25), rgba(76, 175, 80, 0.15)); border: 2px solid #4CAF50; border-radius: 8px; padding: clamp(1.2vh, 1.5vh, 2vh) clamp(1.2vw, 1.5vw, 2vw);">
-                                <div style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); font-weight: 700; color: #4CAF50; margin-bottom: 0.3vh;">
-                                    <i class="fas fa-rocket"></i> Q2 2028
-                                </div>
-                                <div style="font-size: clamp(0.75rem, 1.4vw, 0.95rem); line-height: 1.3; color: #fff; font-weight: 600;">25,000 Farmers @ Scale</div>
-                            </div>
-                        </div>
+                    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 2px solid #4CAF50; border-radius: 12px; padding: 2.5vh 2vw; text-align: center;">
+                        <p style="font-size: clamp(0.95rem, 1.8vw, 1.2rem); color: #fff; font-style: italic; line-height: 1.5; margin: 0;">
+                            <strong style="color: #4CAF50;">De-risks R508.6M investment</strong> through proven pilot validation
+                        </p>
                     </div>
                 </div>
 
-                <!-- Quote Box -->
-                <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 2px solid #4CAF50; border-radius: 10px; padding: clamp(1.5vh, 2vh, 2.5vh) clamp(2vw, 2.5vw, 3vw); margin-top: clamp(2vh, 2.5vh, 3vh); text-align: center; position: relative;">
-                    <i class="fas fa-quote-left" style="position: absolute; top: 1vh; left: 1.5vw; font-size: clamp(1.2rem, 2vw, 1.6rem); color: rgba(76, 175, 80, 0.3);"></i>
-                    <p style="font-size: clamp(0.9rem, 1.6vw, 1.2rem); font-style: italic; color: #fff; line-height: 1.5; margin: 0; padding: 0 2vw;"><strong style="color: #4CAF50;">Strategic partner validates the technology.</strong> Proven MVP unlocks future scaling opportunities.</p>
-                    <i class="fas fa-quote-right" style="position: absolute; bottom: 1vh; right: 1.5vw; font-size: clamp(1.2rem, 2vw, 1.6rem); color: rgba(76, 175, 80, 0.3);"></i>
+                <!-- Right: Visual -->
+                <div style="position: relative; border-radius: 15px; overflow: hidden; border: 3px solid rgba(76, 175, 80, 0.4);">
+                    <img src="images/financial-scale.jpg?v=118" alt="Technology validation" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 0; width: 100%; padding: 3vh 2vw; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.95));">
+                        <h4 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; font-weight: 700; margin-bottom: 1vh;">Strategic Validation</h4>
+                        <p style="font-size: clamp(0.9rem, 1.7vw, 1.1rem); color: #fff; line-height: 1.4; margin: 0;">
+                            Proves technology works BEFORE scaling to 25,000 farmers
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 18B: Timeline to Scale -->
+        <div class="slide">
+            <div style="padding: 5vh 6vw; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center;">
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); color: #4CAF50; font-weight: 900; margin-bottom: 3vh;">
+                    <i class="fas fa-calendar-alt"></i> The Path to Scale
+                </h2>
+
+                <div style="max-width: 900px; width: 100%; display: flex; flex-direction: column; gap: 4vh;">
+                    <!-- Step 1 -->
+                    <div style="background: rgba(76, 175, 80, 0.1); border: 3px solid #4CAF50; border-radius: 20px; padding: 4vh 4vw; text-align: center;">
+                        <div style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: #4CAF50; margin-bottom: 1.5vh;">
+                            <i class="fas fa-flask"></i> Month 24
+                        </div>
+                        <h3 style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">Technology Validated</h3>
+                        <p style="font-size: clamp(1rem, 2vw, 1.3rem); color: #ccc; line-height: 1.5; margin: 0;">20-50 farmers prove MVP works at pilot scale</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div style="font-size: clamp(3rem, 6vw, 5rem); color: #4CAF50;">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.15)); border: 3px solid #4CAF50; border-radius: 20px; padding: 4vh 4vw; text-align: center; box-shadow: 0 10px 40px rgba(76, 175, 80, 0.3);">
+                        <div style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: #4CAF50; margin-bottom: 1.5vh;">
+                            <i class="fas fa-rocket"></i> Q2 2028
+                        </div>
+                        <h3 style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: #fff; margin-bottom: 1vh; font-weight: 700;">Full Deployment</h3>
+                        <p style="font-size: clamp(1rem, 2vw, 1.3rem); color: #fff; line-height: 1.5; margin: 0; font-weight: 600;">25,000 farmers | R508.6M | Gauteng-wide scale</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1084,44 +1086,59 @@
             </div>
         </div>
 
-        <!-- Slide 20: Budget Overview Part 2 - Technology Investments -->
+        <!-- Slide 20: Budget Part 2 - Split Editorial -->
         <div class="slide">
-            <h2 class="animate-in" style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: clamp(2vh, 2.5vh, 3vh); text-align: center;">R7.5M Pilot Budget: Technology Stack (19.2%)</h2>
+            <div style="padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0; height: 100%;">
+                <!-- Left: Content -->
+                <div style="padding: 5vh 4vw; background: rgba(0,0,0,0.9); display: flex; flex-direction: column; justify-content: center; gap: 3vh;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); color: #4CAF50; font-weight: 900; margin-bottom: 0;">Technology Stack</h2>
+                    <p style="font-size: clamp(0.9rem, 1.7vw, 1.1rem); color: #999; margin-bottom: 2vh;">R1.3M (19.2%) in cutting-edge agtech</p>
 
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <!-- Technology Investments -->
-                <div style="display: grid; grid-template-columns: repeat(1, 1fr); gap: clamp(2.5vh, 3vh, 3.5vh);">
-                    <div style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1vh;">
-                            <h3 style="font-size: clamp(1.2rem, 2vw, 1.5rem); color: #4CAF50; margin: 0;"><i class="fas fa-brain"></i> AI Development</h3>
-                            <span style="font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 900; color: #4CAF50;">10.0%</span>
+                    <!-- AI Block -->
+                    <div style="background: rgba(76, 175, 80, 0.1); border-left: 5px solid #4CAF50; padding: 3vh 2.5vw; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.transform='translateX(8px)'" onmouseout="this.style.background='rgba(76, 175, 80, 0.1)'; this.style.transform='translateX(0)'">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5vh;">
+                            <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #fff; font-weight: 700; margin: 0;">
+                                <i class="fas fa-brain"></i> AI Development
+                            </h3>
+                            <span style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; color: #4CAF50;">R752k</span>
                         </div>
-                        <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); margin-bottom: 0.8vh; color: #ccc;"><strong>R752k</strong> | On-Premise ML Training + Professional Workstations</p>
-                        <p style="font-size: clamp(0.75rem, 1.3vw, 0.95rem); line-height: 1.5; margin: 0; color: #999;">Mac Studio M3 Ultra (R222k) + MacBook Pro M4 Max (R137k). Target: 82% credit accuracy. Saves R449k vs cloud.</p>
+                        <p style="font-size: clamp(0.9rem, 1.7vw, 1.1rem); color: #ccc; line-height: 1.5; margin: 0;">
+                            Mac Studio M3 Ultra + ML training workstations. Target: <strong style="color: #4CAF50;">82% credit accuracy</strong>. Saves R449k vs cloud.
+                        </p>
                     </div>
 
-                    <div style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1vh;">
-                            <h3 style="font-size: clamp(1.2rem, 2vw, 1.5rem); color: #4CAF50; margin: 0;"><i class="fas fa-helicopter"></i> Aerial Intelligence</h3>
-                            <span style="font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 900; color: #4CAF50;">7.7%</span>
+                    <!-- Drones Block -->
+                    <div style="background: rgba(76, 175, 80, 0.1); border-left: 5px solid #4CAF50; padding: 3vh 2.5vw; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='rgba(76, 175, 80, 0.2)'; this.style.transform='translateX(8px)'" onmouseout="this.style.background='rgba(76, 175, 80, 0.1)'; this.style.transform='translateX(0)'">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5vh;">
+                            <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #fff; font-weight: 700; margin: 0;">
+                                <i class="fas fa-helicopter"></i> Aerial Intelligence
+                            </h3>
+                            <span style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; color: #4CAF50;">R580k</span>
                         </div>
-                        <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); margin-bottom: 0.8vh; color: #ccc;"><strong>R580k</strong> | Drone Surveillance + Precision Spray System</p>
-                        <p style="font-size: clamp(0.75rem, 1.3vw, 0.95rem); line-height: 1.5; margin: 0; color: #999;">2× DJI Mavic 3 Enterprise (R165k each) + 2× DJI Agras T40 (R125k each). Weekly aerial surveillance.</p>
+                        <p style="font-size: clamp(0.9rem, 1.7vw, 1.1rem); color: #ccc; line-height: 1.5; margin: 0;">
+                            2× DJI Mavic 3 Enterprise + 2× DJI Agras T40. <strong style="color: #4CAF50;">Weekly surveillance</strong> + precision spraying.
+                        </p>
                     </div>
 
-                    <div style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1vh;">
-                            <h3 style="font-size: clamp(1.2rem, 2vw, 1.5rem); color: #4CAF50; margin: 0;"><i class="fas fa-signal"></i> Connectivity</h3>
-                            <span style="font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 900; color: #4CAF50;">1.5%</span>
-                        </div>
-                        <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); margin-bottom: 0.8vh; color: #ccc;"><strong>R109k</strong> | IoT + Communications Infrastructure</p>
-                        <p style="font-size: clamp(0.75rem, 1.3vw, 0.95rem); line-height: 1.5; margin: 0; color: #999;">13 Business LTE SIMs @ R350/month × 24 months. Real-time sensor data transmission from pilot farms.</p>
+                    <!-- Bottom Quote -->
+                    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 2px solid #4CAF50; border-radius: 10px; padding: 2.5vh 2vw; text-align: center;">
+                        <p style="font-size: clamp(0.95rem, 1.8vw, 1.2rem); color: #fff; font-style: italic; line-height: 1.5; margin: 0;">
+                            <strong style="color: #4CAF50;">Tech validates BEFORE scale—</strong>not after
+                        </p>
                     </div>
                 </div>
 
-                <!-- Summary Box -->
-                <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 2px solid #4CAF50; border-radius: 12px; padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 3vw, 4vw); margin-top: clamp(3vh, 4vh, 5vh); text-align: center;">
-                    <p style="font-size: clamp(1rem, 1.8vw, 1.3rem); line-height: 1.6; margin: 0;"><strong style="color: #4CAF50;">Strategic Investment Thesis:</strong> R7.5M validates 5 core technologies (AI credit scoring, LLM automation, drone surveillance, IoT sensors, logistics) at 20-50 farmer scale BEFORE R508.6M deployment. <strong>De-risks scale investment.</strong></p>
+                <!-- Right: Image -->
+                <div style="position: relative; overflow: hidden;">
+                    <img src="images/ai-credit-scoring.jpg?v=118" alt="Technology in agriculture" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 0; width: 100%; padding: 4vh 3vw; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.95));">
+                        <h4 style="font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: #4CAF50; font-weight: 700; margin-bottom: 1.5vh;">
+                            De-Risks R508.6M
+                        </h4>
+                        <p style="font-size: clamp(1rem, 1.9vw, 1.3rem); color: #fff; line-height: 1.5; margin: 0;">
+                            Pilot proves AI credit scoring, drone surveillance, and IoT sensors work at 20-50 farmer scale BEFORE massive deployment
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1550,64 +1567,66 @@
             </div>
         </div>
 
-        <!-- Slide 30: VISUAL STORY - Scale-Up Pathway -->
+        <!-- Slide 30: Scale-Up Pathway - Magazine Spread -->
         <div class="slide">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: center; max-width: 1200px; margin: 0 auto;">
-                <!-- Left: Story Content -->
-                <div>
-                    <h2 style="font-size: clamp(2rem, 3.8vw, 3rem); margin-bottom: 2vh; color: #4CAF50;">
-                        <i class="fas fa-rocket"></i> The Scale-Up Pathway
+            <div style="padding: 4vh 5vw; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; gap: 2vh 3vw; height: 100%;">
+                <!-- Header spans both columns -->
+                <div style="grid-column: 1 / -1; text-align: center;">
+                    <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh;">
+                        <i class="fas fa-rocket"></i> The Path to Scale
                     </h2>
+                    <p style="font-size: clamp(0.9rem, 1.7vw, 1.2rem); color: #999;">Validate cheaply → Scale confidently</p>
+                </div>
 
-                    <div style="background: rgba(76, 175, 80, 0.08); padding: 2.5vh 2vw; border-radius: 12px; margin-bottom: 2vh;">
-                        <h3 style="font-size: clamp(1.1rem, 2vw, 1.4rem); color: #ccc; margin-bottom: 1.5vh;">From Pilot to Full Deployment</h3>
-
-                        <!-- Phase 1: Pilot -->
-                        <div style="padding: 2vh 2vw; background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(76, 175, 80, 0.05)); border-radius: 8px; margin-bottom: 1.5vh; border-left: 4px solid #4CAF50;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1vh;">
-                                <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); color: #4CAF50; margin: 0;">Phase 1: Pilot (24 Months)</h4>
-                                <span style="font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; color: #4CAF50;">R7.5M</span>
-                            </div>
-                            <ul style="font-size: clamp(0.85rem, 1.5vw, 1rem); line-height: 1.6; color: #ccc; margin: 0; padding-left: 1.5vw;">
-                                <li><strong>20-50 farmers</strong> validate 5 core technologies</li>
-                                <li><strong>Proof of concept</strong> for AI credit, drones, WhatsApp platform</li>
-                                <li><strong>Risk mitigation</strong> before massive scale investment</li>
-                            </ul>
+                <!-- Left: Phase Cards -->
+                <div style="display: flex; flex-direction: column; gap: 2.5vh; justify-content: center;">
+                    <!-- Phase 1 -->
+                    <div style="background: rgba(76, 175, 80, 0.08); border: 2px solid rgba(76, 175, 80, 0.3); border-radius: 12px; padding: 3vh 2.5vw; border-left: 5px solid #4CAF50;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5vh;">
+                            <h3 style="font-size: clamp(1.1rem, 2vw, 1.4rem); color: #4CAF50; font-weight: 700; margin: 0;">
+                                <i class="fas fa-flask"></i> Pilot Phase
+                            </h3>
+                            <span style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: #4CAF50; line-height: 1;">R7.5M</span>
                         </div>
-
-                        <!-- Phase 2: Scale-Up -->
-                        <div style="padding: 2vh 2vw; background: linear-gradient(135deg, rgba(76, 175, 80, 0.25), rgba(76, 175, 80, 0.1)); border-radius: 8px; margin-bottom: 1.5vh; border-left: 4px solid #4CAF50;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1vh;">
-                                <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); color: #4CAF50; margin: 0;">Phase 2: Deployment (IDC)</h4>
-                                <span style="font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900; color: #4CAF50;">R508.6M</span>
-                            </div>
-                            <ul style="font-size: clamp(0.85rem, 1.5vw, 1rem); line-height: 1.6; color: #ccc; margin: 0; padding-left: 1.5vw;">
-                                <li><strong>25,000 farmers</strong> across South Africa</li>
-                                <li><strong>Proven technologies</strong> with validated unit economics</li>
-                                <li><strong>Investment confidence</strong> backed by pilot data</li>
-                            </ul>
-                        </div>
-
-                        <!-- Growth Arrow -->
-                        <div style="text-align: center; padding: 2vh 0;">
-                            <div style="font-size: clamp(2rem, 4vw, 3.5rem); color: #4CAF50;">
-                                20-50 → 25,000
-                            </div>
-                            <p style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: #999; margin: 0.5vh 0 0 0;"><strong>500x scale</strong> enabled by validated pilot</p>
-                        </div>
+                        <p style="font-size: clamp(0.9rem, 1.7vw, 1.1rem); color: #ccc; line-height: 1.5; margin: 0;">
+                            <strong>20-50 farmers</strong> validate 5 core technologies over <strong>24 months</strong>
+                        </p>
                     </div>
 
-                    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); padding: 2vh 2vw; border-radius: 12px; border: 2px solid #4CAF50; text-align: center;">
-                        <p style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin: 0; line-height: 1.6;"><strong style="color: #4CAF50;">Validate cheaply. Scale confidently.</strong> R7.5M de-risks R508.6M investment.</p>
+                    <!-- Arrow -->
+                    <div style="text-align: center; font-size: clamp(2.5rem, 5vw, 4rem); color: #4CAF50;">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 2px solid #4CAF50; border-radius: 12px; padding: 3vh 2.5vw; border-left: 5px solid #4CAF50; box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5vh;">
+                            <h3 style="font-size: clamp(1.1rem, 2vw, 1.4rem); color: #4CAF50; font-weight: 700; margin: 0;">
+                                <i class="fas fa-rocket"></i> Full Scale
+                            </h3>
+                            <span style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: #4CAF50; line-height: 1;">R508.6M</span>
+                        </div>
+                        <p style="font-size: clamp(0.9rem, 1.7vw, 1.1rem); color: #fff; line-height: 1.5; margin: 0; font-weight: 600;">
+                            <strong>25,000 farmers</strong> with proven technologies and validated economics
+                        </p>
+                    </div>
+
+                    <!-- Bottom stat -->
+                    <div style="text-align: center; background: rgba(76, 175, 80, 0.08); border-radius: 10px; padding: 2vh 1.5vw;">
+                        <div style="font-size: clamp(2rem, 4vw, 3rem); color: #4CAF50; font-weight: 900; line-height: 1;">500×</div>
+                        <p style="font-size: clamp(0.85rem, 1.6vw, 1rem); color: #999; margin: 0.5vh 0 0 0;">Scale multiplier</p>
                     </div>
                 </div>
 
-                <!-- Right: Illustration -->
-                <div style="position: relative;">
-                    <img src="images/financial-scale.jpg?v=118" alt="Organic Farm with Digital Technology" style="width: 100%; height: auto; object-fit: cover; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
-                    <p style="position: absolute; bottom: 8px; right: 8px; font-size: 0.6rem; color: rgba(255, 255, 255, 0.5); margin: 0; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">
-                        Photo: Pexels
-                    </p>
+                <!-- Right: Image with Caption -->
+                <div style="position: relative; border-radius: 15px; overflow: hidden; border: 3px solid rgba(76, 175, 80, 0.4);">
+                    <img src="images/financial-scale.jpg?v=118" alt="Agricultural scale" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 0; width: 100%; padding: 3.5vh 2.5vw; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.95));">
+                        <h4 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; font-weight: 700; margin-bottom: 1vh;">De-Risked Investment</h4>
+                        <p style="font-size: clamp(0.95rem, 1.8vw, 1.2rem); color: #fff; line-height: 1.5; margin: 0;">
+                            Pilot proves the model works BEFORE committing R508.6M to full deployment
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
