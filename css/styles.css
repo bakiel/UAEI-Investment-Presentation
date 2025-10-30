@@ -3764,3 +3764,69 @@ h2 {
         padding: 3vh 4vw;
     }
 }
+/* ============================================
+   SNAKE GAME SCALING - NAVIGATION FIX (MAIN PRESENTATION)
+   ============================================ */
+.navigation {
+    position: fixed !important;
+    bottom: clamp(15px, 2.5vh, 25px) !important;
+    right: clamp(15px, 2.5vw, 25px) !important;
+    display: flex !important;
+    gap: clamp(8px, 1.5vw, 12px) !important;
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+}
+
+.nav-btn {
+    background: rgba(76, 175, 80, 0.2) !important;
+    border: 2px solid #4CAF50 !important;
+    color: #fff !important;
+    padding: clamp(10px, 1.8vh, 14px) clamp(20px, 3.5vw, 28px) !important;
+    font-size: clamp(0.85rem, 1.6vw, 1.05rem) !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-weight: 700 !important;
+    font-family: 'Poppins', sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.2px !important;
+    pointer-events: auto !important;
+    backdrop-filter: blur(10px) !important;
+    position: relative !important;
+    z-index: 99999 !important;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #4CAF50 !important;
+    border-color: #4CAF50 !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 35px rgba(76, 175, 80, 0.45) !important;
+}
+
+.slide-counter {
+    position: fixed !important;
+    bottom: clamp(15px, 2.5vh, 25px) !important;
+    left: clamp(15px, 2.5vw, 25px) !important;
+    color: #4CAF50 !important;
+    font-size: clamp(1.05rem, 2.2vw, 1.4rem) !important;
+    font-weight: 700 !important;
+    background: rgba(76, 175, 80, 0.2) !important;
+    padding: clamp(10px, 1.8vh, 14px) clamp(20px, 3.5vw, 28px) !important;
+    border-radius: 50px !important;
+    border: 2px solid #4CAF50 !important;
+    z-index: 99999 !important;
+    pointer-events: none !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        bottom: clamp(10px, 2vh, 15px) !important;
+        right: clamp(10px, 2vw, 15px) !important;
+    }
+
+    .slide-counter {
+        bottom: clamp(10px, 2vh, 15px) !important;
+        left: clamp(10px, 2vw, 15px) !important;
+    }
+}
