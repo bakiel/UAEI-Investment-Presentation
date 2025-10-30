@@ -169,3 +169,88 @@ slides.forEach(slide => {
 console.log('UAEI Gauteng Pitch - 10 Slides Loaded');
 console.log(`Presentation ready: ${totalSlides} slides`);
 console.log('Keyboard shortcuts: ← → (navigate), Space (next), F (fullscreen), Esc (exit fullscreen)');
+
+// ============================================
+// MODAL FUNCTIONALITY (from main presentation)
+// ============================================
+
+// Simple modal functions for Slide 3.5 popups
+function showModal(key) {
+    console.log('📱 Opening modal:', key);
+    
+    // Get modal content from data.js (loaded from main presentation)
+    const data = window.modalContent ? window.modalContent[key] : null;
+    
+    if (!data) {
+        console.warn('❌ No modal content found for key:', key);
+        console.log('Available keys:', window.modalContent ? Object.keys(window.modalContent) : 'modalContent not loaded');
+        return;
+    }
+
+    // Create simple stats HTML
+    const statsHTML = data.stats ? data.stats.map(stat => `
+        <div class="modal-stat">
+            <div class="modal-stat-value">${stat.value}</div>
+            <div class="modal-stat-label">${stat.label}</div>
+        </div>
+    `).join('') : '';
+
+    // Set modal content
+    const modalBody = document.getElementById('modal-body');
+    if (modalBody) {
+        modalBody.innerHTML = `
+            <h3>${data.title}</h3>
+            <p>${data.content}</p>
+            <div class="modal-stats">
+                ${statsHTML}
+            </div>
+        `;
+    }
+
+    // Show modal
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        console.log('✅ Modal shown');
+    } else {
+        console.error('❌ Modal element not found in DOM');
+    }
+}
+
+function closeModal() {
+    console.log('📴 Closing modal');
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close modal on backdrop click
+setTimeout(function() {
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target.id === 'modal') {
+                closeModal();
+            }
+        });
+        console.log('✅ Modal backdrop click handler attached');
+    } else {
+        console.warn('⚠️ Modal element not found - backdrop click handler not attached');
+    }
+}, 100);
+
+// Close button handler
+setTimeout(function() {
+    const closeBtn = document.querySelector('.modal-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+        console.log('✅ Modal close button handler attached');
+    }
+}, 100);
+
+console.log('🎭 Modal functions loaded');
+console.log('   modalContent available:', typeof window.modalContent !== 'undefined');
+

@@ -5411,3 +5411,144 @@ body {
     z-index: 9999999 !important;
     touch-action: manipulation !important;
 }
+/* ============================================
+   SLIDE 10 - ULTRA COMPACT TO FIT LANDSCAPE
+   ============================================ */
+
+.ask-layout {
+    gap: 1.5vw !important;
+    margin: 0.5vh 0 !important;
+}
+
+.ask-main h1 {
+    font-size: clamp(1.5rem, 3vw, 2rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+.ask-amount-box {
+    padding: 1vh 1.5vw !important;
+    margin-bottom: 0.8vh !important;
+}
+
+.ask-amount {
+    font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+}
+
+.ask-duration {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+}
+
+.ask-outcomes h3 {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+    margin-bottom: 0.8vh !important;
+}
+
+.outcome-grid {
+    gap: 0.4vh !important;
+    margin-bottom: 0.8vh !important;
+}
+
+.outcome-item {
+    padding: 0.6vh 1vw !important;
+}
+
+.outcome-item i {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+}
+
+.outcome-item span {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.ask-sequencing {
+    gap: 0.8vw !important;
+    margin: 0.8vh 0 !important;
+}
+
+.sequence-step {
+    padding: 0.8vh 1vw !important;
+    max-width: clamp(110px, 16vw, 140px) !important;
+}
+
+.sequence-label {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+    margin-bottom: 0.2vh !important;
+}
+
+.sequence-action {
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.sequence-arrow {
+    font-size: clamp(1.2rem, 2vw, 1.6rem) !important;
+}
+
+.ubuntu-quote-box {
+    padding: 1vh 1.5vw !important;
+    margin-top: 0.8vh !important;
+}
+
+.ubuntu-quote-box i {
+    font-size: clamp(0.9rem, 1.6vw, 1.2rem) !important;
+}
+
+.ubuntu-quote-box p {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+    margin: 0.4vh 0 !important;
+}
+
+.ask-sidebar {
+    padding: 1vh 1vw !important;
+}
+
+.contact-info-compact h4 {
+    font-size: clamp(0.8rem, 1.4vw, 1rem) !important;
+    margin-bottom: 0.4vh !important;
+    margin-top: 0.8vh !important;
+}
+
+.contact-info-compact h4:first-child {
+    margin-top: 0 !important;
+}
+
+.contact-info-compact p {
+    font-size: clamp(0.65rem, 1.1vw, 0.8rem) !important;
+    margin-bottom: 0.2vh !important;
+}
+
+.ask-logo {
+    max-width: clamp(80px, 12vw, 100px) !important;
+    margin-bottom: 0.8vh !important;
+}
+
+.partners-compact {
+    margin-top: 0.8vh !important;
+}
+
+.partner-badge {
+    padding: 0.5vh 0.8vw !important;
+    font-size: clamp(0.65rem, 1.1vw, 0.75rem) !important;
+    margin-bottom: 0.2vh !important;
+}
+
+.final-cta {
+    padding: 1vh 1.5vw !important;
+    margin-top: 0.8vh !important;
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem) !important;
+}
+
+/* Slide 10 specific padding reduction */
+.slide.final-slide {
+    padding: 1vh 2vw 8vh 2vw !important;
+}
+
+/* ============================================
+   SLIDE 3 - WHITE ICONS (not green on green)
+   ============================================ */
+.platform-item .platform-icon {
+    color: #FFFFFF !important;
+}
+
+.platform-item .platform-icon i {
+    color: #FFFFFF !important;
+}
