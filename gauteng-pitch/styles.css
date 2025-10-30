@@ -4339,3 +4339,484 @@ h2 {
     margin-bottom: 1.5vh !important;
     padding-bottom: 0.5vh !important;
 }
+/* ============================================
+   SNAKE GAME SCALING - NAVIGATION FIX
+   ============================================ */
+.navigation {
+    position: fixed !important;
+    bottom: clamp(15px, 2.5vh, 25px) !important;
+    right: clamp(15px, 2.5vw, 25px) !important;
+    display: flex !important;
+    gap: clamp(8px, 1.5vw, 12px) !important;
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+}
+
+.nav-btn {
+    background: rgba(76, 175, 80, 0.2) !important;
+    border: 2px solid #4CAF50 !important;
+    color: #fff !important;
+    padding: clamp(10px, 1.8vh, 14px) clamp(20px, 3.5vw, 28px) !important;
+    font-size: clamp(0.85rem, 1.6vw, 1.05rem) !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-weight: 700 !important;
+    font-family: 'Poppins', sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.2px !important;
+    pointer-events: auto !important;
+    backdrop-filter: blur(10px) !important;
+    position: relative !important;
+    z-index: 99999 !important;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #4CAF50 !important;
+    border-color: #4CAF50 !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 35px rgba(76, 175, 80, 0.45) !important;
+}
+
+.slide-counter {
+    position: fixed !important;
+    bottom: clamp(15px, 2.5vh, 25px) !important;
+    left: clamp(15px, 2.5vw, 25px) !important;
+    color: #4CAF50 !important;
+    font-size: clamp(1.05rem, 2.2vw, 1.4rem) !important;
+    font-weight: 700 !important;
+    background: rgba(76, 175, 80, 0.2) !important;
+    padding: clamp(10px, 1.8vh, 14px) clamp(20px, 3.5vw, 28px) !important;
+    border-radius: 50px !important;
+    border: 2px solid #4CAF50 !important;
+    z-index: 99999 !important;
+    pointer-events: none !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* ============================================
+   SNAKE GAME SCALING - SLIDE PADDING FIX
+   ============================================ */
+.slide {
+    padding: clamp(2vh, 2.5vh, 3vh) clamp(2.5vw, 3vw, 3.5vw) clamp(8vh, 10vh, 12vh) clamp(2.5vw, 3vw, 3.5vw) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: contain !important;
+}
+
+.title-slide {
+    padding: clamp(4vh, 5vh, 6vh) clamp(3vw, 4vw, 5vw) !important;
+}
+
+/* Make sure content doesn't overlap navigation */
+.slide-container {
+    padding-bottom: clamp(70px, 10vh, 100px) !important;
+}
+
+/* ============================================
+   SNAKE GAME SCALING - RESPONSIVE H2
+   ============================================ */
+h2 {
+    font-size: clamp(1.4rem, 2.8vw, 2.2rem) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+    padding-bottom: clamp(0.5vh, 0.8vh, 1vh) !important;
+}
+
+/* ============================================
+   SNAKE GAME SCALING - REDUCE ALL GAPS
+   ============================================ */
+.crisis-stat-large {
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+    padding: clamp(0.5vh, 1vh, 1.5vh) 0 !important;
+}
+
+.crisis-number-huge {
+    font-size: clamp(3rem, 6vw, 5rem) !important;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.crisis-label-large {
+    font-size: clamp(0.85rem, 1.6vw, 1.1rem) !important;
+}
+
+.failure-flow {
+    gap: clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) auto !important;
+}
+
+.failure-step {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+.failure-icon {
+    font-size: clamp(1.8rem, 3vw, 2.5rem) !important;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.failure-step h3 {
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.failure-step p {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+}
+
+.insight-box {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.innovation-section {
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.platform-grid {
+    gap: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+    max-height: none !important;
+}
+
+.platform-item {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+.platform-item .platform-icon {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.platform-item h4 {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+    margin-bottom: clamp(0.3vh, 0.5vh, 0.8vh) !important;
+}
+
+.platform-item p {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+}
+
+.genius-callout {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+}
+
+.component-explanation {
+    gap: clamp(2vw, 2.5vw, 3vw) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) 0 !important;
+}
+
+.component-left {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+.component-stat .stat-value {
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.component-stat .stat-label {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.component-desc {
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+}
+
+.component-right h3 {
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.not-list, .is-list {
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.not-list li, .is-list li {
+    margin-bottom: clamp(0.5vh, 0.8vh, 1vh) !important;
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+}
+
+.analogy-box {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+}
+
+.budget-visual {
+    gap: clamp(0.8vh, 1vh, 1.2vh) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) auto !important;
+}
+
+.budget-bar {
+    height: clamp(18px, 2.2vh, 25px) !important;
+}
+
+.budget-footer {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+    font-size: clamp(0.85rem, 1.5vw, 1rem) !important;
+}
+
+.timeline-phases {
+    gap: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) auto !important;
+}
+
+.phase-card {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+.phase-header {
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.phase-number {
+    width: clamp(30px, 3.5vw, 40px) !important;
+    height: clamp(30px, 3.5vw, 40px) !important;
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+}
+
+.phase-title {
+    font-size: clamp(1rem, 1.8vw, 1.4rem) !important;
+}
+
+.phase-timeline {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+    margin-bottom: clamp(0.3vh, 0.5vh, 0.8vh) !important;
+}
+
+.phase-budget {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.phase-milestones li {
+    margin-bottom: clamp(0.5vh, 0.8vh, 1vh) !important;
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+}
+
+.validation-grid {
+    gap: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) auto !important;
+}
+
+.validation-card {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.validation-header {
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.validation-card li {
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+}
+
+.validation-footer {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+}
+
+.impact-metrics {
+    gap: clamp(1.5vh, 2vh, 2.5vh) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) auto !important;
+}
+
+.impact-row {
+    gap: clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.impact-metric {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw) !important;
+    gap: clamp(0.5vh, 1vh, 1.5vh) !important;
+}
+
+.impact-icon {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+    margin-bottom: clamp(0.3vh, 0.5vh, 0.8vh) !important;
+}
+
+.impact-value {
+    font-size: clamp(1.3rem, 2.5vw, 2rem) !important;
+}
+
+.impact-label {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+}
+
+.impact-statement {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.impact-statement p {
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+}
+
+.why-gauteng {
+    gap: clamp(1.5vh, 2vh, 2.5vh) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) 0 !important;
+}
+
+.why-section {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.why-section h3 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.why-grid {
+    gap: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.why-item {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+.why-item strong {
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+    margin-bottom: clamp(0.3vh, 0.5vh, 0.8vh) !important;
+}
+
+.why-item p {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+}
+
+.urgency-list {
+    gap: clamp(1vh, 1.2vh, 1.5vh) !important;
+}
+
+.urgency-item {
+    gap: clamp(1vw, 1.5vw, 2vw) !important;
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+.urgency-item i {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem) !important;
+}
+
+.urgency-item strong {
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+    margin-bottom: clamp(0.2vh, 0.3vh, 0.5vh) !important;
+}
+
+.urgency-item p {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+}
+
+.value-prop {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+    font-size: clamp(0.95rem, 1.7vw, 1.15rem) !important;
+}
+
+.ask-layout {
+    gap: clamp(2vw, 2.5vw, 3vw) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) 0 !important;
+}
+
+.ask-main h1 {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.ask-amount-box {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.ask-amount {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+}
+
+.ask-duration {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+}
+
+.ask-outcomes h3 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.outcome-grid {
+    gap: clamp(0.5vh, 1vh, 1.5vh) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.outcome-item {
+    padding: clamp(0.8vh, 1vh, 1.5vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+.outcome-item span {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+}
+
+.ask-sequencing {
+    gap: clamp(1vw, 1.5vw, 2vw) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) 0 !important;
+}
+
+.sequence-step {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1vw, 1.5vw, 2vw) !important;
+    max-width: clamp(150px, 20vw, 180px) !important;
+}
+
+.ubuntu-quote-box {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.ubuntu-quote-box p {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+    margin: clamp(0.5vh, 1vh, 1.5vh) 0 !important;
+}
+
+.ask-sidebar {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+.contact-info-compact h4 {
+    font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.contact-info-compact p {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+    margin-bottom: clamp(0.3vh, 0.5vh, 0.8vh) !important;
+}
+
+.ask-logo {
+    max-width: clamp(100px, 15vw, 120px) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+.final-cta {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-top: clamp(1vh, 1.5vh, 2vh) !important;
+    font-size: clamp(1rem, 1.8vw, 1.3rem) !important;
+}
+
+.title-grid {
+    gap: clamp(1.5vh, 2vh, 2.5vh) clamp(2vw, 2.5vw, 3vw) !important;
+    margin: 0 auto clamp(2vh, 2.5vh, 3vh) auto !important;
+}
+
+.title-box {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.title-value {
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+}
+
+.presenter-info {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem) !important;
+}
