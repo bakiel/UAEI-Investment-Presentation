@@ -5368,3 +5368,11 @@ body {
 .slide-container {
     overflow: hidden !important;
 }
+
+/* ============================================
+   LOGO SIZE FIX - 50% BIGGER
+   ============================================ */
+.logo-img {
+    max-width: clamp(120px, 18vw, 180px) !important;
+    max-height: clamp(120px, 18vw, 180px) !important;
+}

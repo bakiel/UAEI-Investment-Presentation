@@ -7,7 +7,7 @@
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - R7.5M Technology Validation Request for Gauteng Innovation Hub">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=30">
+    <link rel="stylesheet" href="styles.css?v=40">
 </head>
 <body>
     <button class="fullscreen-btn" id="fullscreen-btn" title="Toggle Fullscreen (F)">
@@ -613,10 +613,10 @@
         <span id="current-slide">1</span> / <span id="total-slides">11</span>
     </div>
     <div class="navigation">
-        <button class="nav-btn" id="prev-btn">
+        <button class="nav-btn" id="prev-btn" onclick="window.goToPrevSlide(); return false;">
             <i class="fas fa-arrow-left"></i> Prev
         </button>
-        <button class="nav-btn" id="next-btn">
+        <button class="nav-btn" id="next-btn" onclick="window.goToNextSlide(); return false;">
             Next <i class="fas fa-arrow-right"></i>
         </button>
     </div>
@@ -626,10 +626,10 @@
     <!-- CountUp.js for animated numbers -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
     <!-- Modal data -->
-    <script src="../js/data.js?v=30"></script>
+    <script src="../js/data.js?v=40"></script>
     <!-- Modal and interaction scripts -->
-    <script src="../js/app.js?v=30"></script>
+    <script src="../js/app.js?v=40"></script>
     <!-- Slide navigation -->
-    <script src="app.js?v=30"></script>
+    <script src="app.js?v=40"></script>
 </body>
 </html>

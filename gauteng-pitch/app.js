@@ -43,18 +43,31 @@ function updateSlide() {
     nextBtn.disabled = currentSlide === totalSlides - 1;
 }
 
-// Event listeners with failsafe
+// Global functions for inline onclick handlers (highest priority)
+window.goToPrevSlide = function() {
+    console.log('🔥 PREV BUTTON CLICKED - Global onclick function');
+    previousSlide();
+    return false;
+};
+
+window.goToNextSlide = function() {
+    console.log('🔥 NEXT BUTTON CLICKED - Global onclick function');
+    nextSlide();
+    return false;
+};
+
+// Event listeners with failsafe (backup)
 prevBtn.addEventListener('click', function(e) {
     e.stopPropagation();
     e.preventDefault();
-    console.log('PREV clicked');
+    console.log('PREV clicked - event listener backup');
     previousSlide();
 }, true);
 
 nextBtn.addEventListener('click', function(e) {
     e.stopPropagation();
     e.preventDefault();
-    console.log('NEXT clicked');
+    console.log('NEXT clicked - event listener backup');
     nextSlide();
 }, true);
 
