@@ -7,7 +7,7 @@
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - R7.5M Technology Validation Request for Gauteng Innovation Hub">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=76">
+    <link rel="stylesheet" href="styles.css?v=77">
 </head>
 <body>
     <button class="fullscreen-btn" id="fullscreen-btn" title="Toggle Fullscreen (F)">
@@ -45,13 +45,16 @@
 
         <!-- Slide 2: The Crisis -->
         <div class="slide">
-            <h2>The Crisis: Why AgTech Fails</h2>
-            <div class="crisis-stat-large">
+            <div class="visual-story-bg"></div>
+            <i class="fas fa-exclamation-triangle mega-icon mega-icon-top-right animate-in"></i>
+
+            <h2 class="animate-in">The Crisis: Why AgTech Fails</h2>
+            <div class="crisis-stat-large animate-scale">
                 <div class="crisis-number-huge">2-5%</div>
                 <div class="crisis-label-large">Traditional AgTech Adoption Rate</div>
             </div>
 
-            <div class="failure-flow">
+            <div class="failure-flow stagger-children">
                 <div class="failure-step">
                     <div class="failure-icon"><i class="fas fa-laptop"></i></div>
                     <h3>AgTech Company</h3>
@@ -71,58 +74,70 @@
                 </div>
             </div>
 
-            <div class="insight-box">
-                <i class="fas fa-lightbulb"></i>
-                <div class="insight-text">
-                    <strong>The Root Problem:</strong> Farmers don't buy technology—they desperately need capital.
+            <div class="story-card animate-in hover-lift" style="max-width: 900px; margin: 3vh auto 0 auto;">
+                <div class="story-card-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="story-card-content">
+                    <h3>The Root Problem</h3>
+                    <p>Farmers don't buy technology—they desperately need capital. Traditional AgTech fails because it asks cash-strapped farmers to pay for tools instead of solving their actual problem: access to working capital.</p>
                 </div>
             </div>
         </div>
 
         <!-- Slide 3: UAEI Innovation -->
         <div class="slide">
-            <h2>UAEI's Breakthrough: Loan-as-Gateway</h2>
+            <div class="visual-story-bg"></div>
+            <i class="fas fa-rocket mega-icon mega-icon-bottom-left animate-in"></i>
 
-            <div class="innovation-section">
+            <h2 class="animate-in">UAEI's Breakthrough: Loan-as-Gateway</h2>
+
+            <div class="innovation-section animate-in">
                 <h3>The Primary Project: R508.6M Platform</h3>
                 <p class="innovation-desc">Africa's first integrated conservation-agriculture-technology ecosystem</p>
             </div>
 
-            <div class="platform-grid">
-                <div class="platform-item">
+            <div class="platform-grid stagger-children">
+                <div class="platform-item hover-lift">
                     <div class="platform-icon"><i class="fas fa-hand-holding-usd"></i></div>
                     <h4>AgriFinance</h4>
                     <p>R250k loans × 25,000 farmers</p>
                 </div>
-                <div class="platform-item">
+                <div class="platform-item hover-lift">
                     <div class="platform-icon"><i class="fas fa-satellite-dish"></i></div>
                     <h4>IoT Technology</h4>
                     <p>Real-time farm monitoring</p>
                 </div>
-                <div class="platform-item">
+                <div class="platform-item hover-lift">
                     <div class="platform-icon"><i class="fas fa-helicopter"></i></div>
                     <h4>Drone Intelligence</h4>
                     <p>Precision agriculture</p>
                 </div>
-                <div class="platform-item">
+                <div class="platform-item hover-lift">
                     <div class="platform-icon"><i class="fas fa-store"></i></div>
                     <h4>Marketplace</h4>
                     <p>Direct farmer-to-buyer</p>
                 </div>
-                <div class="platform-item">
+                <div class="platform-item hover-lift">
                     <div class="platform-icon"><i class="fas fa-leaf"></i></div>
                     <h4>Conservation</h4>
                     <p>Located 373ha sanctuary site</p>
                 </div>
-                <div class="platform-item">
+                <div class="platform-item hover-lift">
                     <div class="platform-icon"><i class="fas fa-graduation-cap"></i></div>
                     <h4>Training</h4>
                     <p>11 languages + digital literacy</p>
                 </div>
             </div>
 
-            <div class="genius-callout">
-                <strong>The Genius:</strong> Embed technology INSIDE loans → 100% adoption target (vs 2-5% industry)
+            <div class="story-card animate-scale hover-lift" style="max-width: 900px; margin: 3vh auto 0 auto;">
+                <div class="story-card-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="story-card-content">
+                    <h3>The Genius</h3>
+                    <p>Embed technology INSIDE loans → 100% adoption target (vs 2-5% industry). Farmers get working capital they need + technology they wouldn't buy = revolutionary adoption model.</p>
+                </div>
             </div>
         </div>
 
@@ -673,14 +688,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
 
     <!-- Modal data FIRST -->
-    <script src="../js/data.js?v=76"></script>
+    <script src="../js/data.js?v=77"></script>
 
     <!-- LOAD NAVIGATION (now includes modal functions) -->
-    <script src="app.js?v=76"></script>
+    <script src="app.js?v=77"></script>
 
     <!-- Debug click logger -->
     <script>
-        console.log('🚀 GAUTENG PITCH LOADED - v76');
+        console.log('🚀 GAUTENG PITCH LOADED - v77 - VISUAL STORYTELLING EDITION');
         console.log('Navigation functions available:', typeof window.goToNextSlide, typeof window.goToPrevSlide);
         console.log('showModal function available:', typeof window.showModal);
         console.log('closeModal function available:', typeof window.closeModal);
