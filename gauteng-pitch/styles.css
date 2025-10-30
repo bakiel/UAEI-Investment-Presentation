@@ -6322,3 +6322,205 @@ body {
 .hero-presenter-compact strong {
     color: #4CAF50;
 }
+
+/* ============================================
+   v84 - GLOBAL 16:9 LANDSCAPE ENFORCEMENT
+   ============================================ */
+
+/* Force all slides to fit in viewport without scrolling */
+.slide {
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    padding: clamp(2vh, 3vh, 4vh) clamp(3vw, 4vw, 5vw) clamp(8vh, 9vh, 10vh) clamp(3vw, 4vw, 5vw) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* Reduce all heading sizes for landscape */
+.slide h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem) !important;
+    margin-bottom: clamp(2vh, 2.5vh, 3vh) !important;
+}
+
+.slide h3 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+/* Compact all grids to single row */
+.stats-grid,
+.platform-grid,
+.validation-grid,
+.revenue-grid,
+.success-grid,
+.risk-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: clamp(1.5vw, 2vw, 2.5vw) !important;
+    max-height: 60vh !important;
+}
+
+/* Hide all illustration placeholders to save vertical space */
+.illustration-placeholder {
+    display: none !important;
+}
+
+/* Compact all cards */
+.stat-card,
+.platform-item,
+.loan-item,
+.revenue-card,
+.validation-card,
+.success-card,
+.risk-item,
+.team-card {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+/* Story cards - make horizontal instead of vertical */
+.story-card {
+    flex-direction: row !important;
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(2vw, 2.5vw, 3vw) !important;
+    margin: clamp(1vh, 1.5vh, 2vh) 0 !important;
+}
+
+.story-card-icon {
+    font-size: clamp(2rem, 3vw, 2.5rem) !important;
+    min-width: 60px !important;
+}
+
+/* Failure flow - make horizontal */
+.failure-flow {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: clamp(2vw, 3vw, 4vw) !important;
+    margin: clamp(2vh, 3vh, 4vh) 0 !important;
+}
+
+.failure-step {
+    flex: 1 !important;
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.failure-arrow {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+}
+
+/* Crisis stat - reduce size */
+.crisis-stat-large {
+    margin: clamp(2vh, 3vh, 4vh) 0 !important;
+}
+
+.crisis-number-huge {
+    font-size: clamp(3rem, 6vw, 5rem) !important;
+}
+
+/* Budget bars - compact */
+.budget-visual {
+    max-height: 50vh !important;
+    overflow-y: auto !important;
+}
+
+.budget-bar-item {
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+}
+
+/* Timeline phases - horizontal */
+.timeline-phases {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: clamp(2vw, 3vw, 4vw) !important;
+}
+
+.phase-card {
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.phase-milestones li {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem) !important;
+    margin-bottom: 0.5vh !important;
+}
+
+/* Impact metrics - single row */
+.impact-metrics {
+    max-height: 55vh !important;
+}
+
+.impact-row {
+    display: flex !important;
+    gap: clamp(1.5vw, 2vw, 2.5vw) !important;
+    margin-bottom: clamp(1.5vh, 2vh, 2.5vh) !important;
+}
+
+.impact-metric {
+    flex: 1 !important;
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1vw, 1.5vw, 2vw) !important;
+}
+
+/* Loan breakdown - 2 rows max */
+.loan-breakdown {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+/* Platform grid - single row */
+.platform-grid {
+    grid-template-columns: repeat(6, 1fr) !important;
+}
+
+/* Tech stack - compact */
+.tech-stack {
+    max-height: 55vh !important;
+    overflow-y: auto !important;
+}
+
+.tech-layer {
+    margin-bottom: clamp(1vh, 1.5vh, 2vh) !important;
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+/* Revenue grid - 2 rows */
+.revenue-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Risk grid - single row if possible */
+.risk-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+/* Success grid - 2 rows */
+.success-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Component explanation - horizontal */
+.component-explanation {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: clamp(3vw, 4vw, 5vw) !important;
+}
+
+/* Why grid - single row */
+.why-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+.why-item {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+/* Urgency list - horizontal */
+.urgency-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: clamp(2vw, 2.5vw, 3vw) !important;
+}
+
+.urgency-item {
+    padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
