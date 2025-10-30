@@ -1,0 +1,701 @@
+/* ============================================
+   UAEI PRESENTATION - IMAGE INTEGRATION CSS
+   v85: Professional stock photography integration
+   All images: 16:9 landscape optimized
+   ============================================ */
+
+/* ============================================
+   GLOBAL IMAGE PATTERNS
+   ============================================ */
+
+/* Background Image Pattern (Subtle, 10-20% opacity) */
+.slide-with-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide-with-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.82) 50%,
+        rgba(0, 0, 0, 0.85) 100%);
+    z-index: 0;
+}
+
+.slide-with-background > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Split-screen Hero Pattern (Prominent, 40% width) */
+.slide-with-hero .hero-wrapper {
+    display: grid;
+    grid-template-columns: 58% 40%;
+    gap: 2vw;
+    align-items: center;
+    height: 100%;
+}
+
+.slide-with-hero .hero-image {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(76, 175, 80, 0.4);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+/* ============================================
+   SLIDE 1: TITLE/HERO
+   Background: African farmer with smartphone
+   ============================================ */
+
+.slide:nth-child(1) {
+    background-image: url('images/slide-1-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.90) 0%,
+        rgba(0, 0, 0, 0.80) 50%,
+        rgba(0, 0, 0, 0.85) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(1) .hero-landscape {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 2: THE CRISIS
+   Background: Drought/failed crops (dramatic)
+   ============================================ */
+
+.slide:nth-child(2) {
+    background-image: url('images/slide-2-crisis.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.90) 0%,
+        rgba(10, 0, 0, 0.88) 50%,
+        rgba(0, 0, 0, 0.92) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(2) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 3: FAILURE CYCLE
+   Background: Broken agricultural systems
+   ============================================ */
+
+.slide:nth-child(3) {
+    background-image: url('images/slide-3-failure.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(15, 0, 0, 0.90) 0%,
+        rgba(0, 0, 0, 0.88) 50%,
+        rgba(10, 0, 0, 0.90) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(3) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 4: UAEI INNOVATION
+   SPLIT-SCREEN HERO: African farmer using tablet
+   ============================================ */
+
+.slide:nth-child(4) {
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1410 100%);
+}
+
+.slide:nth-child(4) .slide-content {
+    display: grid;
+    grid-template-columns: 56% 42%;
+    gap: 2vw;
+    align-items: center;
+    height: 100%;
+}
+
+.slide:nth-child(4) .content-left {
+    padding-right: 2vw;
+}
+
+.slide:nth-child(4) .hero-image-container {
+    position: relative;
+    height: 70vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(76, 175, 80, 0.4);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.slide:nth-child(4) .hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================
+   SLIDE 5: WHY FARMERS ADOPT
+   Background: Farmer training/community learning
+   ============================================ */
+
+.slide:nth-child(5) {
+    background-image: url('images/slide-5-adopt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(5)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.85) 50%,
+        rgba(0, 0, 0, 0.88) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(5) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 6: R250K LOAN PACKAGE
+   SPLIT-SCREEN HERO: Thriving green farm
+   ============================================ */
+
+.slide:nth-child(6) {
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1410 100%);
+}
+
+.slide:nth-child(6) .slide-content {
+    display: grid;
+    grid-template-columns: 40% 58%;
+    gap: 2vw;
+    align-items: center;
+    height: 100%;
+}
+
+.slide:nth-child(6) .hero-image-container {
+    position: relative;
+    height: 75vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(76, 175, 80, 0.4);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.slide:nth-child(6) .hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide:nth-child(6) .content-right {
+    padding-left: 2vw;
+}
+
+/* ============================================
+   SLIDE 7: WHAT GAUTENG IS FUNDING
+   Background: Agtech IoT/drone technology
+   ============================================ */
+
+.slide:nth-child(7) {
+    background-image: url('images/slide-7-funding.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(7)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.85) 50%,
+        rgba(0, 0, 0, 0.88) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(7) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 8: BUDGET BREAKDOWN
+   Background: Aerial green farmland (subtle)
+   ============================================ */
+
+.slide:nth-child(8) {
+    background-image: url('images/slide-8-budget.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(8)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.90) 50%,
+        rgba(0, 0, 0, 0.92) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(8) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 9: 24-MONTH ROADMAP
+   Background: Plant growth progression
+   ============================================ */
+
+.slide:nth-child(9) {
+    background-image: url('images/slide-9-roadmap.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(9)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.90) 0%,
+        rgba(0, 0, 0, 0.88) 50%,
+        rgba(0, 0, 0, 0.90) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(9) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 10: WHAT GETS VALIDATED
+   Background: Agricultural research/testing
+   ============================================ */
+
+.slide:nth-child(10) {
+    background-image: url('images/slide-10-validation.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(10)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.85) 50%,
+        rgba(0, 0, 0, 0.88) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(10) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 11: PLATFORM ARCHITECTURE
+   Background: Tech network/digital infrastructure
+   ============================================ */
+
+.slide:nth-child(11) {
+    background-image: url('images/slide-11-platform.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(11)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.90) 0%,
+        rgba(0, 0, 0, 0.88) 50%,
+        rgba(0, 0, 0, 0.90) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(11) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 12: REVENUE STREAMS
+   Background: Harvest abundance/marketplace
+   ============================================ */
+
+.slide:nth-child(12) {
+    background-image: url('images/slide-12-revenue.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(12)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.85) 50%,
+        rgba(0, 0, 0, 0.88) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(12) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 13: IMPACT AT SCALE
+   FULL HERO BACKGROUND: Expansive farmland
+   ============================================ */
+
+.slide:nth-child(13) {
+    background-image: url('images/slide-13-impact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(13)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.80) 0%,
+        rgba(0, 0, 0, 0.75) 50%,
+        rgba(0, 0, 0, 0.78) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(13) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 14: RISK MANAGEMENT
+   Background: Farm protection/security
+   ============================================ */
+
+.slide:nth-child(14) {
+    background-image: url('images/slide-14-risk.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(14)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.85) 50%,
+        rgba(0, 0, 0, 0.88) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(14) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 15: WHY GAUTENG
+   Background: Gauteng/South Africa landscape
+   ============================================ */
+
+.slide:nth-child(15) {
+    background-image: url('images/slide-15-gauteng.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(15)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.85) 50%,
+        rgba(0, 0, 0, 0.88) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(15) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 16: WHY NOW
+   Background: Sunrise/golden hour farming
+   ============================================ */
+
+.slide:nth-child(16) {
+    background-image: url('images/slide-16-now.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(16)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.80) 50%,
+        rgba(0, 0, 0, 0.85) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(16) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 17: SUCCESS CRITERIA
+   Background: Successful African farmer
+   ============================================ */
+
+.slide:nth-child(17) {
+    background-image: url('images/slide-17-success.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(17)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.85) 50%,
+        rgba(0, 0, 0, 0.88) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(17) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   SLIDE 18: THE ASK
+   SPLIT-SCREEN HERO: Partnership/handshake
+   ============================================ */
+
+.slide:nth-child(18) {
+    background: linear-gradient(135deg, #0a0f0a 0%, #0f1410 100%);
+}
+
+.slide:nth-child(18) .slide-content {
+    display: grid;
+    grid-template-columns: 60% 38%;
+    gap: 2vw;
+    align-items: center;
+    height: 100%;
+}
+
+.slide:nth-child(18) .content-left {
+    padding-right: 2vw;
+}
+
+.slide:nth-child(18) .hero-image-container {
+    position: relative;
+    height: 70vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(76, 175, 80, 0.4);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.slide:nth-child(18) .hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================
+   SLIDE 19: THANK YOU
+   Background: Community celebration
+   ============================================ */
+
+.slide:nth-child(19) {
+    background-image: url('images/slide-19-thankyou.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide:nth-child(19)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.82) 0%,
+        rgba(0, 0, 0, 0.78) 50%,
+        rgba(0, 0, 0, 0.82) 100%);
+    z-index: 0;
+}
+
+.slide:nth-child(19) > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   RESPONSIVE HERO IMAGE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 1400px) {
+    .slide:nth-child(4) .hero-image-container,
+    .slide:nth-child(6) .hero-image-container,
+    .slide:nth-child(18) .hero-image-container {
+        height: 65vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .slide:nth-child(4) .slide-content,
+    .slide:nth-child(6) .slide-content,
+    .slide:nth-child(18) .slide-content {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+    }
+
+    .slide:nth-child(4) .hero-image-container,
+    .slide:nth-child(6) .hero-image-container,
+    .slide:nth-child(18) .hero-image-container {
+        height: 40vh;
+    }
+}
