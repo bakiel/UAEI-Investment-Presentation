@@ -4837,14 +4837,14 @@ h2 {
     overflow: hidden !important;
 }
 
-/* TITLE SLIDE - DRAMATIC REDUCTION */
+/* TITLE SLIDE - OPTIMIZED FOR LANDSCAPE */
 .logo-container {
-    margin-bottom: clamp(15px, 2.5vh, 25px) !important;
+    margin-bottom: clamp(20px, 3vh, 35px) !important;
 }
 
 .logo-img {
-    max-width: clamp(80px, 12vw, 120px) !important;
-    max-height: clamp(80px, 12vw, 120px) !important;
+    max-width: clamp(180px, 25vw, 280px) !important;
+    max-height: clamp(180px, 25vw, 280px) !important;
 }
 
 .title-slide h1 {

@@ -175,12 +175,12 @@ console.log('Keyboard shortcuts: ← → (navigate), Space (next), F (fullscreen
 // ============================================
 
 // Simple modal functions for Slide 3.5 popups
-function showModal(key) {
+window.showModal = function(key) {
     console.log('📱 Opening modal:', key);
-    
+
     // Get modal content from data.js (loaded from main presentation)
     const data = window.modalContent ? window.modalContent[key] : null;
-    
+
     if (!data) {
         console.warn('❌ No modal content found for key:', key);
         console.log('Available keys:', window.modalContent ? Object.keys(window.modalContent) : 'modalContent not loaded');
@@ -216,16 +216,16 @@ function showModal(key) {
     } else {
         console.error('❌ Modal element not found in DOM');
     }
-}
+};
 
-function closeModal() {
+window.closeModal = function() {
     console.log('📴 Closing modal');
     const modal = document.getElementById('modal');
     if (modal) {
         modal.classList.remove('show');
         document.body.style.overflow = '';
     }
-}
+};
 
 // Close modal on backdrop click
 setTimeout(function() {
