@@ -7,7 +7,7 @@
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - R7.5M Technology Validation Request for Gauteng Innovation Hub">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=60">
+    <link rel="stylesheet" href="styles.css?v=70">
 </head>
 <body>
     <button class="fullscreen-btn" id="fullscreen-btn" title="Toggle Fullscreen (F)">
@@ -515,87 +515,97 @@
         </div>
 
         <!-- Slide 10: The Ask -->
-        <div class="slide final-slide">
-            <div class="ask-layout">
-                <div class="ask-main">
-                    <h1>The Ask</h1>
+        <div class="slide">
+            <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2vh; text-align: center;">The Ask</h1>
 
-                    <div class="ask-amount-box">
-                        <div class="ask-amount">R7,500,000</div>
-                        <div class="ask-duration">24-Month Technology Validation</div>
+            <div class="ask-amount-box" style="max-width: 600px; margin: 0 auto 2vh auto;">
+                <div class="ask-amount">R7,500,000</div>
+                <div class="ask-duration">24-Month Technology Validation</div>
+            </div>
+
+            <div class="ask-outcomes" style="max-width: 900px; margin: 0 auto;">
+                <h3 style="text-align: center; margin-bottom: 2vh;">What Gauteng Gets:</h3>
+                <div class="outcome-grid">
+                    <div class="outcome-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Technology validated (platform + IoT + drones proven)</span>
                     </div>
-
-                    <div class="ask-outcomes">
-                        <h3>What Gauteng Gets:</h3>
-                        <div class="outcome-grid">
-                            <div class="outcome-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Technology validated (platform + IoT + drones proven)</span>
-                            </div>
-                            <div class="outcome-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>IDC investment de-risked (R508.6M backed by evidence)</span>
-                            </div>
-                            <div class="outcome-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Strategic positioning (Gauteng = AgTech validator)</span>
-                            </div>
-                            <div class="outcome-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Replication model (blueprint for other provinces)</span>
-                            </div>
-                        </div>
+                    <div class="outcome-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>IDC investment de-risked (R508.6M backed by evidence)</span>
                     </div>
-
-                    <div class="ask-sequencing">
-                        <div class="sequence-step">
-                            <div class="sequence-label">Month 24</div>
-                            <div class="sequence-action">Technology Validated</div>
-                        </div>
-                        <div class="sequence-arrow">→</div>
-                        <div class="sequence-step">
-                            <div class="sequence-label">Q1 2028</div>
-                            <div class="sequence-action">IDC Proposal Submitted</div>
-                        </div>
-                        <div class="sequence-arrow">→</div>
-                        <div class="sequence-step">
-                            <div class="sequence-label">Q2 2028</div>
-                            <div class="sequence-action">R508.6M Scale Begins</div>
-                        </div>
+                    <div class="outcome-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Strategic positioning (Gauteng = AgTech validator)</span>
                     </div>
-
-                    <div class="ubuntu-quote-box">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Gauteng validates the tools. IDC deploys the capital. 25,000 farmers transformed."</p>
-                        <i class="fas fa-quote-right"></i>
-                    </div>
-                </div>
-
-                <div class="ask-sidebar">
-                    <div class="contact-info-compact">
-                        <img src="../assets/UAEI Logo for dark BG.png" alt="UAEI Logo" class="ask-logo">
-
-                        <h4>Contact</h4>
-                        <p><i class="fas fa-user"></i> <strong>Keletso Kingwane</strong></p>
-                        <p><i class="fas fa-phone"></i> 084 478 8872</p>
-                        <p><i class="fas fa-envelope"></i> keletsok@gmail.com</p>
-
-                        <h4>Company</h4>
-                        <p><strong>Kutlwano Holdings (Pty) Ltd</strong></p>
-                        <p>Reg: 2022/404945/07</p>
-
-                        <div class="partners-compact">
-                            <h4>Partners</h4>
-                            <div class="partner-badge">Mikro Dev</div>
-                            <div class="partner-badge">Ekhowe Cooperative</div>
-                            <div class="partner-badge">Gauteng Economic Dev</div>
-                        </div>
+                    <div class="outcome-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Replication model (blueprint for other provinces)</span>
                     </div>
                 </div>
             </div>
 
-            <div class="final-cta">
-                <strong>Ready to Transform 25,000 Farmers?</strong> Let's validate the technology together.
+            <div class="ask-sequencing" style="max-width: 800px; margin: 2vh auto;">
+                <div class="sequence-step">
+                    <div class="sequence-label">Month 24</div>
+                    <div class="sequence-action">Technology Validated</div>
+                </div>
+                <div class="sequence-arrow">→</div>
+                <div class="sequence-step">
+                    <div class="sequence-label">Q1 2028</div>
+                    <div class="sequence-action">IDC Proposal Submitted</div>
+                </div>
+                <div class="sequence-arrow">→</div>
+                <div class="sequence-step">
+                    <div class="sequence-label">Q2 2028</div>
+                    <div class="sequence-action">R508.6M Scale Begins</div>
+                </div>
+            </div>
+
+            <div class="ubuntu-quote-box" style="max-width: 700px; margin: 2vh auto 0 auto;">
+                <i class="fas fa-quote-left"></i>
+                <p>"Gauteng validates the tools. IDC deploys the capital. 25,000 farmers transformed."</p>
+                <i class="fas fa-quote-right"></i>
+            </div>
+        </div>
+
+        <!-- Slide 11: Contact & Thank You -->
+        <div class="slide final-slide">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: center; max-width: 1100px; margin: 0 auto;">
+                <div>
+                    <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2vh; color: #4CAF50;">Thank You</h1>
+                    <p style="font-size: clamp(1.2rem, 2.2vw, 1.8rem); color: #ccc; margin-bottom: 3vh;">Ready to Transform 25,000 Farmers?</p>
+
+                    <div style="background: rgba(76, 175, 80, 0.1); padding: 2vh 2vw; border-radius: 12px; border: 2px solid #4CAF50;">
+                        <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 2vh;">Contact</h3>
+                        <p style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); margin-bottom: 1vh;">
+                            <i class="fas fa-user" style="color: #4CAF50; width: 25px;"></i> <strong>Keletso Kingwane</strong>
+                        </p>
+                        <p style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); margin-bottom: 1vh;">
+                            <i class="fas fa-phone" style="color: #4CAF50; width: 25px;"></i> 084 478 8872
+                        </p>
+                        <p style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); margin-bottom: 2vh;">
+                            <i class="fas fa-envelope" style="color: #4CAF50; width: 25px;"></i> keletsok@gmail.com
+                        </p>
+
+                        <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); color: #4CAF50; margin-bottom: 1vh;">Company</h4>
+                        <p style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); margin-bottom: 0.5vh;"><strong>Kutlwano Holdings (Pty) Ltd</strong></p>
+                        <p style="font-size: clamp(0.85rem, 1.5vw, 1rem); color: #999;">Reg: 2022/404945/07</p>
+                    </div>
+
+                    <div style="margin-top: 2vh;">
+                        <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); color: #4CAF50; margin-bottom: 1vh;">Strategic Partners</h4>
+                        <div style="display: flex; gap: 1vw; flex-wrap: wrap;">
+                            <div class="partner-badge" style="padding: 1vh 1.5vw; background: rgba(76, 175, 80, 0.15); border: 1px solid #4CAF50; border-radius: 8px; font-size: clamp(0.85rem, 1.5vw, 1rem);">Mikro Dev</div>
+                            <div class="partner-badge" style="padding: 1vh 1.5vw; background: rgba(76, 175, 80, 0.15); border: 1px solid #4CAF50; border-radius: 8px; font-size: clamp(0.85rem, 1.5vw, 1rem);">Ekhowe Cooperative</div>
+                            <div class="partner-badge" style="padding: 1vh 1.5vw; background: rgba(76, 175, 80, 0.15); border: 1px solid #4CAF50; border-radius: 8px; font-size: clamp(0.85rem, 1.5vw, 1rem);">Gauteng Economic Dev</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <img src="../assets/UAEI Logo for dark BG.png" alt="UAEI Logo" style="max-width: clamp(200px, 30vw, 350px); filter: drop-shadow(0 10px 40px rgba(76, 175, 80, 0.4));">
+                </div>
             </div>
         </div>
     </div>
@@ -610,7 +620,7 @@
 
     <!-- Navigation -->
     <div class="slide-counter">
-        <span id="current-slide">1</span> / <span id="total-slides">11</span>
+        <span id="current-slide">1</span> / <span id="total-slides">12</span>
     </div>
     <div class="navigation">
         <button class="nav-btn" id="prev-btn" onclick="window.goToPrevSlide(); return false;">
@@ -627,36 +637,57 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
 
     <!-- Modal data FIRST -->
-    <script src="../js/data.js?v=60"></script>
+    <script src="../js/data.js?v=70"></script>
 
     <!-- LOAD NAVIGATION (now includes modal functions) -->
-    <script src="app.js?v=60"></script>
+    <script src="app.js?v=70"></script>
 
     <!-- Debug click logger -->
     <script>
-        console.log('🚀 GAUTENG PITCH LOADED - v60');
+        console.log('🚀 GAUTENG PITCH LOADED - v70');
         console.log('Navigation functions available:', typeof window.goToNextSlide, typeof window.goToPrevSlide);
+        console.log('showModal function available:', typeof window.showModal);
+        console.log('closeModal function available:', typeof window.closeModal);
+        console.log('modalContent loaded:', typeof window.modalContent);
+        if (window.modalContent) {
+            console.log('modalContent keys:', Object.keys(window.modalContent));
+        }
 
-        // Log ALL clicks on the page
-        document.addEventListener('click', function(e) {
-            console.log('👆 CLICK DETECTED:', e.target);
-            console.log('   Tag:', e.target.tagName);
-            console.log('   ID:', e.target.id);
-            console.log('   Classes:', e.target.className);
-        }, true);
-
-        // Test button directly
+        // Test modal elements
         setTimeout(function() {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            console.log('✅ Modal element exists:', !!modal);
+            console.log('✅ Modal body element exists:', !!modalBody);
+            if (modal) {
+                console.log('   Modal display:', window.getComputedStyle(modal).display);
+                console.log('   Modal z-index:', window.getComputedStyle(modal).zIndex);
+            }
+
             const nextBtn = document.getElementById('next-btn');
             const prevBtn = document.getElementById('prev-btn');
             console.log('✅ Next button exists:', !!nextBtn);
             console.log('✅ Prev button exists:', !!prevBtn);
-            if (nextBtn) {
-                console.log('   Disabled:', nextBtn.disabled);
-                console.log('   Style display:', window.getComputedStyle(nextBtn).display);
-                console.log('   Style pointer-events:', window.getComputedStyle(nextBtn).pointerEvents);
-            }
         }, 1000);
+
+        // Intercept showModal calls
+        const originalShowModal = window.showModal;
+        if (typeof originalShowModal === 'function') {
+            window.showModal = function(key) {
+                console.log('🔥🔥🔥 showModal CALLED with key:', key);
+                console.log('   modalContent exists:', typeof window.modalContent !== 'undefined');
+                if (window.modalContent) {
+                    console.log('   Data for key exists:', typeof window.modalContent[key] !== 'undefined');
+                    if (window.modalContent[key]) {
+                        console.log('   Data:', window.modalContent[key]);
+                    }
+                }
+                return originalShowModal.call(this, key);
+            };
+            console.log('✅ showModal function wrapped for debugging');
+        } else {
+            console.error('❌ showModal function not found!');
+        }
     </script>
 </body>
 </html>
