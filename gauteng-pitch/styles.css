@@ -195,25 +195,13 @@ p, li, span { font-size: clamp(0.85rem, 1.5vw, 1.05rem) !important; }
     position: absolute;
     bottom: 1.5vh;
     right: 1.5vw;
-    width: 10px;
-    height: 10px;
-    background: #4CAF50;
-    border-radius: 50%;
-    box-shadow: 0 0 12px #4CAF50, 0 0 24px #4CAF50, 0 0 36px #4CAF50;
-    animation: pulse-dot 2s infinite;
-}
-
-.glow-dot-top-right {
-    position: absolute;
-    top: 2vh;
-    right: 2vw;
     width: 12px;
     height: 12px;
     background: #4CAF50;
     border-radius: 50%;
     box-shadow: 0 0 15px #4CAF50, 0 0 30px #4CAF50, 0 0 45px #4CAF50;
     animation: pulse-dot 2s infinite;
-    z-index: 1000;
+    z-index: 100;
 }
 
 @keyframes pulse-dot {

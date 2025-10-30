@@ -9,14 +9,6 @@ const totalSlidesEl = document.getElementById('total-slides');
 
 // Initialize
 totalSlidesEl.textContent = totalSlides;
-
-// Add glowing green dot to top right of all slides
-slides.forEach(slide => {
-    const glowDot = document.createElement('div');
-    glowDot.className = 'glow-dot-top-right';
-    slide.appendChild(glowDot);
-});
-
 updateSlide();
 
 // Navigation functions
