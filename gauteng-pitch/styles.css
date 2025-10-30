@@ -646,13 +646,15 @@ h2 {
 }
 
 .stat-card .number {
-    font-size: clamp(2rem, 4.5vw, 4rem);
+    font-size: clamp(1.6rem, 4vw, 3.5rem);
     font-weight: 900;
     color: #fff;
-    white-space: nowrap;
+    white-space: normal;
     overflow: visible;
     flex-shrink: 0;
-    line-height: 1.1;
+    line-height: 1.2;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 .stat-card .label {
@@ -1084,12 +1086,15 @@ h2 {
     position: absolute;
     bottom: 2vh;
     right: 2vw;
-    width: 11px;
-    height: 11px;
+    width: 14px;
+    height: 14px;
     background: #4CAF50;
     border-radius: 50%;
-    box-shadow: 0 0 12px #4CAF50, 0 0 24px #4CAF50, 0 0 36px #4CAF50;
-    animation: pulse 2s infinite;
+    box-shadow: 0 0 15px #4CAF50, 0 0 30px #4CAF50, 0 0 45px #4CAF50;
+    z-index: 10;
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: pulse-glow 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -6213,12 +6218,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: clamp(1.5vh, 2vh, 2.5vh);
 }
 
 .hero-logo-img {
     max-width: clamp(100px, 12vw, 140px);
     margin-bottom: clamp(1vh, 1.5vh, 2vh);
+    filter: drop-shadow(0 0 20px rgba(76, 175, 80, 0.6))
+            drop-shadow(0 0 40px rgba(76, 175, 80, 0.4))
+            drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+    transition: filter 0.3s ease;
+}
+
+.hero-logo-img:hover {
+    filter: drop-shadow(0 0 30px rgba(76, 175, 80, 0.8))
+            drop-shadow(0 0 60px rgba(76, 175, 80, 0.5))
+            drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
 }
 
 .hero-title-text {
@@ -6528,4 +6545,63 @@ body {
 
 .urgency-item {
     padding: clamp(1vh, 1.5vh, 2vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+}
+
+/* ============================================
+   PROPER SLIDE VISIBILITY FIX
+   ============================================ */
+
+/* Hide all slides by default */
+.slide {
+    display: none !important;
+}
+
+/* Show ONLY the active slide */
+.slide.active {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Override ALL animation opacity on active slides */
+.slide.active .animate-in,
+.slide.active .animate-slide-left,
+.slide.active .animate-slide-right,
+.slide.active .animate-scale,
+.slide.active .animate-fade,
+.slide.active .fade-in,
+.slide.active .slide-up,
+.slide.active .stagger-children > * {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Force all active slide content visible */
+.slide.active * {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ensure text colors are visible */
+.slide.active h1,
+.slide.active h2,
+.slide.active h3,
+.slide.active h4,
+.slide.active p,
+.slide.active span,
+.slide.active div,
+.slide.active li {
+    color: #ffffff !important;
+}
+
+/* Green highlight colors */
+.slide.active .green,
+.slide.active .highlight,
+.slide.active .hero-validation,
+.slide.active .hero-amount,
+.slide.active .hero-box-value {
+    color: #4CAF50 !important;
 }
