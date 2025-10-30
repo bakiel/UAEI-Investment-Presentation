@@ -44,6 +44,21 @@ function updateSlide() {
     // Update button states
     prevBtn.disabled = currentSlide === 0;
     nextBtn.disabled = currentSlide === totalSlides - 1;
+
+    // Update progress bar if it exists
+    const progressBar = document.querySelector('.slide-progress-bar');
+    if (progressBar) {
+        progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+    }
+
+    // Update thumbnail dots if they exist
+    const dots = document.querySelectorAll('.thumb-dot');
+    if (dots.length > 0) {
+        dots.forEach((dot, i) => {
+            dot.style.background = i === currentSlide ? '#4CAF50' : 'rgba(255, 255, 255, 0.3)';
+            dot.style.transform = i === currentSlide ? 'scale(1.3)' : 'scale(1)';
+        });
+    }
 }
 
 // Global functions for inline onclick handlers - ONLY METHOD NOW
@@ -381,15 +396,7 @@ function createProgressIndicator() {
     progressContainer.appendChild(progressBar);
     document.body.appendChild(progressContainer);
 
-    // Update progress on slide change
-    const originalUpdateSlide = updateSlide;
-    window.updateSlide = function() {
-        originalUpdateSlide();
-        const bar = document.querySelector('.slide-progress-bar');
-        if (bar) {
-            bar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
-        }
-    };
+    // Progress bar is now updated directly in updateSlide() function
 }
 
 // Slide thumbnails navigation (optional - can be toggled)
@@ -462,16 +469,7 @@ function createThumbnailNav() {
     // Initial state
     toggleThumbnailNav();
 
-    // Update active dot on slide change
-    const originalUpdateSlide2 = updateSlide;
-    window.updateSlide = function() {
-        originalUpdateSlide2();
-        const dots = document.querySelectorAll('.thumb-dot');
-        dots.forEach((dot, i) => {
-            dot.style.background = i === currentSlide ? '#4CAF50' : 'rgba(255, 255, 255, 0.3)';
-            dot.style.transform = i === currentSlide ? 'scale(1.3)' : 'scale(1)';
-        });
-    };
+    // Thumbnail dots are now updated directly in updateSlide() function
 }
 
 // Initialize all enhancements
