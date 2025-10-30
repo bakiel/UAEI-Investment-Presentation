@@ -25,6 +25,9 @@ function showSlide(n) {
 
     slides[currentSlide].classList.add('active');
     updateSlide();
+
+    // Enhanced transitions
+    enhanceSlideTransition();
 }
 
 function nextSlide() {
@@ -60,7 +63,24 @@ window.goToNextSlide = function() {
     return false;
 };
 
-// NO EVENT LISTENERS - inline onclick only for maximum reliability
+// BACKUP EVENT LISTENERS (in addition to inline onclick)
+if (prevBtn) {
+    prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('🔥 PREV CLICKED VIA EVENT LISTENER');
+        previousSlide();
+    });
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('🔥 NEXT CLICKED VIA EVENT LISTENER');
+        nextSlide();
+    });
+}
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
@@ -328,12 +348,8 @@ function enhanceSlideTransition() {
     }
 }
 
-// Override existing slide functions to add animations
-const originalShowSlide = showSlide;
-function showSlide(n) {
-    originalShowSlide(n);
-    enhanceSlideTransition();
-}
+// Slide transitions are now handled directly in showSlide() function above
+// No need to override
 
 // Add hover effects to cards
 function addHoverEffects() {

@@ -5983,3 +5983,193 @@ body {
     z-index: 1 !important;
     pointer-events: auto !important;
 }
+
+/* ============================================
+   v82 - HERO TITLE SLIDE REDESIGN
+   ============================================ */
+
+/* Gradient background */
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at top, rgba(76, 175, 80, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(76, 175, 80, 0.1) 0%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Hero container */
+.hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 3vw;
+}
+
+/* Logo */
+.hero-logo {
+    margin-bottom: clamp(2vh, 3vh, 4vh);
+}
+
+.hero-logo img {
+    max-width: clamp(140px, 20vw, 220px);
+    filter: drop-shadow(0 10px 40px rgba(76, 175, 80, 0.3));
+}
+
+/* Main Title */
+.hero-title {
+    text-align: center;
+    margin-bottom: clamp(3vh, 4vh, 5vh);
+}
+
+.hero-main {
+    font-size: clamp(3rem, 7vw, 6rem) !important;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh);
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff 0%, #4CAF50 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-highlight {
+    color: #4CAF50;
+    text-shadow: 0 0 40px rgba(76, 175, 80, 0.6);
+    -webkit-text-fill-color: #4CAF50;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    color: #bbb;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Investment Boxes */
+.hero-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2vw, 3vw, 4vw);
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: clamp(3vh, 4vh, 5vh);
+}
+
+.hero-box {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.08), rgba(76, 175, 80, 0.03));
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    border-radius: 20px;
+    padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.hero-box:hover::before {
+    left: 100%;
+}
+
+.hero-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: #4CAF50;
+    box-shadow: 0 20px 60px rgba(76, 175, 80, 0.4);
+}
+
+.hero-box-primary {
+    border-left: 4px solid #4CAF50;
+}
+
+.hero-box-secondary {
+    border-left: 4px solid rgba(76, 175, 80, 0.6);
+}
+
+.hero-box-icon {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #4CAF50;
+    margin-bottom: clamp(1vh, 1.5vh, 2vh);
+    opacity: 0.8;
+}
+
+.hero-box-label {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh);
+}
+
+.hero-box-value {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #4CAF50;
+    line-height: 1;
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh);
+    text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.hero-box-desc {
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    color: #ccc;
+    line-height: 1.4;
+}
+
+/* Tagline */
+.hero-tagline {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    color: #fff;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: clamp(3vh, 4vh, 5vh);
+    padding: clamp(1.5vh, 2vh, 2.5vh) clamp(2vw, 3vw, 4vw);
+    background: rgba(76, 175, 80, 0.05);
+    border-radius: 50px;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    max-width: 800px;
+}
+
+/* Footer */
+.hero-footer {
+    text-align: center;
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    color: #999;
+}
+
+.hero-presenter {
+    margin-bottom: clamp(0.5vh, 1vh, 1.5vh);
+}
+
+.hero-presenter strong {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.hero-context {
+    color: #777;
+    font-size: clamp(0.8rem, 1.4vw, 1rem);
+}

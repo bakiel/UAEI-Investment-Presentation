@@ -7,7 +7,7 @@
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - R7.5M Technology Validation Request for Strategic Partners">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=81">
+    <link rel="stylesheet" href="styles.css?v=82">
 </head>
 <body>
     <button class="fullscreen-btn" id="fullscreen-btn" title="Toggle Fullscreen (F)">
@@ -17,40 +17,54 @@
     <div class="slide-container">
         <!-- Slide 1: Title -->
         <div class="slide active title-slide">
-            <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+            <!-- Gradient Background -->
+            <div class="hero-gradient"></div>
 
-                <!-- Logo + Title Section -->
-                <div style="text-align: center; margin-bottom: clamp(2vh, 3vh, 4vh);">
-                    <div class="logo-container animate-scale" style="margin-bottom: clamp(1.5vh, 2vh, 2.5vh);">
-                        <img src="../assets/UAEI Logo for dark BG.png" alt="UAEI Logo" class="logo-img" style="max-width: clamp(120px, 18vw, 180px) !important; max-height: clamp(120px, 18vw, 180px) !important;">
-                    </div>
-                    <h1 class="animate-in" style="font-size: clamp(2rem, 4.5vw, 3.2rem) !important; line-height: 1.2; margin-bottom: clamp(0.8vh, 1vh, 1.2vh);">
-                        <span class="highlight">TECHNOLOGY VALIDATION</span><br>
-                        <span style="font-size: clamp(1.6rem, 3.5vw, 2.6rem);">REQUEST</span>
+            <div class="hero-container">
+                <!-- Logo -->
+                <div class="hero-logo animate-scale">
+                    <img src="../assets/UAEI Logo for dark BG.png" alt="UAEI Logo">
+                </div>
+
+                <!-- Main Title -->
+                <div class="hero-title animate-in">
+                    <h1 class="hero-main">
+                        TECHNOLOGY<br>
+                        <span class="hero-highlight">VALIDATION</span>
                     </h1>
-                    <p class="subtitle animate-in" style="font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important; margin-bottom: 0;">Ubuntu Agricultural Empowerment Initiative | Strategic Funding Pitch</p>
+                    <div class="hero-subtitle">Ubuntu Agricultural Empowerment Initiative</div>
                 </div>
 
-                <!-- Compact 2-Box Grid -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2vw, 3vw, 4vw); width: 100%; max-width: 700px; margin-bottom: clamp(2vh, 2.5vh, 3vh);">
-                    <div class="title-box primary hover-glow stagger-children" style="padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;">
-                        <div class="title-label" style="font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;">Pilot Request</div>
-                        <div class="title-value" style="font-size: clamp(2.2rem, 4vw, 3rem) !important; margin: 0.5vh 0;">R7.5M</div>
-                        <div class="title-desc" style="font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;">Technology Validation</div>
+                <!-- Investment Boxes -->
+                <div class="hero-boxes stagger-children">
+                    <div class="hero-box hero-box-primary hover-lift">
+                        <div class="hero-box-icon"><i class="fas fa-flask"></i></div>
+                        <div class="hero-box-label">Pilot Request</div>
+                        <div class="hero-box-value">R7.5M</div>
+                        <div class="hero-box-desc">24-Month Technology Validation</div>
                     </div>
-                    <div class="title-box secondary hover-glow stagger-children" style="padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;">
-                        <div class="title-label" style="font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;">Full Project</div>
-                        <div class="title-value" style="font-size: clamp(2.2rem, 4vw, 3rem) !important; margin: 0.5vh 0;">R508.6M</div>
-                        <div class="title-desc" style="font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;">Scale Deployment (IDC)</div>
+                    <div class="hero-box hero-box-secondary hover-lift">
+                        <div class="hero-box-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="hero-box-label">Full Deployment</div>
+                        <div class="hero-box-value">R508.6M</div>
+                        <div class="hero-box-desc">25,000 Farmers at Scale (IDC)</div>
                     </div>
                 </div>
 
-                <!-- Compact Presenter Info -->
-                <div class="presenter-info animate-in" style="text-align: center; font-size: clamp(0.75rem, 1.4vw, 0.95rem) !important;">
-                    <p style="margin-bottom: 0.3vh;"><strong>Keletso Kingwane</strong> | Kutlwano Holdings (Pty) Ltd</p>
-                    <p style="margin: 0;">Technology Validation Pilot Programme</p>
+                <!-- Value Proposition -->
+                <div class="hero-tagline animate-in">
+                    <i class="fas fa-quote-left" style="opacity: 0.3; margin-right: 10px;"></i>
+                    Validate cheaply. Scale confidently.
+                    <i class="fas fa-quote-right" style="opacity: 0.3; margin-left: 10px;"></i>
                 </div>
 
+                <!-- Presenter Info -->
+                <div class="hero-footer animate-in">
+                    <div class="hero-presenter">
+                        <strong>Keletso Kingwane</strong> | Kutlwano Holdings (Pty) Ltd
+                    </div>
+                    <div class="hero-context">Strategic Funding Pitch</div>
+                </div>
             </div>
         </div>
 
@@ -1117,14 +1131,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
 
     <!-- Modal data FIRST -->
-    <script src="../js/data.js?v=81"></script>
+    <script src="../js/data.js?v=82"></script>
 
     <!-- LOAD NAVIGATION (now includes modal functions) -->
-    <script src="app.js?v=81"></script>
+    <script src="app.js?v=82"></script>
 
     <!-- Debug click logger -->
     <script>
-        console.log('🚀 UAEI STRATEGIC PITCH LOADED - v81 - NAVIGATION FIXED');
+        console.log('🚀 UAEI STRATEGIC PITCH LOADED - v82 - NAVIGATION FIXED + HERO REDESIGN');
         console.log('Navigation functions available:', typeof window.goToNextSlide, typeof window.goToPrevSlide);
         console.log('showModal function available:', typeof window.showModal);
         console.log('closeModal function available:', typeof window.closeModal);
