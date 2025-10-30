@@ -5891,3 +5891,31 @@ body {
 .platform-item .platform-icon i {
     color: #FFFFFF !important;
 }
+
+/* ============================================
+   ILLUSTRATION PLACEHOLDERS (v79)
+   ============================================ */
+.illustration-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.illustration-placeholder img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.illustration-placeholder img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Graceful degradation if SVG missing */
+.illustration-placeholder img[src$=".svg"]:not([src]) {
+    display: none;
+}

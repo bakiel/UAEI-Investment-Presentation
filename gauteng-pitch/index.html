@@ -7,7 +7,7 @@
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - R7.5M Technology Validation Request for Gauteng Innovation Hub">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=78">
+    <link rel="stylesheet" href="styles.css?v=79">
 </head>
 <body>
     <button class="fullscreen-btn" id="fullscreen-btn" title="Toggle Fullscreen (F)">
@@ -96,7 +96,37 @@
             </div>
         </div>
 
-        <!-- Slide 3: UAEI Innovation -->
+        <!-- Slide 3: The Failure Cycle (NEW) -->
+        <div class="slide">
+            <h2 class="animate-in">The Traditional AgTech Death Spiral</h2>
+
+            <div class="illustration-placeholder animate-scale" style="max-width: 600px; margin: 0 auto 4vh auto; text-align: center;">
+                <img src="illustrations/failure-cycle.svg" alt="AgTech Failure Cycle" style="width: 100%; height: auto; opacity: 0.9;">
+            </div>
+
+            <div class="failure-stats-grid stagger-children" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2vw, 3vw, 4vw); max-width: 900px; margin: 0 auto;">
+                <div class="stat-card-large hover-lift" style="background: rgba(255, 87, 87, 0.1); border: 2px solid #ff5757; padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; text-align: center;">
+                    <div style="font-size: clamp(2.5rem, 5vw, 4rem); color: #ff5757; font-weight: 900; margin-bottom: 1vh;">R6,150</div>
+                    <div style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); color: #ccc;">Average AgTech Subscription Cost</div>
+                </div>
+                <div class="stat-card-large hover-lift" style="background: rgba(255, 87, 87, 0.1); border: 2px solid #ff5757; padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; text-align: center;">
+                    <div style="font-size: clamp(2.5rem, 5vw, 4rem); color: #ff5757; font-weight: 900; margin-bottom: 1vh;">R14,000</div>
+                    <div style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); color: #ccc;">Average Smallholder Annual Income</div>
+                </div>
+            </div>
+
+            <div class="story-card animate-in hover-lift" style="max-width: 900px; margin: 4vh auto 0 auto; background: rgba(255, 87, 87, 0.08); border-left: 4px solid #ff5757;">
+                <div class="story-card-icon" style="color: #ff5757;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="story-card-content">
+                    <h3 style="color: #ff5757;">The Math Doesn't Work</h3>
+                    <p>Asking a farmer earning R14k/year to spend R6k on technology = 44% of their income. This is why 95-98% of smallholders reject AgTech. The industry is asking starving people to buy diet plans.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: UAEI Innovation -->
         <div class="slide">
             <div class="visual-story-bg"></div>
             <i class="fas fa-rocket mega-icon mega-icon-bottom-left animate-in"></i>
@@ -152,7 +182,7 @@
             </div>
         </div>
 
-        <!-- Slide 3.5: Why It Works - WhatsApp + Languages -->
+        <!-- Slide 5: Why It Works - WhatsApp + Languages -->
         <div class="slide">
             <h2 class="animate-in">Why Farmers Actually Adopt</h2>
             <div class="stats-grid stagger-children">
@@ -183,7 +213,70 @@
             </div>
         </div>
 
-        <!-- Slide 4: The R7.5M Component -->
+        <!-- Slide 6: The R250k Loan Package (NEW) -->
+        <div class="slide">
+            <h2 class="animate-in">What Farmers Actually Get: R250k Loan Package</h2>
+
+            <div class="illustration-placeholder animate-scale" style="max-width: 500px; margin: 0 auto 3vh auto; text-align: center;">
+                <img src="illustrations/loan-package.svg" alt="Loan Package Breakdown" style="width: 100%; height: auto; opacity: 0.9;">
+            </div>
+
+            <div class="loan-breakdown stagger-children" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: clamp(1.5vw, 2vw, 2.5vw); max-width: 1100px; margin: 0 auto;">
+                <div class="loan-item hover-lift" onclick="showModal('cashCapital')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R100k</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Cash Capital</h4>
+                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Working capital for seeds, fertilizer, labor</p>
+                </div>
+
+                <div class="loan-item hover-lift" onclick="showModal('iotSensors')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R30k</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">IoT Sensors</h4>
+                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Real-time soil, weather, irrigation monitoring</p>
+                </div>
+
+                <div class="loan-item hover-lift" onclick="showModal('droneMonitoring')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R40k</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Drone Service</h4>
+                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Weekly aerial surveillance + AI analytics</p>
+                </div>
+
+                <div class="loan-item hover-lift" onclick="showModal('organicInputs')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R50k</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Conservation Compost™</h4>
+                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Wildlife sanctuary organic fertilizer</p>
+                </div>
+
+                <div class="loan-item hover-lift" onclick="showModal('trainingProgram')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R20k</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Training</h4>
+                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">11-language WhatsApp certification</p>
+                </div>
+
+                <div class="loan-item hover-lift" onclick="showModal('marketplaceAccess')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #4CAF50; font-weight: 900; margin-bottom: 1vh;">R10k</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Marketplace</h4>
+                    <p style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.4; margin: 0;">Direct buyer access + auto repayment</p>
+                </div>
+            </div>
+
+            <div class="story-card animate-scale hover-lift" style="max-width: 900px; margin: 3vh auto 0 auto;">
+                <div class="story-card-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="story-card-content">
+                    <h3>The Breakthrough</h3>
+                    <p>Farmers don't pay for technology upfront—they get capital they need + technology embedded inside. Repayment is automatic through marketplace sales. This is why adoption jumps from 2-5% to 100% target.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: The R7.5M Component -->
         <div class="slide">
             <h2>What Gauteng Is Funding: Technology Validation</h2>
 
@@ -220,7 +313,7 @@
             </div>
         </div>
 
-        <!-- Slide 5: Budget Breakdown -->
+        <!-- Slide 8: Budget Breakdown -->
         <div class="slide">
             <h2>R7.5M Budget Allocation</h2>
 
@@ -297,7 +390,7 @@
             </div>
         </div>
 
-        <!-- Slide 6: 24-Month Roadmap -->
+        <!-- Slide 9: 24-Month Roadmap -->
         <div class="slide">
             <h2>24-Month Technology Validation Roadmap</h2>
 
@@ -352,7 +445,7 @@
             </div>
         </div>
 
-        <!-- Slide 7: What Gets Validated -->
+        <!-- Slide 10: What Gets Validated -->
         <div class="slide">
             <h2>What 20-50 Farmers CAN Validate</h2>
 
@@ -411,7 +504,194 @@
             </div>
         </div>
 
-        <!-- Slide 8: Full Project Impact -->
+        <!-- Slide 11: Team & Credentials (NEW) -->
+        <div class="slide">
+            <h2 class="animate-in">Team & Credentials</h2>
+
+            <div class="illustration-placeholder animate-scale" style="max-width: 400px; margin: 0 auto 3vh auto; text-align: center;">
+                <img src="illustrations/team-expertise.svg" alt="Team Expertise" style="width: 100%; height: auto; opacity: 0.9;">
+            </div>
+
+            <div class="team-grid stagger-children" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2vw, 3vw, 4vw); max-width: 1000px; margin: 0 auto;">
+                <div class="team-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-user-tie"></i> Keletso Kingwane
+                    </h3>
+                    <div style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: #999; margin-bottom: 1vh;">Founder & CEO</div>
+                    <ul style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6; margin: 0; padding-left: 1.5vw;">
+                        <li>20+ years agribusiness experience</li>
+                        <li>USAID-validated project manager</li>
+                        <li>JASPER™ financial system architect</li>
+                        <li>Conservation agriculture specialist</li>
+                    </ul>
+                </div>
+
+                <div class="team-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-handshake"></i> Strategic Partners
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.8; margin: 0;">
+                        <p style="margin-bottom: 1vh;"><strong style="color: #4CAF50;">Mikro Dev:</strong> R6.25B loan portfolio, 100,000+ farmers financed</p>
+                        <p style="margin-bottom: 1vh;"><strong style="color: #4CAF50;">Ekhowe Cooperative:</strong> 2,300+ existing farmer network</p>
+                        <p style="margin: 0;"><strong style="color: #4CAF50;">Buyer Network:</strong> R18M+ pre-committed purchase orders</p>
+                    </div>
+                </div>
+
+                <div class="team-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-code"></i> Technology Team
+                    </h3>
+                    <ul style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6; margin: 0; padding-left: 1.5vw;">
+                        <li>AI/ML engineers (credit scoring + LLM)</li>
+                        <li>Mobile developers (WhatsApp platform)</li>
+                        <li>IoT specialists (sensor deployment)</li>
+                        <li>Drone operators (certified pilots)</li>
+                    </ul>
+                </div>
+
+                <div class="team-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-award"></i> Validation & Assets
+                    </h3>
+                    <ul style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6; margin: 0; padding-left: 1.5vw;">
+                        <li>R62.5M Modimolle facility identified</li>
+                        <li>373ha wildlife sanctuary secured (R45M value)</li>
+                        <li>USAID methodology validation</li>
+                        <li>Operational JASPER™ financial system</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Platform Architecture (NEW) -->
+        <div class="slide">
+            <h2 class="animate-in">Technology Stack: Platform Architecture</h2>
+
+            <div class="illustration-placeholder animate-scale" style="max-width: 500px; margin: 0 auto 3vh auto; text-align: center;">
+                <img src="illustrations/tech-stack.svg" alt="Technology Stack" style="width: 100%; height: auto; opacity: 0.9;">
+            </div>
+
+            <div class="tech-stack stagger-children" style="max-width: 1100px; margin: 0 auto;">
+                <div class="tech-layer hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50; margin-bottom: 2vh;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-brain"></i> AI Intelligence Layer
+                    </h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2vw;">
+                        <div>
+                            <strong style="color: #4CAF50;">Credit Scoring AI:</strong> 350-variable algorithm analyzing farmer data (target 82% accuracy vs 65% traditional)
+                        </div>
+                        <div>
+                            <strong style="color: #4CAF50;">Open-Source LLM:</strong> Fine-tuned on farmer queries, 11-language support, voice-to-text automation
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-layer hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50; margin-bottom: 2vh;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-satellite-dish"></i> IoT Monitoring Layer
+                    </h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5vw;">
+                        <div><strong style="color: #4CAF50;">Soil Sensors:</strong> Moisture, pH, NPK levels</div>
+                        <div><strong style="color: #4CAF50;">Weather Stations:</strong> Temp, humidity, rainfall</div>
+                        <div><strong style="color: #4CAF50;">Drones:</strong> Multispectral imaging, pest detection</div>
+                    </div>
+                </div>
+
+                <div class="tech-layer hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50; margin-bottom: 2vh;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-mobile-alt"></i> Farmer Interface Layer
+                    </h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2vw;">
+                        <div>
+                            <strong style="color: #4CAF50;">WhatsApp Platform:</strong> Zero-download interface, 11 languages, voice + text, offline sync
+                        </div>
+                        <div>
+                            <strong style="color: #4CAF50;">Training System:</strong> Video lessons, certification tracking, peer learning via stokvels
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-layer hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-chart-line"></i> Financial & Marketplace Layer
+                    </h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2vw;">
+                        <div>
+                            <strong style="color: #4CAF50;">JASPER™ Finance:</strong> Loan disbursement, repayment tracking, portfolio management
+                        </div>
+                        <div>
+                            <strong style="color: #4CAF50;">Marketplace:</strong> Buyer matching, pricing algorithms, auto-deduction repayment
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Revenue Streams (NEW) -->
+        <div class="slide">
+            <h2 class="animate-in">6 Integrated Revenue Streams at Scale</h2>
+
+            <div class="illustration-placeholder animate-scale" style="max-width: 450px; margin: 0 auto 3vh auto; text-align: center;">
+                <img src="illustrations/revenue-streams.svg" alt="Revenue Streams" style="width: 100%; height: auto; opacity: 0.9;">
+            </div>
+
+            <div class="revenue-grid stagger-children" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: clamp(1.5vw, 2vw, 2.5vw); max-width: 1100px; margin: 0 auto;">
+                <div class="revenue-card hover-lift" onclick="showModal('marketplace')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.6rem, 3vw, 2.4rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh;">51.4%</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Marketplace</h4>
+                    <div style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: #ccc; margin-bottom: 0.5vh;">R850M Y5 Revenue</div>
+                    <p style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.3; margin: 0; color: #999;">9% commission trading</p>
+                </div>
+
+                <div class="revenue-card hover-lift" onclick="showModal('precision')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.6rem, 3vw, 2.4rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh;">16.3%</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Precision Ag</h4>
+                    <div style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: #ccc; margin-bottom: 0.5vh;">R270M Y5 Revenue</div>
+                    <p style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.3; margin: 0; color: #999;">IoT + drone services</p>
+                </div>
+
+                <div class="revenue-card hover-lift" onclick="showModal('bioinputs')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.6rem, 3vw, 2.4rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh;">14.4%</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Bio-Inputs</h4>
+                    <div style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: #ccc; margin-bottom: 0.5vh;">R238M Y5 Revenue</div>
+                    <p style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.3; margin: 0; color: #999;">Conservation Compost™</p>
+                </div>
+
+                <div class="revenue-card hover-lift" onclick="showModal('finance')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.6rem, 3vw, 2.4rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh;">7.3%</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">AgriFinance</h4>
+                    <div style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: #ccc; margin-bottom: 0.5vh;">R121M Y5 Revenue</div>
+                    <p style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.3; margin: 0; color: #999;">Loan interest income</p>
+                </div>
+
+                <div class="revenue-card hover-lift" onclick="showModal('training')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.6rem, 3vw, 2.4rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh;">5.3%</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">Training</h4>
+                    <div style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: #ccc; margin-bottom: 0.5vh;">R88M Y5 Revenue</div>
+                    <p style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.3; margin: 0; color: #999;">11-language platform</p>
+                </div>
+
+                <div class="revenue-card hover-lift" onclick="showModal('b2b')" style="background: rgba(76, 175, 80, 0.08); padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw); border-radius: 12px; border-left: 4px solid #4CAF50; cursor: pointer; position: relative;">
+                    <div class="click-indicator pulse-icon"></div>
+                    <div style="font-size: clamp(1.6rem, 3vw, 2.4rem); color: #4CAF50; font-weight: 900; margin-bottom: 0.5vh;">5.3%</div>
+                    <h4 style="font-size: clamp(1rem, 1.8vw, 1.3rem); margin-bottom: 1vh; color: #4CAF50;">B2B Services</h4>
+                    <div style="font-size: clamp(0.9rem, 1.6vw, 1.1rem); color: #ccc; margin-bottom: 0.5vh;">R88M Y5 Revenue</div>
+                    <p style="font-size: clamp(0.8rem, 1.4vw, 1rem); line-height: 1.3; margin: 0; color: #999;">Data + carbon credits</p>
+                </div>
+            </div>
+
+            <div class="total-revenue animate-scale" style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1)); border: 3px solid #4CAF50; border-radius: 15px; padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); text-align: center; max-width: 800px; margin: 3vh auto 0 auto;">
+                <div style="font-size: clamp(0.95rem, 1.7vw, 1.2rem); color: #4CAF50; margin-bottom: 1vh; font-weight: 600;">Total Year 5 Revenue</div>
+                <div style="font-size: clamp(2.5rem, 5vw, 4rem); color: #4CAF50; font-weight: 900; line-height: 1;">R1.65 Billion</div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Full Project Impact -->
         <div class="slide">
             <h2>Impact at Scale: R508.6M Deployment Outcomes</h2>
 
@@ -473,7 +753,68 @@
             </div>
         </div>
 
-        <!-- Slide 9A: Why Gauteng -->
+        <!-- Slide 15: Risk Management (NEW) -->
+        <div class="slide">
+            <h2 class="animate-in">Risk Mitigation Strategy</h2>
+
+            <div class="illustration-placeholder animate-scale" style="max-width: 450px; margin: 0 auto 3vh auto; text-align: center;">
+                <img src="illustrations/risk-mitigation.svg" alt="Risk Management" style="width: 100%; height: auto; opacity: 0.9;">
+            </div>
+
+            <div class="risk-grid stagger-children" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2vw, 3vw, 4vw); max-width: 1000px; margin: 0 auto;">
+                <div class="risk-item" style="background: rgba(255, 87, 87, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #ff5757;">
+                    <h3 style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #ff5757; margin-bottom: 1vh;">
+                        <i class="fas fa-exclamation-triangle"></i> Risk: Technology Adoption Fails
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.5; color: #ccc;">
+                        <p style="margin-bottom: 1vh;"><strong>Scenario:</strong> Farmers don't use platform/IoT</p>
+                        <p style="margin: 0;"><strong style="color: #4CAF50;">Mitigation:</strong> WhatsApp interface (90% already use), voice support (no reading required), stokvel peer training, 3-day onboarding protocol</p>
+                    </div>
+                </div>
+
+                <div class="risk-item" style="background: rgba(255, 87, 87, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #ff5757;">
+                    <h3 style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #ff5757; margin-bottom: 1vh;">
+                        <i class="fas fa-exclamation-triangle"></i> Risk: Cost Overruns
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.5; color: #ccc;">
+                        <p style="margin-bottom: 1vh;"><strong>Scenario:</strong> Actual costs exceed R7.5M budget</p>
+                        <p style="margin: 0;"><strong style="color: #4CAF50;">Mitigation:</strong> Fixed vendor contracts, phased procurement, 15% contingency buffer, monthly budget reviews, in-kind equity contribution from Kutlwano</p>
+                    </div>
+                </div>
+
+                <div class="risk-item" style="background: rgba(255, 87, 87, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #ff5757;">
+                    <h3 style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #ff5757; margin-bottom: 1vh;">
+                        <i class="fas fa-exclamation-triangle"></i> Risk: Farmer Recruitment Fails
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.5; color: #ccc;">
+                        <p style="margin-bottom: 1vh;"><strong>Scenario:</strong> Can't recruit 20-50 pilot farmers</p>
+                        <p style="margin: 0;"><strong style="color: #4CAF50;">Mitigation:</strong> Ekhowe Cooperative provides 2,300-farmer network, R100k cash capital incentive, Mikro Dev lending credibility, stokvel endorsement model</p>
+                    </div>
+                </div>
+
+                <div class="risk-item" style="background: rgba(255, 87, 87, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #ff5757;">
+                    <h3 style="font-size: clamp(1.1rem, 2vw, 1.5rem); color: #ff5757; margin-bottom: 1vh;">
+                        <i class="fas fa-exclamation-triangle"></i> Risk: IDC Rejects Proposal
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.5; color: #ccc;">
+                        <p style="margin-bottom: 1vh;"><strong>Scenario:</strong> Technology validated but IDC declines funding</p>
+                        <p style="margin: 0;"><strong style="color: #4CAF50;">Mitigation:</strong> Proven MVP attracts alternative funders (DFIs, impact investors, private equity), validated platform = asset for other AgTech opportunities</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card animate-scale hover-lift" style="max-width: 900px; margin: 3vh auto 0 auto;">
+                <div class="story-card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="story-card-content">
+                    <h3>De-Risking Approach</h3>
+                    <p>24-month pilot specifically designed to identify and solve problems at 20-50 farmer scale BEFORE investing R508.6M. This is the entire point: validate cheaply, scale confidently.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 16: Why Gauteng -->
         <div class="slide">
             <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: clamp(2vh, 3vh, 4vh); text-align: center;">
                 <i class="fas fa-trophy"></i> Why Gauteng?
@@ -505,7 +846,7 @@
             </div>
         </div>
 
-        <!-- Slide 9B: Why Now -->
+        <!-- Slide 17: Why Now -->
         <div class="slide">
             <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: clamp(2vh, 3vh, 4vh); text-align: center;">
                 <i class="fas fa-rocket"></i> Why Now?
@@ -554,7 +895,84 @@
             </div>
         </div>
 
-        <!-- Slide 10: The Ask -->
+        <!-- Slide 18: Success Criteria (NEW) -->
+        <div class="slide">
+            <h2 class="animate-in">Pilot Success Criteria: Measurable Outcomes</h2>
+
+            <div class="illustration-placeholder animate-scale" style="max-width: 450px; margin: 0 auto 3vh auto; text-align: center;">
+                <img src="illustrations/success-metrics.svg" alt="Success Metrics" style="width: 100%; height: auto; opacity: 0.9;">
+            </div>
+
+            <div class="success-grid stagger-children" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2vw, 3vw, 4vw); max-width: 1000px; margin: 0 auto;">
+                <div class="success-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-users"></i> Farmer Adoption
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6;">
+                        <p style="margin-bottom: 0.5vh;"><strong>Target:</strong> 80%+ active platform usage</p>
+                        <p style="margin-bottom: 0.5vh;"><strong>Metric:</strong> Weekly WhatsApp engagement</p>
+                        <p style="margin: 0;"><strong>Success:</strong> Proves loan-as-gateway model works</p>
+                    </div>
+                </div>
+
+                <div class="success-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-brain"></i> AI Credit Model
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6;">
+                        <p style="margin-bottom: 0.5vh;"><strong>Target:</strong> 82% accuracy (vs 65% banks)</p>
+                        <p style="margin-bottom: 0.5vh;"><strong>Metric:</strong> Predicted vs actual repayment</p>
+                        <p style="margin: 0;"><strong>Success:</strong> AI superior to traditional scoring</p>
+                    </div>
+                </div>
+
+                <div class="success-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-satellite-dish"></i> IoT Reliability
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6;">
+                        <p style="margin-bottom: 0.5vh;"><strong>Target:</strong> 90%+ sensor uptime</p>
+                        <p style="margin-bottom: 0.5vh;"><strong>Metric:</strong> Data transmission success rate</p>
+                        <p style="margin: 0;"><strong>Success:</strong> Infrastructure proven reliable</p>
+                    </div>
+                </div>
+
+                <div class="success-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-dollar-sign"></i> Cost Benchmarking
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6;">
+                        <p style="margin-bottom: 0.5vh;"><strong>Target:</strong> Within 15% of projections</p>
+                        <p style="margin-bottom: 0.5vh;"><strong>Metric:</strong> Actual vs budgeted per-farmer cost</p>
+                        <p style="margin: 0;"><strong>Success:</strong> Financial model validated</p>
+                    </div>
+                </div>
+
+                <div class="success-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-clock"></i> Operational Efficiency
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6;">
+                        <p style="margin-bottom: 0.5vh;"><strong>Target:</strong> 2-3 days onboarding time</p>
+                        <p style="margin-bottom: 0.5vh;"><strong>Metric:</strong> Application to full activation</p>
+                        <p style="margin: 0;"><strong>Success:</strong> Scalable to 25,000 farmers</p>
+                    </div>
+                </div>
+
+                <div class="success-card hover-lift" style="background: rgba(76, 175, 80, 0.08); padding: clamp(2vh, 2.5vh, 3vh) clamp(2vw, 2.5vw, 3vw); border-radius: 12px; border-left: 4px solid #4CAF50;">
+                    <h3 style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); color: #4CAF50; margin-bottom: 1.5vh;">
+                        <i class="fas fa-file-alt"></i> IDC Proposal Ready
+                    </h3>
+                    <div style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); line-height: 1.6;">
+                        <p style="margin-bottom: 0.5vh;"><strong>Target:</strong> Evidence-based R508.6M package</p>
+                        <p style="margin-bottom: 0.5vh;"><strong>Metric:</strong> Completed proposal submission</p>
+                        <p style="margin: 0;"><strong>Success:</strong> De-risked scale investment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 19: The Ask -->
         <div class="slide">
             <div style="max-width: 1200px; margin: 0 auto;">
                 <h1 class="animate-scale" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: clamp(2vh, 3vh, 4vh); text-align: center; color: #4CAF50;">The Ask</h1>
@@ -631,7 +1049,7 @@
             </div>
         </div>
 
-        <!-- Slide 11: Contact & Thank You -->
+        <!-- Slide 20: Contact & Thank You -->
         <div class="slide final-slide">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: center; max-width: 1100px; margin: 0 auto;">
                 <div>
@@ -682,7 +1100,7 @@
 
     <!-- Navigation -->
     <div class="slide-counter">
-        <span id="current-slide">1</span> / <span id="total-slides">13</span>
+        <span id="current-slide">1</span> / <span id="total-slides">20</span>
     </div>
     <div class="navigation">
         <button class="nav-btn" id="prev-btn" onclick="window.goToPrevSlide(); return false;">
@@ -699,14 +1117,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
 
     <!-- Modal data FIRST -->
-    <script src="../js/data.js?v=78"></script>
+    <script src="../js/data.js?v=79"></script>
 
     <!-- LOAD NAVIGATION (now includes modal functions) -->
-    <script src="app.js?v=78"></script>
+    <script src="app.js?v=79"></script>
 
     <!-- Debug click logger -->
     <script>
-        console.log('🚀 GAUTENG PITCH LOADED - v78 - NAVIGATION FIXED + COMPACT TITLE');
+        console.log('🚀 GAUTENG PITCH LOADED - v79 - 20 SLIDES + ILLUSTRATIONS');
         console.log('Navigation functions available:', typeof window.goToNextSlide, typeof window.goToPrevSlide);
         console.log('showModal function available:', typeof window.showModal);
         console.log('closeModal function available:', typeof window.closeModal);
