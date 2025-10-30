@@ -142,6 +142,135 @@ p, li, span { font-size: clamp(0.85rem, 1.5vw, 1.05rem) !important; }
 }
 
 /* ============================================
+   MAGAZINE-STYLE ENHANCEMENTS
+   ============================================ */
+
+/* Loading Overlays */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(76, 175, 80, 0.2);
+    border-top: 5px solid #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Backdrop Blur Effects */
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.backdrop-blur-strong {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Glow Dot Pulse Animation */
+.glow-dot {
+    position: absolute;
+    bottom: 1.5vh;
+    right: 1.5vw;
+    width: 10px;
+    height: 10px;
+    background: #4CAF50;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #4CAF50, 0 0 24px #4CAF50, 0 0 36px #4CAF50;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.3);
+    }
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-alt {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Gradient Icon Containers */
+.gradient-icon-bg {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* Enhanced Card Hover with Transform */
+.card-hover-transform {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-hover-transform:hover {
+    border-color: #4CAF50;
+    transform: translateX(8px);
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.4);
+}
+
+/* Magazine Cover Title Effect */
+.magazine-title-large {
+    font-size: clamp(4rem, 10vh, 9rem);
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 0.9;
+    text-shadow: 0 10px 40px rgba(0,0,0,0.9);
+}
+
+/* Float Hint Animation */
+@keyframes floatHint {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -60%); }
+}
+
+.float-hint {
+    animation: floatHint 2s ease-in-out infinite;
+}
+
+/* ============================================
    ILLUSTRATION STYLING & VISUAL STORYTELLING
    ============================================ */
 .story-illustration {
@@ -763,8 +892,9 @@ h2 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.92);
-    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 10000;
     align-items: center;
     justify-content: center;
@@ -781,19 +911,21 @@ h2 {
 }
 
 .modal-content {
-    background: linear-gradient(135deg, rgba(20, 20, 20, 0.97), rgba(30, 30, 30, 0.97));
-    border: 2px solid rgba(76, 175, 80, 0.3);
-    border-radius: clamp(16px, 3vw, 32px);
-    padding: clamp(3vh, 5vh, 6vh) clamp(2.5vw, 4vw, 5vw);
-    max-width: min(90vw, 1000px);
-    width: 92vw;
-    max-height: 88vh;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.98), rgba(30, 30, 30, 0.98));
+    border: 3px solid rgba(76, 175, 80, 0.5);
+    border-radius: clamp(20px, 3vw, 30px);
+    padding: clamp(4vh, 5vh, 6vh) clamp(3vw, 4vw, 5vw);
+    max-width: min(90vw, 800px);
+    width: 90%;
+    max-height: 85vh;
     overflow-y: auto;
     position: relative;
-    box-shadow: 0 3vh 10vh rgba(0, 0, 0, 0.85);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9);
     animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     pointer-events: auto;
     z-index: 10001;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .modal-content::-webkit-scrollbar {
