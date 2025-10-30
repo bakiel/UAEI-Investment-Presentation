@@ -7,7 +7,7 @@
     <meta name="description" content="Ubuntu Agricultural Empowerment Initiative - R7.5M Technology Validation Request for Gauteng Innovation Hub">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=77">
+    <link rel="stylesheet" href="styles.css?v=78">
 </head>
 <body>
     <button class="fullscreen-btn" id="fullscreen-btn" title="Toggle Fullscreen (F)">
@@ -17,29 +17,40 @@
     <div class="slide-container">
         <!-- Slide 1: Title -->
         <div class="slide active title-slide">
-            <div class="logo-container animate-scale">
-                <img src="../assets/UAEI Logo for dark BG.png" alt="UAEI Logo" class="logo-img">
-            </div>
-            <h1 class="animate-in">
-                <span class="highlight">TECHNOLOGY VALIDATION</span><br>
-                REQUEST
-            </h1>
-            <p class="subtitle animate-in">Ubuntu Agricultural Empowerment Initiative</p>
-            <div class="title-grid stagger-children">
-                <div class="title-box primary hover-glow">
-                    <div class="title-label">Gauteng Request</div>
-                    <div class="title-value">R7.5M</div>
-                    <div class="title-desc">Technology Validation Component</div>
+            <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+
+                <!-- Logo + Title Section -->
+                <div style="text-align: center; margin-bottom: clamp(2vh, 3vh, 4vh);">
+                    <div class="logo-container animate-scale" style="margin-bottom: clamp(1.5vh, 2vh, 2.5vh);">
+                        <img src="../assets/UAEI Logo for dark BG.png" alt="UAEI Logo" class="logo-img" style="max-width: clamp(120px, 18vw, 180px) !important; max-height: clamp(120px, 18vw, 180px) !important;">
+                    </div>
+                    <h1 class="animate-in" style="font-size: clamp(2rem, 4.5vw, 3.2rem) !important; line-height: 1.2; margin-bottom: clamp(0.8vh, 1vh, 1.2vh);">
+                        <span class="highlight">TECHNOLOGY VALIDATION</span><br>
+                        <span style="font-size: clamp(1.6rem, 3.5vw, 2.6rem);">REQUEST</span>
+                    </h1>
+                    <p class="subtitle animate-in" style="font-size: clamp(0.95rem, 1.7vw, 1.2rem) !important; margin-bottom: 0;">Ubuntu Agricultural Empowerment Initiative</p>
                 </div>
-                <div class="title-box secondary hover-glow">
-                    <div class="title-label">Full Project</div>
-                    <div class="title-value">R508.6M</div>
-                    <div class="title-desc">Scale Deployment (IDC)</div>
+
+                <!-- Compact 2-Box Grid -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2vw, 3vw, 4vw); width: 100%; max-width: 700px; margin-bottom: clamp(2vh, 2.5vh, 3vh);">
+                    <div class="title-box primary hover-glow stagger-children" style="padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;">
+                        <div class="title-label" style="font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;">Gauteng Request</div>
+                        <div class="title-value" style="font-size: clamp(2.2rem, 4vw, 3rem) !important; margin: 0.5vh 0;">R7.5M</div>
+                        <div class="title-desc" style="font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;">Technology Validation</div>
+                    </div>
+                    <div class="title-box secondary hover-glow stagger-children" style="padding: clamp(1.5vh, 2vh, 2.5vh) clamp(1.5vw, 2vw, 2.5vw) !important;">
+                        <div class="title-label" style="font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;">Full Project</div>
+                        <div class="title-value" style="font-size: clamp(2.2rem, 4vw, 3rem) !important; margin: 0.5vh 0;">R508.6M</div>
+                        <div class="title-desc" style="font-size: clamp(0.75rem, 1.3vw, 0.95rem) !important;">Scale Deployment (IDC)</div>
+                    </div>
                 </div>
-            </div>
-            <div class="presenter-info animate-in">
-                <p><strong>Keletso Kingwane</strong> | Kutlwano Holdings (Pty) Ltd</p>
-                <p>October 28, 2025 | Gauteng Innovation Hub Pitch</p>
+
+                <!-- Compact Presenter Info -->
+                <div class="presenter-info animate-in" style="text-align: center; font-size: clamp(0.75rem, 1.4vw, 0.95rem) !important;">
+                    <p style="margin-bottom: 0.3vh;"><strong>Keletso Kingwane</strong> | Kutlwano Holdings (Pty) Ltd</p>
+                    <p style="margin: 0;">October 28, 2025 | Gauteng Innovation Hub Pitch</p>
+                </div>
+
             </div>
         </div>
 
@@ -688,14 +699,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
 
     <!-- Modal data FIRST -->
-    <script src="../js/data.js?v=77"></script>
+    <script src="../js/data.js?v=78"></script>
 
     <!-- LOAD NAVIGATION (now includes modal functions) -->
-    <script src="app.js?v=77"></script>
+    <script src="app.js?v=78"></script>
 
     <!-- Debug click logger -->
     <script>
-        console.log('🚀 GAUTENG PITCH LOADED - v77 - VISUAL STORYTELLING EDITION');
+        console.log('🚀 GAUTENG PITCH LOADED - v78 - NAVIGATION FIXED + COMPACT TITLE');
         console.log('Navigation functions available:', typeof window.goToNextSlide, typeof window.goToPrevSlide);
         console.log('showModal function available:', typeof window.showModal);
         console.log('closeModal function available:', typeof window.closeModal);
