@@ -12,8 +12,13 @@ totalSlidesEl.textContent = totalSlides;
 updateSlide();
 
 // Navigation functions
-function showSlide(n) {
-    slides.forEach(slide => slide.classList.remove('active'));
+function showSlide(n, direction = null) {
+    // Determine direction if not specified
+    if (direction === null) {
+        direction = n > currentSlide ? 'forward' : 'backward';
+    }
+
+    const oldSlide = slides[currentSlide];
 
     if (n >= totalSlides) {
         currentSlide = totalSlides - 1;
@@ -23,7 +28,32 @@ function showSlide(n) {
         currentSlide = n;
     }
 
-    slides[currentSlide].classList.add('active');
+    const newSlide = slides[currentSlide];
+
+    // Apply exit animation to old slide
+    if (oldSlide && oldSlide !== newSlide) {
+        oldSlide.style.display = 'flex';
+        oldSlide.classList.remove('slide-enter-left', 'slide-enter-right');
+        oldSlide.classList.add(direction === 'forward' ? 'slide-exit-left' : 'slide-exit-right');
+
+        // Remove old slide after animation
+        setTimeout(() => {
+            oldSlide.classList.remove('active', 'slide-exit-left', 'slide-exit-right');
+            oldSlide.style.display = 'none';
+        }, 400);
+    }
+
+    // Apply enter animation to new slide
+    newSlide.style.display = 'flex';
+    newSlide.classList.remove('slide-exit-left', 'slide-exit-right');
+    newSlide.classList.add(direction === 'forward' ? 'slide-enter-right' : 'slide-enter-left');
+
+    // Add active class after a brief delay
+    setTimeout(() => {
+        newSlide.classList.add('active');
+        newSlide.classList.remove('slide-enter-left', 'slide-enter-right');
+    }, 10);
+
     updateSlide();
 
     // Enhanced transitions
