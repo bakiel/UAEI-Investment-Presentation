@@ -131,9 +131,9 @@ All rights reserved.
 ## 👥 Contact
 
 **Kutlwano Holdings (Pty) Ltd**
-Company Reg: 2022/404945/07
+Company Reg: 2017/103109/07
 
-**Contact Person**: Keletso Kingwane
+**Contact Person**: Keletso Kungwane
 📧 Email: keletsok@gmail.com
 📧 Business: info@kutlwanoholdings.co.za
 📱 Tel: 084 478 8872
