@@ -2271,6 +2271,7 @@ h2 {
     gap: clamp(1.5vw, 2vw, 2.5vw) !important;
     max-width: 100% !important;
     align-items: stretch !important;
+    justify-content: center !important;
     grid-template-columns: none !important;
 }
 
