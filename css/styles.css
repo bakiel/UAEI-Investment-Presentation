@@ -2241,9 +2241,13 @@ h2 {
 
 /* Opportunity Single Layout (Slides 6-7) */
 .opportunity-single {
-    max-width: 90vw;
-    margin: 0 auto;
-    padding: 1vh 2vw;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .opportunity-header {
@@ -2269,7 +2273,8 @@ h2 {
 .stats-large {
     display: flex !important;
     gap: clamp(0.8vw, 1.2vw, 1.5vw) !important;
-    max-width: 100% !important;
+    width: 100% !important;
+    max-width: none !important;
     align-items: stretch !important;
     justify-content: center !important;
     flex-wrap: nowrap !important;
@@ -2283,14 +2288,15 @@ h2 {
     border-radius: 12px !important;
     text-align: center !important;
     transition: all 0.3s ease !important;
-    flex: 1 !important;
+    flex: 1 1 0 !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
     min-height: 0 !important;
     height: auto !important;
-    max-width: 18vw !important;
+    max-width: 17vw !important;
+    min-width: 0 !important;
 }
 
 .stat-large:hover {
