@@ -58,6 +58,21 @@ function showSlide(n, direction = null) {
     // Update button states
     document.getElementById('prev-btn').disabled = currentSlide === 0;
     document.getElementById('next-btn').disabled = currentSlide === totalSlides - 1;
+
+    // Update progress bar if it exists
+    const progressBar = document.querySelector('.slide-progress-bar');
+    if (progressBar) {
+        progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+    }
+
+    // Update thumbnail dots if they exist
+    const dots = document.querySelectorAll('.thumb-dot');
+    if (dots.length > 0) {
+        dots.forEach((dot, i) => {
+            dot.style.background = i === currentSlide ? '#4CAF50' : 'rgba(255, 255, 255, 0.3)';
+            dot.style.transform = i === currentSlide ? 'scale(1.3)' : 'scale(1)';
+        });
+    }
 }
 
 function nextSlide() {
@@ -531,6 +546,109 @@ function handleSwipe() {
 }
 
 // ============================================
+// PROGRESS INDICATOR & THUMBNAIL NAVIGATION
+// ============================================
+function createProgressIndicator() {
+    const existingProgress = document.querySelector('.slide-progress');
+    if (existingProgress) return;
+
+    const progressContainer = document.createElement('div');
+    progressContainer.className = 'slide-progress';
+    progressContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 9999;
+    `;
+
+    const progressBar = document.createElement('div');
+    progressBar.className = 'slide-progress-bar';
+    progressBar.style.cssText = `
+        height: 100%;
+        background: linear-gradient(90deg, #4CAF50, #66BB6A);
+        width: ${((currentSlide + 1) / totalSlides) * 100}%;
+        transition: width 0.5s ease;
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+    `;
+
+    progressContainer.appendChild(progressBar);
+    document.body.appendChild(progressContainer);
+}
+
+function createThumbnailNav() {
+    const existingNav = document.querySelector('.thumbnail-nav');
+    if (existingNav) return;
+
+    const nav = document.createElement('div');
+    nav.className = 'thumbnail-nav';
+    nav.style.cssText = `
+        position: fixed;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        gap: 8px;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px 15px;
+        border-radius: 25px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        pointer-events: auto;
+    `;
+
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'thumb-dot';
+        dot.style.cssText = `
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: ${i === currentSlide ? '#4CAF50' : 'rgba(255, 255, 255, 0.3)'};
+            cursor: pointer;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+        `;
+
+        dot.addEventListener('click', () => showSlide(i));
+        dot.addEventListener('mouseenter', () => {
+            if (i !== currentSlide) {
+                dot.style.background = 'rgba(76, 175, 80, 0.6)';
+                dot.style.transform = 'scale(1.3)';
+            }
+        });
+        dot.addEventListener('mouseleave', () => {
+            if (i !== currentSlide) {
+                dot.style.background = 'rgba(255, 255, 255, 0.3)';
+                dot.style.transform = 'scale(1)';
+            }
+        });
+
+        nav.appendChild(dot);
+    }
+
+    document.body.appendChild(nav);
+
+    // Show/hide thumbnail nav based on fullscreen state
+    function toggleThumbnailNav() {
+        if (document.fullscreenElement) {
+            nav.style.display = 'flex';
+        } else {
+            nav.style.display = 'none';
+        }
+    }
+
+    // Listen for fullscreen changes
+    document.addEventListener('fullscreenchange', toggleThumbnailNav);
+
+    // Initial state
+    toggleThumbnailNav();
+}
+
+// ============================================
 // INITIALIZE
 // ============================================
 // Initialize first slide without animation
@@ -538,6 +656,12 @@ slides[0].classList.add('active');
 slides[0].style.display = 'flex';
 document.getElementById('current-slide').textContent = '1';
 document.getElementById('prev-btn').disabled = true;
+
+// Initialize progress indicator and thumbnail navigation
+setTimeout(() => {
+    createProgressIndicator();
+    createThumbnailNav();
+}, 500);
 
 console.log('%c UAEI Presentation Loaded ', 'background: #4CAF50; color: #fff; font-size: 16px; padding: 10px; font-weight: bold;');
 console.log('Keyboard shortcuts:');
