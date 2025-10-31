@@ -7,10 +7,47 @@ const totalSlides = slides.length;
 
 document.getElementById('total-slides').textContent = totalSlides;
 
-function showSlide(n) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (n + totalSlides) % totalSlides;
-    slides[currentSlide].classList.add('active');
+function showSlide(n, direction = null) {
+    // Determine direction if not specified
+    if (direction === null) {
+        direction = n > currentSlide ? 'forward' : 'backward';
+    }
+
+    const oldSlide = slides[currentSlide];
+
+    if (n >= totalSlides) {
+        currentSlide = totalSlides - 1;
+    } else if (n < 0) {
+        currentSlide = 0;
+    } else {
+        currentSlide = n;
+    }
+
+    const newSlide = slides[currentSlide];
+
+    // Apply exit animation to old slide
+    if (oldSlide && oldSlide !== newSlide) {
+        oldSlide.style.display = 'flex';
+        oldSlide.classList.remove('slide-enter-left', 'slide-enter-right');
+        oldSlide.classList.add(direction === 'forward' ? 'slide-exit-left' : 'slide-exit-right');
+
+        // Remove old slide after animation
+        setTimeout(() => {
+            oldSlide.classList.remove('active', 'slide-exit-left', 'slide-exit-right');
+            oldSlide.style.display = 'none';
+        }, 400);
+    }
+
+    // Apply enter animation to new slide
+    newSlide.style.display = 'flex';
+    newSlide.classList.remove('slide-exit-left', 'slide-exit-right');
+    newSlide.classList.add(direction === 'forward' ? 'slide-enter-right' : 'slide-enter-left');
+
+    // Add active class after a brief delay
+    setTimeout(() => {
+        newSlide.classList.add('active');
+        newSlide.classList.remove('slide-enter-left', 'slide-enter-right');
+    }, 10);
 
     document.getElementById('current-slide').textContent = currentSlide + 1;
 
@@ -492,7 +529,11 @@ function handleSwipe() {
 // ============================================
 // INITIALIZE
 // ============================================
-showSlide(0);
+// Initialize first slide without animation
+slides[0].classList.add('active');
+slides[0].style.display = 'flex';
+document.getElementById('current-slide').textContent = '1';
+document.getElementById('prev-btn').disabled = true;
 
 console.log('%c UAEI Presentation Loaded ', 'background: #4CAF50; color: #fff; font-size: 16px; padding: 10px; font-weight: bold;');
 console.log('Keyboard shortcuts:');
