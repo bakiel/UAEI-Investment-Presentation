@@ -6,12 +6,12 @@ const modalContent = {
         stats: [
             { value: 'R356M', label: 'IDC Loan (70%)' },
             { value: 'R152.6M', label: 'Government Grants (30%)' },
-            { value: 'R100M', label: 'Kutlwano Equity (In-kind)' },
-            { value: 'R309.6M', label: 'CAPEX Investment' }
+            { value: 'R100M', label: 'Kutlwano Assets (In-kind)' },
+            { value: 'R20M', label: 'Cash Equity (IRR basis)' }
         ]
     },
     revenue: {
-        title: 'Year 5 Revenue: R1.65B',
+        title: 'Year 5 Revenue: R1.654B',
         content: 'Diversified revenue across six integrated platforms, with strong marketplace and technology service revenues.',
         stats: [
             { value: 'R850M', label: 'Marketplace (51.4%)' },
@@ -21,23 +21,23 @@ const modalContent = {
         ]
     },
     irr: {
-        title: '28.9% Internal Rate of Return',
-        content: 'Exceptional returns driven by rapid revenue scaling, high margins, and strategic asset optimization.',
+        title: '74.4% Internal Rate of Return',
+        content: '10-year equity IRR representing 325x return (R20M equity → R6.5B). This is 6x development finance hurdles and 3x private equity benchmarks.',
         stats: [
-            { value: 'R3.29B', label: 'Net Present Value' },
+            { value: 'R8.392B', label: 'Net Present Value' },
             { value: 'R692M', label: 'Year 5 Net Income' },
             { value: 'Year 2', label: 'Break-even' },
-            { value: 'R9.8B', label: 'Exit Valuation' }
+            { value: '325x', label: 'Equity Multiple' }
         ]
     },
     npv: {
-        title: 'R3.29 Billion Net Present Value',
-        content: 'Substantial value creation through technology-enabled agriculture transformation and conservation integration.',
+        title: 'R8.392 Billion Net Present Value',
+        content: 'DCF valuation @ 12% WACC over 10 years. Represents intrinsic value for investment decision-making.',
         stats: [
-            { value: '28.9%', label: 'IRR' },
-            { value: '159%', label: 'Gross Return (IDC)' },
-            { value: '64.5x', label: 'Equity Multiple' },
-            { value: 'R1.32B', label: 'Cumulative Free Cash' }
+            { value: '74.4%', label: 'IRR (10Y Equity)' },
+            { value: '325x', label: 'Equity Multiple' },
+            { value: '4.0 yrs', label: 'Payback Period' },
+            { value: 'R4.875B', label: 'Year 10 Cash' }
         ]
     },
     farmers: {
@@ -51,13 +51,13 @@ const modalContent = {
         ]
     },
     exit: {
-        title: 'R9.8B Exit Valuation',
-        content: 'Year 5 strategic exit opportunity based on 6x revenue multiple, positioning for acquisition by major agtech or financial services platform.',
+        title: 'R22.8B Exit Valuation',
+        content: 'Year 10 strategic exit using 10x EBITDA multiple (standard market approach). Kutlwano 66% stake = R15.0B, representing 150x ROI.',
         stats: [
-            { value: '6.0x', label: 'Revenue Multiple' },
-            { value: 'R1.65B', label: 'Year 5 Revenue' },
-            { value: '12.0x', label: 'EBITDA Multiple' },
-            { value: 'R815M', label: 'Year 5 EBITDA' }
+            { value: '10.0x', label: 'EBITDA Multiple' },
+            { value: 'R2.281B', label: 'Year 10 EBITDA' },
+            { value: 'R15.0B', label: 'Kutlwano Share (66%)' },
+            { value: '150x', label: 'Kutlwano ROI' }
         ]
     },
     marketplace: {
@@ -131,13 +131,23 @@ const modalContent = {
         ]
     },
     year5: {
-        title: 'Year 5: Exit Ready',
-        content: 'Full ecosystem maturity with 25,000 farmers and R1.65B revenue, positioning for R9.8B exit.',
+        title: 'Year 5: Ecosystem Maturity',
+        content: 'Full ecosystem maturity with 25,000 farmers and R1.654B revenue. Strong foundation for 10-year growth trajectory.',
         stats: [
-            { value: 'R1.65B', label: 'Revenue' },
-            { value: 'R692M', label: 'Net Income' },
+            { value: 'R1.654B', label: 'Revenue' },
+            { value: 'R692M', label: 'Net Income (41.8%)' },
             { value: '25,000', label: 'Farmers' },
-            { value: 'R9.8B', label: 'Exit Valuation' }
+            { value: 'R983M', label: 'EBITDA (59.4%)' }
+        ]
+    },
+    year10: {
+        title: 'Year 10: Exit Ready',
+        content: 'R22.8B enterprise value (10x EBITDA). Kutlwano 66% stake worth R15.0B representing 150x ROI on R100M asset contribution.',
+        stats: [
+            { value: 'R3.515B', label: 'Revenue' },
+            { value: 'R1.387B', label: 'Net Income (39.5%)' },
+            { value: 'R2.281B', label: 'EBITDA (64.9%)' },
+            { value: 'R22.8B', label: 'Exit Valuation' }
         ]
     },
     // WhatsApp & Language Accessibility Modals
