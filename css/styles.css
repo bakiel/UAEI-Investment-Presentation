@@ -2241,7 +2241,7 @@ h2 {
 
 /* Opportunity Single Layout (Slides 6-7) */
 .opportunity-single {
-    max-width: 1000px;
+    max-width: 90vw;
     margin: 0 auto;
     padding: 1vh 2vw;
 }
@@ -2268,15 +2268,16 @@ h2 {
 
 .stats-large {
     display: flex !important;
-    gap: clamp(1.5vw, 2vw, 2.5vw) !important;
+    gap: clamp(0.8vw, 1.2vw, 1.5vw) !important;
     max-width: 100% !important;
     align-items: stretch !important;
     justify-content: center !important;
+    flex-wrap: nowrap !important;
     grid-template-columns: none !important;
 }
 
 .stat-large {
-    padding: clamp(2vh, 2.5vh, 3vh) clamp(1.5vw, 2vw, 2.5vw) !important;
+    padding: clamp(2vh, 2.5vh, 3vh) clamp(1vw, 1.2vw, 1.5vw) !important;
     background: rgba(255, 255, 255, 0.02) !important;
     border: 2px solid rgba(76, 175, 80, 0.25) !important;
     border-radius: 12px !important;
@@ -2289,6 +2290,7 @@ h2 {
     align-items: center !important;
     min-height: 0 !important;
     height: auto !important;
+    max-width: 18vw !important;
 }
 
 .stat-large:hover {
