@@ -43,11 +43,15 @@ function showSlide(n, direction = null) {
     newSlide.classList.remove('slide-exit-left', 'slide-exit-right');
     newSlide.classList.add(direction === 'forward' ? 'slide-enter-right' : 'slide-enter-left');
 
-    // Add active class after a brief delay
+    // Add active class immediately
     setTimeout(() => {
         newSlide.classList.add('active');
-        newSlide.classList.remove('slide-enter-left', 'slide-enter-right');
     }, 10);
+
+    // Remove animation classes after animation completes
+    setTimeout(() => {
+        newSlide.classList.remove('slide-enter-left', 'slide-enter-right');
+    }, 410);
 
     document.getElementById('current-slide').textContent = currentSlide + 1;
 
