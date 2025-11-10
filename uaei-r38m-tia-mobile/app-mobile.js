@@ -30,7 +30,7 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     // Set initial state for fade-in animations
     const animatedElements = document.querySelectorAll(
-        '.mobile-section, .mobile-card, .mobile-platform-card, .mobile-budget-item, .metric-card, .list-item'
+        '.mobile-section, .mobile-card, .platform-card, .mobile-budget-item, .metric-card, .list-item, .story-card, .transformation-flow, .value-card, .scenario-card, .ask-item, .crisis-stat, .problem-card'
     );
 
     animatedElements.forEach(el => {
