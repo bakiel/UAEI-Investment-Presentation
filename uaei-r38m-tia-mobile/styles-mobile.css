@@ -1,0 +1,438 @@
+/* UAEI R38M TIA Mobile Presentation - Portrait Optimized */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #4CAF50;
+    --dark-bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    --alert-red: #ff5757;
+    --financial: #4CAF50;
+    --social: #2196F3;
+    --environmental: #8BC34A;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Mobile Container */
+.mobile-container {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Sections */
+.mobile-section {
+    padding: 3rem 1.5rem;
+    min-height: 50vh;
+}
+
+.mobile-section.dark {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(76, 175, 80, 0.02));
+}
+
+.mobile-section.cta {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(76, 175, 80, 0.05));
+}
+
+/* Hero Section */
+.hero-mobile {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.mobile-logo {
+    width: clamp(120px, 40vw, 200px);
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 20px rgba(76, 175, 80, 0.6));
+}
+
+.mobile-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A, #81C784);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mobile-subtitle {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-green);
+}
+
+.section-title i {
+    margin-right: 0.5rem;
+}
+
+/* Stat Boxes */
+.mobile-stat-box {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
+    border: 2px solid var(--primary-green);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.mobile-stat-box.primary {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.15));
+    border: 3px solid var(--primary-green);
+}
+
+.mobile-stat-box.secondary {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(76, 175, 80, 0.08));
+}
+
+.mobile-stat-box.large {
+    padding: 3rem 2rem;
+}
+
+.stat-icon {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-size: clamp(3rem, 12vw, 5rem);
+    font-weight: 900;
+    color: var(--primary-green);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.stat-detail {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+/* Cards */
+.mobile-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mobile-card.alert {
+    background: rgba(255, 87, 87, 0.1);
+    border: 2px solid rgba(255, 87, 87, 0.3);
+}
+
+.mobile-card.success {
+    background: rgba(76, 175, 80, 0.1);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.mobile-card h3 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.mobile-card p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.6;
+}
+
+.large-text {
+    font-size: clamp(1.1rem, 4.5vw, 1.4rem) !important;
+}
+
+/* Lists */
+.mobile-list {
+    margin: 2rem 0;
+}
+
+.list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--primary-green);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.list-item.success {
+    background: rgba(76, 175, 80, 0.08);
+    border-left-color: var(--primary-green);
+}
+
+.list-item i {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.list-item .fa-times-circle {
+    color: var(--alert-red);
+}
+
+.list-item strong {
+    display: block;
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+}
+
+.list-item p {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Platform Cards */
+.mobile-platform-card {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.platform-icon {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.mobile-platform-card h3 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.mobile-platform-card p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.mobile-platform-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.mobile-platform-card ul li {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.mobile-platform-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+/* Budget Items */
+.mobile-budget-item {
+    margin-bottom: 2rem;
+}
+
+.budget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.budget-label {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.budget-amount {
+    font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.budget-bar {
+    width: 100%;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.budget-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), #66BB6A);
+    transition: width 0.5s ease;
+}
+
+.budget-percent {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    color: var(--primary-green);
+    font-weight: 700;
+    text-align: right;
+}
+
+.budget-desc {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+/* Metric Grid */
+.mobile-metric-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.metric-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.metric-icon.financial {
+    color: var(--financial);
+}
+
+.metric-icon.social {
+    color: var(--social);
+}
+
+.metric-icon.environmental {
+    color: var(--environmental);
+}
+
+.metric-value {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-weight: 900;
+    color: var(--primary-green);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.metric-detail {
+    font-size: clamp(0.75rem, 3vw, 0.9rem);
+    color: var(--text-muted);
+}
+
+/* Highlights */
+.mobile-highlight {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(76, 175, 80, 0.08));
+    border: 2px solid var(--primary-green);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.mobile-highlight.success {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
+}
+
+.mobile-highlight p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.mobile-highlight strong {
+    color: var(--primary-green);
+}
+
+/* Footer */
+.footer-logo {
+    width: clamp(150px, 50vw, 250px);
+    margin: 3rem auto 2rem;
+    display: block;
+    filter: drop-shadow(0 0 15px rgba(76, 175, 80, 0.4));
+}
+
+/* Responsive Adjustments */
+@media (max-width: 360px) {
+    .mobile-section {
+        padding: 2rem 1rem;
+    }
+
+    .mobile-metric-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Touch Optimization */
+button, a, .list-item {
+    -webkit-tap-highlight-color: rgba(76, 175, 80, 0.2);
+    touch-action: manipulation;
+}
